@@ -4,8 +4,6 @@
     export let img = "./x.svg"
 </script>
 
-<div class="flex flex-col gap-2">
-    <a href={url} class="flex flex-col gap-2">
-        <img src={img} alt={social} class="h-8">
-    </a>
-</div>
+<a href={url} class="inline-block" target="_blank" rel="noopener noreferrer" title={social}>
+    <img src={img} alt={social} class="h-6 md:h-12 hover:opacity-80 transition-opacity">
+</a>
