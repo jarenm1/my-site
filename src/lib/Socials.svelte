@@ -15,7 +15,7 @@
     ];
 </script>
 
-<div class="flex gap-4 md:gap-8 items-center flex-col md:flex-row px-4">
+<div class="flex gap-4 md:gap-8 items-center flex-row px-4">
     {#each socials as social}
         <Social social={social.social} url={social.url} img={social.img} />
     {/each}

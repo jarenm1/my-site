@@ -119,7 +119,7 @@
 <div class="scan-lines"></div>
 <!-- Main content container -->
 <div class="w-full max-w-4xl bg-black opacity-80 p-4 rounded-md space-y-6 flex-col">
-    <div class="flex flex-row justify-between items-center">
+    <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="flex flex-col">
             <div class="text-white flex flex-row gap-4">
                 <img src="pfp.jpg" alt="pfp" class="w-32 h-32 rounded-full border-green-900/50 border-2">
