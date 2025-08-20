@@ -15,7 +15,7 @@ export const storiesBySlug: StoryBySlug = {
                 'The goal of this project was to attempt a real -> sim, for user interfaces. I got the idea for this after seeing a video from a robotics company on twitter. I thought it would be cool to be able to command the robots like units in starcraft.' 
         },
         { kind: 'heading', text: 'PhDs aren\'t real.', level: 2 },
-        { kind: 'paragraph', text: 'I worked on this project with my friend and together we decided that phds are not real.' },
+        { kind: 'paragraph', text: 'While my friend and I were working on this project we came to the conclusion that phds are not real. (cope)' },
         { kind: 'paragraph', text: 'Since phds are seen as the pinnacle of academia, and you can learn anything in 2-weeks (1 phd). I deicded to measure this project in phds. The project\'s scope quickly became 4+ phds..'},
         { kind: 'image', src: '/output.jpg', alt: 'Reconstruction preview', caption: 'BFMatching' },
         { kind: 'heading', text: 'Gaussian Splatting', level: 2 },
