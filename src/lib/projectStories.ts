@@ -20,7 +20,7 @@ export const storiesBySlug: StoryBySlug = {
         { kind: 'image', src: '/output.jpg', alt: 'Reconstruction preview', caption: 'BFMatching' },
         { kind: 'heading', text: 'Gaussian Splatting', level: 2 },
         { kind: 'paragraph', text: 'I spent a lot of time reading about gaussian splatting. It was the best approach I could find for the visulization, but actual Gaussian Splats are far to complex and expensive to render in real-time. I\'m still looking into this (august 20, 2025)' },
+        { kind: 'heading', text: 'Update 09/12/2025', level: 2 },
+        { kind: 'paragraph', text: 'After reading a paper about a newer method for SLAM. I have decided to implement it. DK-SLAM in Applied Sciences published July 2025. I am unsure how long it will take to implement. And what I will need to write from scratch. But this approach aligns heavily with what I wanted to implement.' },
     ]
 };
-
-
