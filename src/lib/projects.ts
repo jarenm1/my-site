@@ -18,7 +18,7 @@ export const projects: Project[] = [
     {
         name: "3D scene reconstruction",
         description:
-            "Monocular SLAM with MDE for Dense Point Clouds & YOLO for dynamic object detection",
+            "Monocular SLAM. Custom renderer built on wgpu. ML feature extraction. WIP. Mostly closed source.",
         url: "https://www.github.com/jarenm1/rslam"
     },
     {
@@ -29,16 +29,16 @@ export const projects: Project[] = [
     },
     {
         name: "jeditr",
-        description: "A plugin driven text editor written in Tauri w/ React. Currently inactive. Athas.dev has a much more complete editor w/ the same goals and similar tech stack.",
+        description: "A plugin driven text editor written in Rust Tauri w/ React. Abandoned. Athas.dev and Zed offer much better experiences with similar project goals.",
         url: "https://jeditr.com"
     },
     {
         name: "glyph",
-        description: "GUI library for building simple applications in rust with a tailwind-like styling.",
+        description: "GUI library for building simple applications in rust with a tailwind-like styling. Super unfinished. Closed source.",
     },
     {
         name: "rbx-mcp",
-        description: "bit of a silly project I made in 3 hours to mess around with roblox's game engine, roblox studio.",
+        description: "bit of a silly project I made in 3 hours to mess around with roblox's game engine, roblox studio. Not very useful. Should have used agent architecture.",
         url: "https://www.github.com/jarenm1/rbx-mcp"
     },
     {
