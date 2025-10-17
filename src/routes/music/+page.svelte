@@ -24,5 +24,4 @@
     <li>quannnic</li>
     <li>SEBii</li>
     <li>Harto Falion</li>
-    <li>lieu</li>
 </ul>
