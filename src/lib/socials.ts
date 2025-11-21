@@ -14,6 +14,11 @@ export const socials: SocialLink[] = [
         social: "X (Twitter)",
         url: "https://x.com/jaren11111",
         img: "/x.svg"
+    },
+    {
+        social: "YouTube",
+        url: "https://www.youtube.com/@imjaren",
+        img: "/youtube.svg"
     }
 ];
 

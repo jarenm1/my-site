@@ -2,9 +2,8 @@
     import Socials from "$lib/Socials.svelte";
     const links = [
         { name: "Home", href: "/" },
-        { name: "All Projects", href: "/projects" },
+        { name: "Projects", href: "/projects" },
     ];
-    
 </script>
 
 <nav class="w-full border-b border-white/20 py-4 mb-8">
@@ -21,4 +20,3 @@
         <Socials />
     </div>
 </nav>
-

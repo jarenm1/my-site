@@ -16,35 +16,34 @@ export function slugify(input: string): string {
 
 export const projects: Project[] = [
     {
-        name: "3D scene reconstruction",
+        name: "Monocular reconstruction",
         description:
-            "Monocular SLAM. Custom renderer built on wgpu. ML feature extraction. WIP. Mostly closed source.",
-        url: "https://www.github.com/jarenm1/rslam"
+            "Monocular Reconstruction. Custom renderer built w/ wgpu.",
+        url: "https://www.github.com/jarenm1/triad"
     },
     {
         name: "rust game engine",
         description:
-            "An ECS driven game engine written in rust w/wgpu & winit, heavily inspired by bevy.",
+            "Superseded by Triad.",
         url: "https://www.github.com/jarenm1/rusty_engine"
     },
     {
         name: "jeditr",
-        description: "A plugin driven text editor written in Rust Tauri w/ React. Abandoned. Athas.dev and Zed offer much better experiences with similar project goals.",
-        url: "https://jeditr.com"
+        description: "Tauri text editor.",
+        url: "https://www.github.com/jarenm1/jeditr"
     },
     {
         name: "glyph",
-        description: "GUI library for building simple applications in rust with a tailwind-like styling. Super unfinished. Closed source.",
+        description: "GUI framework I'm definitly not finishing ever. Written in rust btw.",
     },
     {
         name: "rbx-mcp",
-        description: "bit of a silly project I made in 3 hours to mess around with roblox's game engine, roblox studio. Not very useful. Should have used agent architecture.",
+        description: "Experimenting with LLM's capabilities in game mechanics and 3D space through Roblox's game engine..",
         url: "https://www.github.com/jarenm1/rbx-mcp"
     },
     {
-        name: "nvim-completions",
-        description: "neovim plugin. Couldn't get it to work and zed has everything I need.",
-        url: "https://www.github.com/jarenm1/nvim-completions"
+        name: "Other:",
+        description: "I have worked on other projects, but they weren't worthy of a mention.",
     }
 ];
 

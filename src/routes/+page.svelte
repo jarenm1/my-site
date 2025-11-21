@@ -1,7 +1,6 @@
 <script>
     import About from "$lib/About.svelte";
     import Projects from "$lib/Projects.svelte";
-    import Environment from "$lib/Environment.svelte";
     import { projects as defaultProjects } from "$lib/projects";
 
     const devices = [
@@ -22,9 +21,8 @@
         }
     ];
 
-    const projects = defaultProjects.slice(0, 3);
+    const projects = defaultProjects.filter((p) => p.name === "Monocular reconstruction");
 </script>
 
 <About />
-<Projects {projects} />
-<Environment devices={devices} />
+<Projects {projects} title="What I'm Working On:" />

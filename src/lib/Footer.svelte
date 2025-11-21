@@ -4,7 +4,6 @@
 
 <footer class="mt-12 border-t border-white/20 py-6 text-sm">
     <div class="flex flex-wrap items-center justify-between gap-4">
-        <p class="text-white/60">© {new Date().getFullYear()} jarenmchugh</p>
         <nav class="flex flex-wrap gap-x-6 gap-y-2">
             {#each socials as s}
                 <a
@@ -20,5 +19,3 @@
         </nav>
     </div>
 </footer>
-
-
