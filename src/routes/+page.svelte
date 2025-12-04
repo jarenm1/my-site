@@ -21,7 +21,7 @@
         }
     ];
 
-    const projects = defaultProjects.filter((p) => p.name === "Monocular reconstruction");
+    const projects = defaultProjects.filter((p) => p.name === "Triad");
 </script>
 
 <About />

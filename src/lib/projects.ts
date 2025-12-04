@@ -16,7 +16,7 @@ export function slugify(input: string): string {
 
 export const projects: Project[] = [
     {
-        name: "Monocular reconstruction",
+        name: "Triad",
         description:
             "Monocular Reconstruction. Custom renderer built w/ wgpu.",
         url: "https://www.github.com/jarenm1/triad"
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     },
     {
         name: "glyph",
-        description: "GUI framework I'm definitly not finishing ever. Written in rust btw.",
+        description: "GUI framework I'm definitly not finishing ever. Written in rust btw. May integrate into triad for ui.",
     },
     {
         name: "rbx-mcp",
