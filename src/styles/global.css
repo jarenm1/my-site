@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:wght@600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Tailwind v4 font utilities: use class names like font-aboreto or font-courier-prime */
+  --font-aboreto: "Aboreto", serif;
+  --font-courier-prime: "Courier Prime", monospace;
+}
+
+h1 {
+  @apply text-4xl leading-tight;
+}
+
+h2 {
+  @apply text-3xl leading-snug font-semibold;
+}
+
+h3 {
+  @apply text-2xl font-bold;
+}
+
+main article a {
+  @apply text-blue-300  hover:text-blue-400;
+}
+
+main article img {
+  @apply rounded-lg;
+}
+
+main article figure {
+  @apply space-y-3;
+}
+
+main article figcaption {
+  @apply text-sm text-neutral-400 font-mono;
+}
+
+.triad-links {
+  color: #fff;
+}
+
+.triad-links a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.triad-links a:hover {
+  color: #e5e7eb;
+}
+
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}

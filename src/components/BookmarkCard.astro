@@ -1,0 +1,17 @@
+---
+const { title, href, description } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noreferrer"
+  class="flex h-32 flex-col justify-between rounded-lg border border-neutral-800 bg-neutral-900/60 px-4 py-3 transition hover:border-neutral-700"
+>
+  <div class="flex items-center justify-between gap-3">
+    <h3 class="text-lg font-semibold text-white">{title}</h3>
+
+    {href && <span class="text-xs uppercase tracking-wide text-neutral-400">Link</span>}
+  </div>
+  {description && <p class="mt-2 text-sm text-neutral-300">{description}</p>}
+</a>

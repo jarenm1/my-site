@@ -1,0 +1,30 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import BookmarkCard from '../../components/BookmarkCard.astro';
+
+const bookmarks = [
+  {
+    title: 'Rustlings',
+    href: 'https://github.com/rust-lang/rustlings',
+    description: 'Very helpful rust exercises. Helped me understand some general programming concepts as well.',
+  },
+  {
+    title: '3Blue1Brown',
+    href: 'https://www.youtube.com/@3blue1brown',
+    description: 'Good visuals and made it easier to approach some math concepts.',
+  },
+  {
+    title: "learncpp",
+    href: 'https://www.learncpp.com/',
+    description: 'Great resource for learning C++ and general CS concepts. Will teach you more than any CS class.',
+  }
+];
+---
+
+<MainLayout title="Bookmarks" description="Resources I keep handy.">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    {bookmarks.map((item) => (
+      <BookmarkCard {...item} />
+    ))}
+  </div>
+</MainLayout>
