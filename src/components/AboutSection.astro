@@ -1,0 +1,19 @@
+---
+const birthday = new Date('2004-09-22');
+const today = new Date();
+let age = today.getFullYear() - birthday.getFullYear();
+const monthDiff = today.getMonth() - birthday.getMonth();
+if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthday.getDate())) {
+  age--;
+}
+---
+
+<div>
+  <h1>About Me</h1>
+  <ul>
+    <li>Age: {age}</li>
+    <li>Austin, TX.</li>
+    <li>Rust + systems, Amateur ML research</li>
+    <li>CS student, looking for work in robotics or ML. <a href="https://x.com/jaren11111">DM on X</a>.</li>
+  </ul>
+</div>

@@ -1,0 +1,449 @@
+---
+---
+
+<canvas id="predator-prey-canvas" class="mx-auto pointer-events-none opacity-30"></canvas>
+
+<script>
+  const canvas = document.getElementById('predator-prey-canvas') as HTMLCanvasElement;
+  const context = canvas.getContext('2d');
+  
+  if (context) {
+    const ctx = context;
+    const size = 400;
+    canvas.width = size;
+    canvas.height = size;
+    
+    const centerX = size / 2;
+    const centerY = size / 2;
+    const arenaRadius = size / 2 - 20;
+    
+    // Food particles
+    interface Food {
+      x: number;
+      y: number;
+      alive: boolean;
+    }
+    
+    const foodItems: Food[] = [];
+    const maxFood = 15;
+    
+    function spawnFood() {
+      if (foodItems.filter(f => f.alive).length >= maxFood) return;
+      
+      // Random position within circle
+      const angle = Math.random() * Math.PI * 2;
+      const dist = Math.random() * (arenaRadius - 20);
+      foodItems.push({
+        x: centerX + Math.cos(angle) * dist,
+        y: centerY + Math.sin(angle) * dist,
+        alive: true
+      });
+    }
+    
+    // Initialize food
+    for (let i = 0; i < maxFood; i++) {
+      spawnFood();
+    }
+    
+    // Genes for prey - they want food, avoid predators
+    interface PreyGenes {
+      speed: number;           // 1.0 to 2.5
+      foodAttraction: number;  // 0.5 to 2.0
+      predatorFear: number;    // 0.5 to 2.0
+      turnSpeed: number;       // 0.05 to 0.2
+    }
+    
+    // Genes for predators - they hunt prey
+    interface PredatorGenes {
+      speed: number;           // 0.8 to 2.0
+      preyAttraction: number;  // 0.5 to 2.0
+      turnSpeed: number;       // 0.05 to 0.2
+    }
+    
+    const PREY_COUNT = 12;
+    const PREDATOR_COUNT = 3;
+    const EAT_DISTANCE = 8;
+    const CATCH_DISTANCE = 10;
+    
+    class Prey {
+      x: number;
+      y: number;
+      angle: number;
+      genes: PreyGenes;
+      foodEaten: number;
+      alive: boolean;
+      deathTime: number;  // frame when died, 0 if alive
+      history: { x: number; y: number }[];
+      
+      constructor(genes?: PreyGenes) {
+        const spawnAngle = Math.random() * Math.PI * 2;
+        const spawnDist = Math.random() * arenaRadius * 0.5;
+        this.x = centerX + Math.cos(spawnAngle) * spawnDist;
+        this.y = centerY + Math.sin(spawnAngle) * spawnDist;
+        this.angle = Math.random() * Math.PI * 2;
+        this.foodEaten = 0;
+        this.alive = true;
+        this.deathTime = 0;
+        this.history = [];
+        
+        this.genes = genes || {
+          speed: 1.0 + Math.random() * 1.5,
+          foodAttraction: 0.5 + Math.random() * 1.5,
+          predatorFear: 0.5 + Math.random() * 1.5,
+          turnSpeed: 0.05 + Math.random() * 0.15
+        };
+      }
+      
+      update(predators: Predator[]) {
+        if (!this.alive) return;
+        
+        // Find nearest food
+        let nearestFood: Food | null = null;
+        let nearestFoodDist = Infinity;
+        for (const food of foodItems) {
+          if (!food.alive) continue;
+          const dist = Math.sqrt((food.x - this.x) ** 2 + (food.y - this.y) ** 2);
+          if (dist < nearestFoodDist) {
+            nearestFoodDist = dist;
+            nearestFood = food;
+          }
+        }
+        
+        // Find nearest predator
+        let nearestPredator: Predator | null = null;
+        let nearestPredDist = Infinity;
+        for (const pred of predators) {
+          const dist = Math.sqrt((pred.x - this.x) ** 2 + (pred.y - this.y) ** 2);
+          if (dist < nearestPredDist) {
+            nearestPredDist = dist;
+            nearestPredator = pred;
+          }
+        }
+        
+        // Calculate desired angle
+        let desiredAngle = this.angle;
+        
+        // Attraction to food
+        if (nearestFood) {
+          const foodAngle = Math.atan2(nearestFood.y - this.y, nearestFood.x - this.x);
+          const foodInfluence = this.genes.foodAttraction / (nearestFoodDist * 0.1 + 1);
+          desiredAngle = this.blendAngles(desiredAngle, foodAngle, foodInfluence * 0.3);
+        }
+        
+        // Fear of predators
+        if (nearestPredator && nearestPredDist < 100) {
+          const predAngle = Math.atan2(nearestPredator.y - this.y, nearestPredator.x - this.x);
+          const fleeAngle = predAngle + Math.PI; // Opposite direction
+          const fearInfluence = this.genes.predatorFear / (nearestPredDist * 0.05 + 1);
+          desiredAngle = this.blendAngles(desiredAngle, fleeAngle, fearInfluence * 0.5);
+        }
+        
+        // Stay in arena
+        const distFromCenter = Math.sqrt((this.x - centerX) ** 2 + (this.y - centerY) ** 2);
+        if (distFromCenter > arenaRadius - 30) {
+          const centerAngle = Math.atan2(centerY - this.y, centerX - this.x);
+          desiredAngle = this.blendAngles(desiredAngle, centerAngle, 0.5);
+        }
+        
+        // Turn towards desired angle
+        const angleDiff = this.normalizeAngle(desiredAngle - this.angle);
+        this.angle += Math.sign(angleDiff) * Math.min(Math.abs(angleDiff), this.genes.turnSpeed);
+        
+        // Move
+        this.x += Math.cos(this.angle) * this.genes.speed;
+        this.y += Math.sin(this.angle) * this.genes.speed;
+        
+        // Keep in bounds
+        const newDist = Math.sqrt((this.x - centerX) ** 2 + (this.y - centerY) ** 2);
+        if (newDist > arenaRadius) {
+          this.x = centerX + (this.x - centerX) * arenaRadius / newDist;
+          this.y = centerY + (this.y - centerY) * arenaRadius / newDist;
+        }
+        
+        // Eat food
+        if (nearestFood && nearestFoodDist < EAT_DISTANCE) {
+          nearestFood.alive = false;
+          this.foodEaten++;
+          // Spawn new food
+          setTimeout(() => spawnFood(), 500);
+        }
+        
+        // Track history
+        this.history.push({ x: this.x, y: this.y });
+        if (this.history.length > 20) this.history.shift();
+      }
+      
+      blendAngles(a1: number, a2: number, t: number): number {
+        const diff = this.normalizeAngle(a2 - a1);
+        return a1 + diff * t;
+      }
+      
+      normalizeAngle(a: number): number {
+        while (a > Math.PI) a -= Math.PI * 2;
+        while (a < -Math.PI) a += Math.PI * 2;
+        return a;
+      }
+      
+      draw(ctx: CanvasRenderingContext2D, currentTime: number) {
+        // Calculate fade progress (0 = alive, 1 = fully faded)
+        let fadeProgress = 0;
+        if (!this.alive) {
+          fadeProgress = Math.min(1, (currentTime - this.deathTime) / 60);
+          if (fadeProgress >= 1) return; // Fully faded
+        }
+        
+        // Lerp from blue (100, 200, 255) to white (255, 255, 255)
+        const r = Math.round(100 + (255 - 100) * fadeProgress);
+        const g = Math.round(200 + (255 - 200) * fadeProgress);
+        const b = 255;
+        const alpha = 1 - fadeProgress * 0.7; // Also fade out slightly
+        
+        // Body only (no trail)
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${0.9 * alpha})`;
+        ctx.fill();
+      }
+      
+      reset(genes?: PreyGenes) {
+        const spawnAngle = Math.random() * Math.PI * 2;
+        const spawnDist = Math.random() * arenaRadius * 0.5;
+        this.x = centerX + Math.cos(spawnAngle) * spawnDist;
+        this.y = centerY + Math.sin(spawnAngle) * spawnDist;
+        this.angle = Math.random() * Math.PI * 2;
+        this.foodEaten = 0;
+        this.alive = true;
+        this.deathTime = 0;
+        this.history = [];
+        if (genes) this.genes = genes;
+      }
+      
+      kill(currentTime: number) {
+        this.alive = false;
+        this.deathTime = currentTime;
+      }
+    }
+    
+    class Predator {
+      x: number;
+      y: number;
+      angle: number;
+      genes: PredatorGenes;
+      kills: number;
+      history: { x: number; y: number }[];
+      
+      constructor(genes?: PredatorGenes) {
+        const spawnAngle = Math.random() * Math.PI * 2;
+        this.x = centerX + Math.cos(spawnAngle) * arenaRadius * 0.8;
+        this.y = centerY + Math.sin(spawnAngle) * arenaRadius * 0.8;
+        this.angle = Math.random() * Math.PI * 2;
+        this.kills = 0;
+        this.history = [];
+        
+        this.genes = genes || {
+          speed: 0.8 + Math.random() * 1.2,
+          preyAttraction: 0.5 + Math.random() * 1.5,
+          turnSpeed: 0.05 + Math.random() * 0.15
+        };
+      }
+      
+      update(preyList: Prey[], currentTime: number) {
+        // Find nearest alive prey
+        let nearestPrey: Prey | null = null;
+        let nearestDist = Infinity;
+        for (const p of preyList) {
+          if (!p.alive) continue;
+          const dist = Math.sqrt((p.x - this.x) ** 2 + (p.y - this.y) ** 2);
+          if (dist < nearestDist) {
+            nearestDist = dist;
+            nearestPrey = p;
+          }
+        }
+        
+        // Turn towards prey
+        if (nearestPrey) {
+          const preyAngle = Math.atan2(nearestPrey.y - this.y, nearestPrey.x - this.x);
+          const angleDiff = this.normalizeAngle(preyAngle - this.angle);
+          const turnAmount = Math.sign(angleDiff) * Math.min(Math.abs(angleDiff), this.genes.turnSpeed);
+          this.angle += turnAmount * this.genes.preyAttraction;
+        }
+        
+        // Move
+        this.x += Math.cos(this.angle) * this.genes.speed;
+        this.y += Math.sin(this.angle) * this.genes.speed;
+        
+        // Keep in bounds
+        const dist = Math.sqrt((this.x - centerX) ** 2 + (this.y - centerY) ** 2);
+        if (dist > arenaRadius) {
+          this.x = centerX + (this.x - centerX) * arenaRadius / dist;
+          this.y = centerY + (this.y - centerY) * arenaRadius / dist;
+        }
+        
+        // Catch prey
+        if (nearestPrey && nearestDist < CATCH_DISTANCE) {
+          nearestPrey.kill(currentTime);
+          this.kills++;
+        }
+        
+        // Track history
+        this.history.push({ x: this.x, y: this.y });
+        if (this.history.length > 30) this.history.shift();
+      }
+      
+      normalizeAngle(a: number): number {
+        while (a > Math.PI) a -= Math.PI * 2;
+        while (a < -Math.PI) a += Math.PI * 2;
+        return a;
+      }
+      
+      draw(ctx: CanvasRenderingContext2D) {
+        // Body only (no trail)
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 7, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 100, 100, 0.9)';
+        ctx.fill();
+      }
+      
+      reset(genes?: PredatorGenes) {
+        const spawnAngle = Math.random() * Math.PI * 2;
+        this.x = centerX + Math.cos(spawnAngle) * arenaRadius * 0.8;
+        this.y = centerY + Math.sin(spawnAngle) * arenaRadius * 0.8;
+        this.angle = Math.random() * Math.PI * 2;
+        this.kills = 0;
+        this.history = [];
+        if (genes) this.genes = genes;
+      }
+    }
+    
+    // Mutation functions
+    function mutatePrey(genes: PreyGenes): PreyGenes {
+      const mutate = (v: number, min: number, max: number) => {
+        const newV = v + (Math.random() - 0.5) * (max - min) * 0.2;
+        return Math.max(min, Math.min(max, newV));
+      };
+      return {
+        speed: mutate(genes.speed, 1.0, 2.5),
+        foodAttraction: mutate(genes.foodAttraction, 0.5, 2.0),
+        predatorFear: mutate(genes.predatorFear, 0.5, 2.0),
+        turnSpeed: mutate(genes.turnSpeed, 0.05, 0.2)
+      };
+    }
+    
+    function mutatePredator(genes: PredatorGenes): PredatorGenes {
+      const mutate = (v: number, min: number, max: number) => {
+        const newV = v + (Math.random() - 0.5) * (max - min) * 0.2;
+        return Math.max(min, Math.min(max, newV));
+      };
+      return {
+        speed: mutate(genes.speed, 0.8, 2.0),
+        preyAttraction: mutate(genes.preyAttraction, 0.5, 2.0),
+        turnSpeed: mutate(genes.turnSpeed, 0.05, 0.2)
+      };
+    }
+    
+    // Initialize populations
+    const prey: Prey[] = [];
+    const predators: Predator[] = [];
+    
+    for (let i = 0; i < PREY_COUNT; i++) {
+      prey.push(new Prey());
+    }
+    for (let i = 0; i < PREDATOR_COUNT; i++) {
+      predators.push(new Predator());
+    }
+    
+    let generation = 1;
+    let generationTime = 0;
+    let globalTime = 0;
+    const GENERATION_LENGTH = 600; // 10 seconds
+    
+    function newGeneration() {
+      // Find best prey (most food eaten)
+      const sortedPrey = [...prey].sort((a, b) => b.foodEaten - a.foodEaten);
+      const bestPrey = sortedPrey[0];
+      
+      // Find best predator (most kills)
+      const sortedPredators = [...predators].sort((a, b) => b.kills - a.kills);
+      const bestPredator = sortedPredators[0];
+      
+      // Reset and evolve prey
+      prey.forEach(p => {
+        p.reset(mutatePrey(bestPrey?.genes || p.genes));
+      });
+      
+      // Reset and evolve predators
+      predators.forEach(p => {
+        p.reset(mutatePredator(bestPredator?.genes || p.genes));
+      });
+      
+      // Reset food
+      foodItems.length = 0;
+      for (let i = 0; i < maxFood; i++) {
+        spawnFood();
+      }
+      
+      generation++;
+      generationTime = 0;
+    }
+    
+    function animate() {
+      if (!ctx) return;
+      
+      // Clear with fade
+      ctx.fillStyle = 'rgba(10, 10, 10, 0.1)';
+      ctx.fillRect(0, 0, size, size);
+      
+      // Draw arena boundary
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, arenaRadius, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(60, 60, 70, 0.5)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      
+      // Draw food
+      foodItems.forEach(food => {
+        if (!food.alive) return;
+        ctx.beginPath();
+        ctx.arc(food.x, food.y, 4, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(100, 255, 150, 0.8)';
+        ctx.fill();
+      });
+      
+      // Update and draw prey
+      prey.forEach(p => {
+        p.update(predators);
+        p.draw(ctx, globalTime);
+      });
+      
+      // Update and draw predators
+      predators.forEach(p => {
+        p.update(prey, globalTime);
+        p.draw(ctx);
+      });
+      
+      // Check for generation end
+      generationTime++;
+      globalTime++;
+      const allPreyDead = prey.every(p => !p.alive);
+      
+      if (allPreyDead || generationTime > GENERATION_LENGTH) {
+        newGeneration();
+      }
+      
+      // Draw UI
+      const aliveCount = prey.filter(p => p.alive).length;
+      ctx.font = '11px monospace';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+      ctx.textAlign = 'left';
+      ctx.fillText(`Gen ${generation} | Prey: ${aliveCount}/${PREY_COUNT}`, 10, size - 10);
+      
+      requestAnimationFrame(animate);
+    }
+    
+    // Initial clear
+    ctx.fillStyle = 'rgb(10, 10, 10)';
+    ctx.fillRect(0, 0, size, size);
+    
+    animate();
+  }
+</script>

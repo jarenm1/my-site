@@ -6,12 +6,12 @@ const { title, href, description } = Astro.props;
   href={href}
   target="_blank"
   rel="noreferrer"
-  class="flex h-32 flex-col justify-between rounded-lg border border-neutral-800 bg-neutral-900/60 px-4 py-3 transition hover:border-neutral-700"
+  class="group flex h-32 flex-col justify-between rounded-2xl border border-neutral-800/80 bg-neutral-900/60 px-4 py-3 shadow-[0_6px_18px_rgba(0,0,0,0.25)] transition duration-200 ease-out hover:border-neutral-700/80 hover:bg-neutral-900/75 hover:shadow-[0_10px_28px_rgba(0,0,0,0.35)]"
 >
   <div class="flex items-center justify-between gap-3">
-    <h3 class="text-lg font-semibold text-white">{title}</h3>
+    <h3 class="text-lg font-semibold text-white underline decoration-blue-300/40 group-hover:decoration-blue-300/80 underline-offset-4">{title}</h3>
 
     {href && <span class="text-xs uppercase tracking-wide text-neutral-400">Link</span>}
   </div>
-  {description && <p class="mt-2 text-sm text-neutral-300">{description}</p>}
+  {description && <p class="mt-2 text-sm text-neutral-300 no-underline">{description}</p>}
 </a>

@@ -1,37 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Serif+4:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
-  /* Tailwind v4 font utilities: use class names like font-aboreto or font-courier-prime */
-  --font-aboreto: "Aboreto", serif;
-  --font-courier-prime: "Courier Prime", monospace;
+  /* Tailwind v4 font utilities: use class names like font-display, font-serif, font-mono */
+  --font-display: "Fraunces", "Source Serif 4", "Times New Roman", serif;
+  --font-serif: "Source Serif 4", "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 h1 {
-  @apply text-4xl leading-tight;
+  @apply text-4xl leading-tight font-display;
 }
 
 h2 {
-  @apply text-3xl leading-snug font-semibold;
+  @apply text-3xl leading-snug font-semibold font-display;
 }
 
 h3 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold font-display;
 }
 
-main article a {
-  @apply text-blue-300  hover:text-blue-400;
+.prose :where(h1, h2, h3, h4) {
+  @apply mt-6 mb-2;
 }
 
-main article img {
-  @apply rounded-lg;
+.prose :where(p) {
+  @apply mt-3;
 }
 
-main article figure {
+.prose a {
+  @apply text-blue-300 underline decoration-blue-300/40 underline-offset-4 transition hover:text-blue-400 hover:decoration-blue-300/80;
+}
+
+.prose img {
+  @apply rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.35)];
+}
+
+:where(a, button, input, textarea, select, summary, [role="button"]):focus-visible {
+  outline: 2px solid rgb(148 163 184 / 0.6);
+  outline-offset: 2px;
+}
+
+.prose figure {
   @apply space-y-3;
 }
 
-main article figcaption {
+.prose figcaption {
   @apply text-sm text-neutral-400 font-mono;
 }
 
@@ -48,26 +63,69 @@ main article figcaption {
   color: #e5e7eb;
 }
 
-.courier-prime-regular {
-  font-family: "Courier Prime", monospace;
-  font-weight: 400;
-  font-style: normal;
+/* Mermaid subgraph labels */
+.mermaid .cluster-label {
+  fill: #737373 !important;
+  color: #737373 !important;
 }
 
-.courier-prime-bold {
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
-  font-style: normal;
+.mermaid .cluster-label span {
+  color: #737373 !important;
+  font-size: 0.8em !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.courier-prime-regular-italic {
-  font-family: "Courier Prime", monospace;
-  font-weight: 400;
-  font-style: italic;
+/* Nav link hover effect - underline slides in from left */
+.nav-link {
+  position: relative;
+  color: rgb(163 163 163); /* neutral-400 */
+  transition: color 0.2s ease;
 }
 
-.courier-prime-bold-italic {
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
-  font-style: italic;
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgb(250 250 250); /* neutral-50 */
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: rgb(250 250 250); /* neutral-50 */
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile nav links - left border accent slides in */
+.mobile-nav-link {
+  position: relative;
+  color: rgb(163 163 163);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.mobile-nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 0;
+  background: rgb(250 250 250);
+  transition: height 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+  color: rgb(250 250 250);
+  padding-left: 1.25rem;
+}
+
+.mobile-nav-link:hover::before {
+  height: 60%;
 }

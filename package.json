@@ -11,8 +11,11 @@
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/ts-plugin": "^1.10.6",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.4",
+    "playwright": "^1.58.1",
+    "rehype-mermaid": "^3.0.0",
     "tailwindcss": "^4.1.17"
   }
 }
