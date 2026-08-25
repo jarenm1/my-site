@@ -1,39 +1,19 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import AboutSection from '../components/AboutSection.astro';
-import HotTakes from '../components/HotTakes.md';
 import PredatorPrey from '../components/PredatorPrey.astro';
-import { getCollection } from 'astro:content';
-
-const notes = await getCollection('digest');
-const latestNotes = notes
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-  .slice(0, 1);
 ---
 
 <MainLayout title="Jaren McHugh">
-  <section class="prose prose-invert prose-neutral max-w-none space-y-4">
-    <AboutSection />
-  </section>
+  <div class="landing">
+    <section class="landing-copy">
+      <AboutSection />
+    </section>
 
-  <section class="mt-8 space-y-1">
-    <h2 class="text-2xl font-display">Latest</h2>
-    <div>
-      {latestNotes.map((note) => (
-        <a href={`/digest/${note.slug}`} class="block py-1 px-1 rounded-lg hover:bg-neutral-900/50 transition group">
-          <div class="flex items-center justify-between">
-            <span class="text-lg text-neutral-200 group-hover:text-white underline decoration-blue-300/40 group-hover:decoration-blue-300/80 underline-offset-4">{note.data.title}</span>
-            <time class="text-sm text-neutral-600 font-mono group-hover:text-neutral-400 no-underline">{new Date(note.data.date.toISOString().split('T')[0] + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
-          </div>
-        </a>
-      ))}
+    <div class="rl-showcase">
+      <PredatorPrey />
     </div>
-    <a href="/digest" class="inline-block text-sm text-neutral-500 hover:text-neutral-300 font-mono mt-2">
-      View all →
-    </a>
-  </section>
 
-  <div class="mt-12 flex justify-center">
-    <PredatorPrey />
+    <section class="posts-space" aria-label="Posts"></section>
   </div>
 </MainLayout>

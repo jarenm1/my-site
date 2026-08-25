@@ -1,7 +1,7 @@
 ---
 ---
 
-<canvas id="predator-prey-canvas" class="mx-auto pointer-events-none opacity-30"></canvas>
+<canvas id="predator-prey-canvas" class="block mx-auto pointer-events-none opacity-30 max-w-full h-auto"></canvas>
 
 <script>
   const canvas = document.getElementById('predator-prey-canvas') as HTMLCanvasElement;
@@ -432,10 +432,10 @@
       
       // Draw UI
       const aliveCount = prey.filter(p => p.alive).length;
-      ctx.font = '11px monospace';
+      ctx.font = '10px "IBM Plex Mono", ui-monospace, monospace';
       ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-      ctx.textAlign = 'left';
-      ctx.fillText(`Gen ${generation} | Prey: ${aliveCount}/${PREY_COUNT}`, 10, size - 10);
+      ctx.textAlign = 'center';
+      ctx.fillText(`GEN ${generation}  |  PREY ${aliveCount}/${PREY_COUNT}`, centerX, size - 8);
       
       requestAnimationFrame(animate);
     }

@@ -1,5 +1,4 @@
 ---
-import Navbar from '../components/Navbar.astro';
 const { title, description } = Astro.props;
 import '../styles/global.css'
 
@@ -12,54 +11,7 @@ import '../styles/global.css'
     <title>{title}</title>
   </head>
   <body class="bg-neutral-950 text-white font-serif">
-    <Navbar />
-    <main class="mx-auto max-w-3xl px-4 pt-6 pb-10 text-lg text-neutral-100 space-y-8">
+    <main>
       <slot />
     </main>
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-      
-      mermaid.initialize({ 
-        theme: 'base',
-        themeVariables: {
-          primaryColor: 'transparent',
-          primaryTextColor: '#f5f5f5',
-          primaryBorderColor: '#525252',
-          secondaryColor: 'transparent',
-          tertiaryColor: 'transparent',
-          lineColor: '#93c5fd',
-          textColor: '#f5f5f5',
-          mainBkg: 'transparent',
-          nodeBorder: '#525252',
-          clusterBkg: 'transparent',
-          clusterBorder: '#404040',
-          edgeLabelBackground: '#0a0a0a',
-          titleColor: '#a3a3a3',
-          nodeTextColor: '#f5f5f5'
-        },
-        flowchart: {
-          nodeSpacing: 30,
-          rankSpacing: 40,
-          padding: 15,
-          curve: 'basis',
-          htmlLabels: true
-        },
-        startOnLoad: false 
-      });
-      
-      // Find all code blocks and check for mermaid content
-      document.querySelectorAll('pre code, pre.astro-code code').forEach(function(code) {
-        const text = code.textContent.trim();
-        if (/^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|erDiagram|gantt|pie|mindmap|subgraph)/.test(text)) {
-          const pre = code.parentElement;
-          const div = document.createElement('div');
-          div.className = 'mermaid';
-          div.textContent = text;
-          pre.parentNode.replaceChild(div, pre);
-        }
-      });
-      
-      await mermaid.run();
-    </script>
-  </body>
 </html>
