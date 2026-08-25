@@ -5,12 +5,15 @@ import PredatorPrey from '../components/PredatorPrey.astro';
 ---
 
 <MainLayout title="Jaren McHugh">
-  <section class="prose prose-invert prose-neutral max-w-none space-y-4">
-    <AboutSection />
-  </section>
+  <div class="landing">
+    <section class="landing-copy">
+      <AboutSection />
+    </section>
 
+    <div class="rl-showcase">
+      <PredatorPrey />
+    </div>
 
-  <div class="mt-12 flex justify-center">
-    <PredatorPrey />
+    <section class="posts-space" aria-label="Posts"></section>
   </div>
 </MainLayout>
