@@ -1,0 +1,18 @@
+0 verbose cli /nix/store/vs03s8q30qg698zzpbszk08j4shb0gsl-nodejs-slim-22.22.2/bin/node /nix/store/6x6v11xjf0psckgqmyhfyhw9bdma0rn6-nodejs-22.22.2/bin/npm
+1 info using npm@10.9.7
+2 info using node@v22.22.2
+3 silly config load:file:/nix/store/9ajfmqyg0y8y60jhxzd5x1zwqd3l39yn-nodejs-slim-22.22.2-npm/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/jaren/my-site/.npmrc
+5 silly config load:file:/home/jaren/.npmrc
+6 silly config load:file:/nix/store/vs03s8q30qg698zzpbszk08j4shb0gsl-nodejs-slim-22.22.2/etc/npmrc
+7 verbose title npm run dev
+8 verbose argv "run" "dev"
+9 verbose logfile logs-max:10 dir:/home/jaren/my-site/.npm-cache/_logs/2026-06-08T20_19_00_702Z-
+10 verbose logfile /home/jaren/my-site/.npm-cache/_logs/2026-06-08T20_19_00_702Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose cwd /home/jaren/my-site
+13 verbose os Linux 6.18.33
+14 verbose node v22.22.2
+15 verbose npm  v10.9.7
+16 verbose exit 127
+17 verbose code 127

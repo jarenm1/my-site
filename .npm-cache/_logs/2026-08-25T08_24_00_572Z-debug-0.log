@@ -1,0 +1,1139 @@
+0 verbose cli /nix/store/vs03s8q30qg698zzpbszk08j4shb0gsl-nodejs-slim-22.22.2/bin/node /nix/store/6x6v11xjf0psckgqmyhfyhw9bdma0rn6-nodejs-22.22.2/bin/npm
+1 info using npm@10.9.7
+2 info using node@v22.22.2
+3 silly config load:file:/nix/store/9ajfmqyg0y8y60jhxzd5x1zwqd3l39yn-nodejs-slim-22.22.2-npm/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/jaren/my-site/.npmrc
+5 silly config load:file:/home/jaren/.npmrc
+6 silly config load:file:/nix/store/vs03s8q30qg698zzpbszk08j4shb0gsl-nodejs-slim-22.22.2/etc/npmrc
+7 verbose title npm uninstall rehype-mermaid
+8 verbose argv "uninstall" "rehype-mermaid"
+9 verbose logfile logs-max:10 dir:/home/jaren/my-site/.npm-cache/_logs/2026-08-25T08_24_00_572Z-
+10 verbose logfile /home/jaren/my-site/.npm-cache/_logs/2026-08-25T08_24_00_572Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+15 silly reify mark retired [
+15 silly reify   '/home/jaren/my-site/node_modules/acorn',
+15 silly reify   '/home/jaren/my-site/node_modules/.bin/acorn'
+15 silly reify ]
+16 silly reify mark retired [ '/home/jaren/my-site/node_modules/acorn-walk' ]
+17 silly reify mark retired [ '/home/jaren/my-site/node_modules/ansi-align' ]
+18 silly reify mark retired [ '/home/jaren/my-site/node_modules/ansi-regex' ]
+19 silly reify mark retired [ '/home/jaren/my-site/node_modules/ansi-styles' ]
+20 silly reify mark retired [ '/home/jaren/my-site/node_modules/anymatch' ]
+21 silly reify mark retired [ '/home/jaren/my-site/node_modules/argparse' ]
+22 silly reify mark retired [ '/home/jaren/my-site/node_modules/aria-query' ]
+23 silly reify mark retired [ '/home/jaren/my-site/node_modules/array-iterate' ]
+24 silly reify mark retired [
+24 silly reify   '/home/jaren/my-site/node_modules/astro',
+24 silly reify   '/home/jaren/my-site/node_modules/.bin/astro'
+24 silly reify ]
+25 silly reify mark retired [ '/home/jaren/my-site/node_modules/axobject-query' ]
+26 silly reify mark retired [ '/home/jaren/my-site/node_modules/bail' ]
+27 silly reify mark retired [ '/home/jaren/my-site/node_modules/base-64' ]
+28 silly reify mark retired [ '/home/jaren/my-site/node_modules/base64-js' ]
+29 silly reify mark retired [ '/home/jaren/my-site/node_modules/blake3-wasm' ]
+30 silly reify mark retired [ '/home/jaren/my-site/node_modules/boolbase' ]
+31 silly reify mark retired [ '/home/jaren/my-site/node_modules/boxen' ]
+32 silly reify mark retired [ '/home/jaren/my-site/node_modules/brotli' ]
+33 silly reify mark retired [ '/home/jaren/my-site/node_modules/camelcase' ]
+34 silly reify mark retired [ '/home/jaren/my-site/node_modules/ccount' ]
+35 silly reify mark retired [ '/home/jaren/my-site/node_modules/chalk' ]
+36 silly reify mark retired [ '/home/jaren/my-site/node_modules/character-entities' ]
+37 silly reify mark retired [ '/home/jaren/my-site/node_modules/character-entities-html4' ]
+38 silly reify mark retired [ '/home/jaren/my-site/node_modules/character-entities-legacy' ]
+39 silly reify mark retired [ '/home/jaren/my-site/node_modules/chevrotain' ]
+40 silly reify mark retired [ '/home/jaren/my-site/node_modules/chevrotain-allstar' ]
+41 silly reify mark retired [ '/home/jaren/my-site/node_modules/chokidar' ]
+42 silly reify mark retired [ '/home/jaren/my-site/node_modules/ci-info' ]
+43 silly reify mark retired [ '/home/jaren/my-site/node_modules/cli-boxes' ]
+44 silly reify mark retired [ '/home/jaren/my-site/node_modules/clone' ]
+45 silly reify mark retired [ '/home/jaren/my-site/node_modules/clsx' ]
+46 silly reify mark retired [ '/home/jaren/my-site/node_modules/color' ]
+47 silly reify mark retired [ '/home/jaren/my-site/node_modules/color-convert' ]
+48 silly reify mark retired [ '/home/jaren/my-site/node_modules/color-name' ]
+49 silly reify mark retired [ '/home/jaren/my-site/node_modules/color-string' ]
+50 silly reify mark retired [ '/home/jaren/my-site/node_modules/comma-separated-tokens' ]
+51 silly reify mark retired [ '/home/jaren/my-site/node_modules/commander' ]
+52 silly reify mark retired [ '/home/jaren/my-site/node_modules/common-ancestor-path' ]
+53 silly reify mark retired [ '/home/jaren/my-site/node_modules/confbox' ]
+54 silly reify mark retired [ '/home/jaren/my-site/node_modules/cookie' ]
+55 silly reify mark retired [ '/home/jaren/my-site/node_modules/cookie-es' ]
+56 silly reify mark retired [ '/home/jaren/my-site/node_modules/cose-base' ]
+57 silly reify mark retired [ '/home/jaren/my-site/node_modules/crossws' ]
+58 silly reify mark retired [ '/home/jaren/my-site/node_modules/css-select' ]
+59 silly reify mark retired [ '/home/jaren/my-site/node_modules/css-tree' ]
+60 silly reify mark retired [ '/home/jaren/my-site/node_modules/css-what' ]
+61 silly reify mark retired [
+61 silly reify   '/home/jaren/my-site/node_modules/cssesc',
+61 silly reify   '/home/jaren/my-site/node_modules/.bin/cssesc'
+61 silly reify ]
+62 silly reify mark retired [ '/home/jaren/my-site/node_modules/csso' ]
+63 silly reify mark retired [ '/home/jaren/my-site/node_modules/cytoscape' ]
+64 silly reify mark retired [ '/home/jaren/my-site/node_modules/cytoscape-cose-bilkent' ]
+65 silly reify mark retired [ '/home/jaren/my-site/node_modules/cytoscape-fcose' ]
+66 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3' ]
+67 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-array' ]
+68 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-axis' ]
+69 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-brush' ]
+70 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-chord' ]
+71 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-color' ]
+72 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-contour' ]
+73 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-delaunay' ]
+74 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-dispatch' ]
+75 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-drag' ]
+76 silly reify mark retired [
+76 silly reify   '/home/jaren/my-site/node_modules/d3-dsv',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/csv2json',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/csv2tsv',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/dsv2dsv',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/dsv2json',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/json2csv',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/json2dsv',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/json2tsv',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/tsv2csv',
+76 silly reify   '/home/jaren/my-site/node_modules/.bin/tsv2json'
+76 silly reify ]
+77 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-ease' ]
+78 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-fetch' ]
+79 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-force' ]
+80 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-format' ]
+81 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-geo' ]
+82 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-hierarchy' ]
+83 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-interpolate' ]
+84 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-path' ]
+85 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-polygon' ]
+86 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-quadtree' ]
+87 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-random' ]
+88 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-sankey' ]
+89 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-scale' ]
+90 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-scale-chromatic' ]
+91 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-selection' ]
+92 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-shape' ]
+93 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-time' ]
+94 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-time-format' ]
+95 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-timer' ]
+96 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-transition' ]
+97 silly reify mark retired [ '/home/jaren/my-site/node_modules/d3-zoom' ]
+98 silly reify mark retired [ '/home/jaren/my-site/node_modules/dagre-d3-es' ]
+99 silly reify mark retired [ '/home/jaren/my-site/node_modules/dayjs' ]
+100 silly reify mark retired [ '/home/jaren/my-site/node_modules/debug' ]
+101 silly reify mark retired [ '/home/jaren/my-site/node_modules/decode-named-character-reference' ]
+102 silly reify mark retired [ '/home/jaren/my-site/node_modules/defu' ]
+103 silly reify mark retired [ '/home/jaren/my-site/node_modules/delaunator' ]
+104 silly reify mark retired [ '/home/jaren/my-site/node_modules/dequal' ]
+105 silly reify mark retired [ '/home/jaren/my-site/node_modules/destr' ]
+106 silly reify mark retired [ '/home/jaren/my-site/node_modules/detect-libc' ]
+107 silly reify mark retired [ '/home/jaren/my-site/node_modules/deterministic-object-hash' ]
+108 silly reify mark retired [ '/home/jaren/my-site/node_modules/devalue' ]
+109 silly reify mark retired [ '/home/jaren/my-site/node_modules/devlop' ]
+110 silly reify mark retired [ '/home/jaren/my-site/node_modules/dfa' ]
+111 silly reify mark retired [ '/home/jaren/my-site/node_modules/diff' ]
+112 silly reify mark retired [ '/home/jaren/my-site/node_modules/dlv' ]
+113 silly reify mark retired [ '/home/jaren/my-site/node_modules/dom-serializer' ]
+114 silly reify mark retired [ '/home/jaren/my-site/node_modules/domelementtype' ]
+115 silly reify mark retired [ '/home/jaren/my-site/node_modules/domhandler' ]
+116 silly reify mark retired [ '/home/jaren/my-site/node_modules/dompurify' ]
+117 silly reify mark retired [ '/home/jaren/my-site/node_modules/domutils' ]
+118 silly reify mark retired [ '/home/jaren/my-site/node_modules/dset' ]
+119 silly reify mark retired [ '/home/jaren/my-site/node_modules/emoji-regex' ]
+120 silly reify mark retired [ '/home/jaren/my-site/node_modules/enhanced-resolve' ]
+121 silly reify mark retired [ '/home/jaren/my-site/node_modules/entities' ]
+122 silly reify mark retired [ '/home/jaren/my-site/node_modules/error-stack-parser-es' ]
+123 silly reify mark retired [ '/home/jaren/my-site/node_modules/es-module-lexer' ]
+124 silly reify mark retired [
+124 silly reify   '/home/jaren/my-site/node_modules/esbuild',
+124 silly reify   '/home/jaren/my-site/node_modules/.bin/esbuild'
+124 silly reify ]
+125 silly reify mark retired [ '/home/jaren/my-site/node_modules/escape-string-regexp' ]
+126 silly reify mark retired [ '/home/jaren/my-site/node_modules/estree-walker' ]
+127 silly reify mark retired [ '/home/jaren/my-site/node_modules/eventemitter3' ]
+128 silly reify mark retired [ '/home/jaren/my-site/node_modules/exit-hook' ]
+129 silly reify mark retired [ '/home/jaren/my-site/node_modules/extend' ]
+130 silly reify mark retired [ '/home/jaren/my-site/node_modules/fast-deep-equal' ]
+131 silly reify mark retired [ '/home/jaren/my-site/node_modules/fdir' ]
+132 silly reify mark retired [ '/home/jaren/my-site/node_modules/flattie' ]
+133 silly reify mark retired [ '/home/jaren/my-site/node_modules/fontace' ]
+134 silly reify mark retired [ '/home/jaren/my-site/node_modules/fontkit' ]
+135 silly reify mark retired [ '/home/jaren/my-site/node_modules/get-east-asian-width' ]
+136 silly reify mark retired [ '/home/jaren/my-site/node_modules/github-slugger' ]
+137 silly reify mark retired [ '/home/jaren/my-site/node_modules/glob-to-regexp' ]
+138 silly reify mark retired [ '/home/jaren/my-site/node_modules/graceful-fs' ]
+139 silly reify mark retired [ '/home/jaren/my-site/node_modules/h3' ]
+140 silly reify mark retired [ '/home/jaren/my-site/node_modules/hachure-fill' ]
+141 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-from-dom' ]
+142 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-from-html' ]
+143 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-from-html-isomorphic' ]
+144 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-from-parse5' ]
+145 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-is-element' ]
+146 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-parse-selector' ]
+147 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-raw' ]
+148 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-to-html' ]
+149 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-to-parse5' ]
+150 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-to-text' ]
+151 silly reify mark retired [ '/home/jaren/my-site/node_modules/hast-util-whitespace' ]
+152 silly reify mark retired [ '/home/jaren/my-site/node_modules/hastscript' ]
+153 silly reify mark retired [ '/home/jaren/my-site/node_modules/html-escaper' ]
+154 silly reify mark retired [ '/home/jaren/my-site/node_modules/html-void-elements' ]
+155 silly reify mark retired [ '/home/jaren/my-site/node_modules/http-cache-semantics' ]
+156 silly reify mark retired [ '/home/jaren/my-site/node_modules/iconv-lite' ]
+157 silly reify mark retired [ '/home/jaren/my-site/node_modules/import-meta-resolve' ]
+158 silly reify mark retired [ '/home/jaren/my-site/node_modules/internmap' ]
+159 silly reify mark retired [ '/home/jaren/my-site/node_modules/iron-webcrypto' ]
+160 silly reify mark retired [ '/home/jaren/my-site/node_modules/is-arrayish' ]
+161 silly reify mark retired [
+161 silly reify   '/home/jaren/my-site/node_modules/is-docker',
+161 silly reify   '/home/jaren/my-site/node_modules/.bin/is-docker'
+161 silly reify ]
+162 silly reify mark retired [ '/home/jaren/my-site/node_modules/is-fullwidth-code-point' ]
+163 silly reify mark retired [
+163 silly reify   '/home/jaren/my-site/node_modules/is-inside-container',
+163 silly reify   '/home/jaren/my-site/node_modules/.bin/is-inside-container'
+163 silly reify ]
+164 silly reify mark retired [ '/home/jaren/my-site/node_modules/is-plain-obj' ]
+165 silly reify mark retired [ '/home/jaren/my-site/node_modules/is-wsl' ]
+166 silly reify mark retired [
+166 silly reify   '/home/jaren/my-site/node_modules/jiti',
+166 silly reify   '/home/jaren/my-site/node_modules/.bin/jiti'
+166 silly reify ]
+167 silly reify mark retired [
+167 silly reify   '/home/jaren/my-site/node_modules/js-yaml',
+167 silly reify   '/home/jaren/my-site/node_modules/.bin/js-yaml'
+167 silly reify ]
+168 silly reify mark retired [
+168 silly reify   '/home/jaren/my-site/node_modules/katex',
+168 silly reify   '/home/jaren/my-site/node_modules/.bin/katex'
+168 silly reify ]
+169 silly reify mark retired [ '/home/jaren/my-site/node_modules/khroma' ]
+170 silly reify mark retired [ '/home/jaren/my-site/node_modules/kleur' ]
+171 silly reify mark retired [ '/home/jaren/my-site/node_modules/langium' ]
+172 silly reify mark retired [ '/home/jaren/my-site/node_modules/layout-base' ]
+173 silly reify mark retired [ '/home/jaren/my-site/node_modules/lightningcss' ]
+174 silly reify mark retired [ '/home/jaren/my-site/node_modules/lightningcss-linux-x64-gnu' ]
+175 silly reify mark retired [ '/home/jaren/my-site/node_modules/lightningcss-linux-x64-musl' ]
+176 silly reify mark retired [ '/home/jaren/my-site/node_modules/lodash-es' ]
+177 silly reify mark retired [ '/home/jaren/my-site/node_modules/longest-streak' ]
+178 silly reify mark retired [ '/home/jaren/my-site/node_modules/lru-cache' ]
+179 silly reify mark retired [ '/home/jaren/my-site/node_modules/magic-string' ]
+180 silly reify mark retired [ '/home/jaren/my-site/node_modules/magicast' ]
+181 silly reify mark retired [ '/home/jaren/my-site/node_modules/markdown-table' ]
+182 silly reify mark retired [
+182 silly reify   '/home/jaren/my-site/node_modules/marked',
+182 silly reify   '/home/jaren/my-site/node_modules/.bin/marked'
+182 silly reify ]
+183 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-definitions' ]
+184 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-find-and-replace' ]
+185 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-from-markdown' ]
+186 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-gfm' ]
+187 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-gfm-autolink-literal' ]
+188 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-gfm-footnote' ]
+189 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-gfm-strikethrough' ]
+190 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-gfm-table' ]
+191 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-gfm-task-list-item' ]
+192 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-phrasing' ]
+193 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-to-hast' ]
+194 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-to-markdown' ]
+195 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdast-util-to-string' ]
+196 silly reify mark retired [ '/home/jaren/my-site/node_modules/mdn-data' ]
+197 silly reify mark retired [ '/home/jaren/my-site/node_modules/mermaid' ]
+198 silly reify mark retired [ '/home/jaren/my-site/node_modules/mermaid-isomorphic' ]
+199 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark' ]
+200 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-core-commonmark' ]
+201 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-extension-gfm' ]
+202 silly reify mark retired [
+202 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-autolink-literal'
+202 silly reify ]
+203 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-extension-gfm-footnote' ]
+204 silly reify mark retired [
+204 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-strikethrough'
+204 silly reify ]
+205 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-extension-gfm-table' ]
+206 silly reify mark retired [
+206 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-tagfilter'
+206 silly reify ]
+207 silly reify mark retired [
+207 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-task-list-item'
+207 silly reify ]
+208 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-factory-destination' ]
+209 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-factory-label' ]
+210 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-factory-space' ]
+211 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-factory-title' ]
+212 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-factory-whitespace' ]
+213 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-character' ]
+214 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-chunked' ]
+215 silly reify mark retired [
+215 silly reify   '/home/jaren/my-site/node_modules/micromark-util-classify-character'
+215 silly reify ]
+216 silly reify mark retired [
+216 silly reify   '/home/jaren/my-site/node_modules/micromark-util-combine-extensions'
+216 silly reify ]
+217 silly reify mark retired [
+217 silly reify   '/home/jaren/my-site/node_modules/micromark-util-decode-numeric-character-reference'
+217 silly reify ]
+218 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-decode-string' ]
+219 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-encode' ]
+220 silly reify mark retired [
+220 silly reify   '/home/jaren/my-site/node_modules/micromark-util-normalize-identifier'
+220 silly reify ]
+221 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-resolve-all' ]
+222 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-html-tag-name' ]
+223 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-sanitize-uri' ]
+224 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-symbol' ]
+225 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-subtokenize' ]
+226 silly reify mark retired [ '/home/jaren/my-site/node_modules/micromark-util-types' ]
+227 silly reify mark retired [
+227 silly reify   '/home/jaren/my-site/node_modules/mime',
+227 silly reify   '/home/jaren/my-site/node_modules/.bin/mime'
+227 silly reify ]
+228 silly reify mark retired [
+228 silly reify   '/home/jaren/my-site/node_modules/miniflare',
+228 silly reify   '/home/jaren/my-site/node_modules/.bin/miniflare'
+228 silly reify ]
+229 silly reify mark retired [
+229 silly reify   '/home/jaren/my-site/node_modules/mini-svg-data-uri',
+229 silly reify   '/home/jaren/my-site/node_modules/.bin/mini-svg-data-uri'
+229 silly reify ]
+230 silly reify mark retired [ '/home/jaren/my-site/node_modules/mlly' ]
+231 silly reify mark retired [ '/home/jaren/my-site/node_modules/mrmime' ]
+232 silly reify mark retired [ '/home/jaren/my-site/node_modules/ms' ]
+233 silly reify mark retired [
+233 silly reify   '/home/jaren/my-site/node_modules/nanoid',
+233 silly reify   '/home/jaren/my-site/node_modules/.bin/nanoid'
+233 silly reify ]
+234 silly reify mark retired [ '/home/jaren/my-site/node_modules/neotraverse' ]
+235 silly reify mark retired [ '/home/jaren/my-site/node_modules/node-fetch-native' ]
+236 silly reify mark retired [ '/home/jaren/my-site/node_modules/nlcst-to-string' ]
+237 silly reify mark retired [ '/home/jaren/my-site/node_modules/node-mock-http' ]
+238 silly reify mark retired [ '/home/jaren/my-site/node_modules/normalize-path' ]
+239 silly reify mark retired [ '/home/jaren/my-site/node_modules/nth-check' ]
+240 silly reify mark retired [ '/home/jaren/my-site/node_modules/ofetch' ]
+241 silly reify mark retired [ '/home/jaren/my-site/node_modules/ohash' ]
+242 silly reify mark retired [ '/home/jaren/my-site/node_modules/oniguruma-parser' ]
+243 silly reify mark retired [ '/home/jaren/my-site/node_modules/oniguruma-to-es' ]
+244 silly reify mark retired [ '/home/jaren/my-site/node_modules/p-limit' ]
+245 silly reify mark retired [ '/home/jaren/my-site/node_modules/p-queue' ]
+246 silly reify mark retired [ '/home/jaren/my-site/node_modules/parse-latin' ]
+247 silly reify mark retired [ '/home/jaren/my-site/node_modules/parse5' ]
+248 silly reify mark retired [ '/home/jaren/my-site/node_modules/path-browserify' ]
+249 silly reify mark retired [ '/home/jaren/my-site/node_modules/path-data-parser' ]
+250 silly reify mark retired [ '/home/jaren/my-site/node_modules/path-to-regexp' ]
+251 silly reify mark retired [ '/home/jaren/my-site/node_modules/pathe' ]
+252 silly reify mark retired [ '/home/jaren/my-site/node_modules/piccolore' ]
+253 silly reify mark retired [ '/home/jaren/my-site/node_modules/picocolors' ]
+254 silly reify mark retired [ '/home/jaren/my-site/node_modules/package-manager-detector' ]
+255 silly reify mark retired [ '/home/jaren/my-site/node_modules/p-timeout' ]
+256 silly reify mark retired [ '/home/jaren/my-site/node_modules/picomatch' ]
+257 silly reify mark retired [ '/home/jaren/my-site/node_modules/pkg-types' ]
+258 silly reify mark retired [
+258 silly reify   '/home/jaren/my-site/node_modules/playwright-core',
+258 silly reify   '/home/jaren/my-site/node_modules/.bin/playwright-core'
+258 silly reify ]
+259 silly reify mark retired [ '/home/jaren/my-site/node_modules/points-on-curve' ]
+260 silly reify mark retired [
+260 silly reify   '/home/jaren/my-site/node_modules/playwright',
+260 silly reify   '/home/jaren/my-site/node_modules/.bin/playwright'
+260 silly reify ]
+261 silly reify mark retired [ '/home/jaren/my-site/node_modules/points-on-path' ]
+262 silly reify mark retired [ '/home/jaren/my-site/node_modules/postcss' ]
+263 silly reify mark retired [ '/home/jaren/my-site/node_modules/postcss-selector-parser' ]
+264 silly reify mark retired [ '/home/jaren/my-site/node_modules/prismjs' ]
+265 silly reify mark retired [ '/home/jaren/my-site/node_modules/pako' ]
+266 silly reify mark retired [ '/home/jaren/my-site/node_modules/prompts' ]
+267 silly reify mark retired [ '/home/jaren/my-site/node_modules/property-information' ]
+268 silly reify mark retired [ '/home/jaren/my-site/node_modules/radix3' ]
+269 silly reify mark retired [ '/home/jaren/my-site/node_modules/regex' ]
+270 silly reify mark retired [ '/home/jaren/my-site/node_modules/readdirp' ]
+271 silly reify mark retired [ '/home/jaren/my-site/node_modules/regex-recursion' ]
+272 silly reify mark retired [ '/home/jaren/my-site/node_modules/regex-utilities' ]
+273 silly reify mark retired [ '/home/jaren/my-site/node_modules/rehype' ]
+274 silly reify mark retired [ '/home/jaren/my-site/node_modules/rehype-mermaid' ]
+275 silly reify mark retired [ '/home/jaren/my-site/node_modules/rehype-parse' ]
+276 silly reify mark retired [ '/home/jaren/my-site/node_modules/rehype-raw' ]
+277 silly reify mark retired [ '/home/jaren/my-site/node_modules/rehype-stringify' ]
+278 silly reify mark retired [ '/home/jaren/my-site/node_modules/remark-gfm' ]
+279 silly reify mark retired [ '/home/jaren/my-site/node_modules/remark-parse' ]
+280 silly reify mark retired [ '/home/jaren/my-site/node_modules/remark-rehype' ]
+281 silly reify mark retired [ '/home/jaren/my-site/node_modules/remark-smartypants' ]
+282 silly reify mark retired [ '/home/jaren/my-site/node_modules/remark-stringify' ]
+283 silly reify mark retired [ '/home/jaren/my-site/node_modules/restructure' ]
+284 silly reify mark retired [ '/home/jaren/my-site/node_modules/retext' ]
+285 silly reify mark retired [ '/home/jaren/my-site/node_modules/retext-latin' ]
+286 silly reify mark retired [ '/home/jaren/my-site/node_modules/retext-stringify' ]
+287 silly reify mark retired [ '/home/jaren/my-site/node_modules/robust-predicates' ]
+288 silly reify mark retired [ '/home/jaren/my-site/node_modules/retext-smartypants' ]
+289 silly reify mark retired [ '/home/jaren/my-site/node_modules/rw' ]
+290 silly reify mark retired [
+290 silly reify   '/home/jaren/my-site/node_modules/rollup',
+290 silly reify   '/home/jaren/my-site/node_modules/.bin/rollup'
+290 silly reify ]
+291 silly reify mark retired [ '/home/jaren/my-site/node_modules/roughjs' ]
+292 silly reify mark retired [ '/home/jaren/my-site/node_modules/safer-buffer' ]
+293 silly reify mark retired [ '/home/jaren/my-site/node_modules/sax' ]
+294 silly reify mark retired [
+294 silly reify   '/home/jaren/my-site/node_modules/semver',
+294 silly reify   '/home/jaren/my-site/node_modules/.bin/semver'
+294 silly reify ]
+295 silly reify mark retired [ '/home/jaren/my-site/node_modules/sharp' ]
+296 silly reify mark retired [ '/home/jaren/my-site/node_modules/shiki' ]
+297 silly reify mark retired [ '/home/jaren/my-site/node_modules/simple-swizzle' ]
+298 silly reify mark retired [ '/home/jaren/my-site/node_modules/sisteransi' ]
+299 silly reify mark retired [ '/home/jaren/my-site/node_modules/smol-toml' ]
+300 silly reify mark retired [ '/home/jaren/my-site/node_modules/source-map-js' ]
+301 silly reify mark retired [ '/home/jaren/my-site/node_modules/space-separated-tokens' ]
+302 silly reify mark retired [ '/home/jaren/my-site/node_modules/stoppable' ]
+303 silly reify mark retired [ '/home/jaren/my-site/node_modules/string-width' ]
+304 silly reify mark retired [ '/home/jaren/my-site/node_modules/stringify-entities' ]
+305 silly reify mark retired [ '/home/jaren/my-site/node_modules/strip-ansi' ]
+306 silly reify mark retired [ '/home/jaren/my-site/node_modules/stylis' ]
+307 silly reify mark retired [ '/home/jaren/my-site/node_modules/supports-color' ]
+308 silly reify mark retired [
+308 silly reify   '/home/jaren/my-site/node_modules/svgo',
+308 silly reify   '/home/jaren/my-site/node_modules/.bin/svgo'
+308 silly reify ]
+309 silly reify mark retired [ '/home/jaren/my-site/node_modules/tailwindcss' ]
+310 silly reify mark retired [ '/home/jaren/my-site/node_modules/tapable' ]
+311 silly reify mark retired [ '/home/jaren/my-site/node_modules/tiny-inflate' ]
+312 silly reify mark retired [ '/home/jaren/my-site/node_modules/tinyglobby' ]
+313 silly reify mark retired [ '/home/jaren/my-site/node_modules/tinyexec' ]
+314 silly reify mark retired [ '/home/jaren/my-site/node_modules/trim-lines' ]
+315 silly reify mark retired [ '/home/jaren/my-site/node_modules/trough' ]
+316 silly reify mark retired [ '/home/jaren/my-site/node_modules/ts-dedent' ]
+317 silly reify mark retired [
+317 silly reify   '/home/jaren/my-site/node_modules/tsconfck',
+317 silly reify   '/home/jaren/my-site/node_modules/.bin/tsconfck'
+317 silly reify ]
+318 silly reify mark retired [ '/home/jaren/my-site/node_modules/tslib' ]
+319 silly reify mark retired [ '/home/jaren/my-site/node_modules/type-fest' ]
+320 silly reify mark retired [
+320 silly reify   '/home/jaren/my-site/node_modules/typescript',
+320 silly reify   '/home/jaren/my-site/node_modules/.bin/tsc',
+320 silly reify   '/home/jaren/my-site/node_modules/.bin/tsserver'
+320 silly reify ]
+321 silly reify mark retired [ '/home/jaren/my-site/node_modules/ufo' ]
+322 silly reify mark retired [ '/home/jaren/my-site/node_modules/ultrahtml' ]
+323 silly reify mark retired [ '/home/jaren/my-site/node_modules/uncrypto' ]
+324 silly reify mark retired [ '/home/jaren/my-site/node_modules/undici' ]
+325 silly reify mark retired [ '/home/jaren/my-site/node_modules/undici-types' ]
+326 silly reify mark retired [ '/home/jaren/my-site/node_modules/unenv' ]
+327 silly reify mark retired [ '/home/jaren/my-site/node_modules/unicode-properties' ]
+328 silly reify mark retired [ '/home/jaren/my-site/node_modules/unified' ]
+329 silly reify mark retired [ '/home/jaren/my-site/node_modules/unicode-trie' ]
+330 silly reify mark retired [ '/home/jaren/my-site/node_modules/unifont' ]
+331 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-find-after' ]
+332 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-is' ]
+333 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-modify-children' ]
+334 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-position' ]
+335 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-remove-position' ]
+336 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-stringify-position' ]
+337 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-visit' ]
+338 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-visit-children' ]
+339 silly reify mark retired [ '/home/jaren/my-site/node_modules/unist-util-visit-parents' ]
+340 silly reify mark retired [ '/home/jaren/my-site/node_modules/unstorage' ]
+341 silly reify mark retired [ '/home/jaren/my-site/node_modules/util-deprecate' ]
+342 silly reify mark retired [
+342 silly reify   '/home/jaren/my-site/node_modules/uuid',
+342 silly reify   '/home/jaren/my-site/node_modules/.bin/uuid'
+342 silly reify ]
+343 silly reify mark retired [ '/home/jaren/my-site/node_modules/vfile-location' ]
+344 silly reify mark retired [ '/home/jaren/my-site/node_modules/vfile' ]
+345 silly reify mark retired [ '/home/jaren/my-site/node_modules/vfile-message' ]
+346 silly reify mark retired [
+346 silly reify   '/home/jaren/my-site/node_modules/vite',
+346 silly reify   '/home/jaren/my-site/node_modules/.bin/vite'
+346 silly reify ]
+347 silly reify mark retired [ '/home/jaren/my-site/node_modules/vscode-jsonrpc' ]
+348 silly reify mark retired [ '/home/jaren/my-site/node_modules/vscode-languageserver-protocol' ]
+349 silly reify mark retired [
+349 silly reify   '/home/jaren/my-site/node_modules/vscode-languageserver',
+349 silly reify   '/home/jaren/my-site/node_modules/.bin/installServerIntoExtension'
+349 silly reify ]
+350 silly reify mark retired [ '/home/jaren/my-site/node_modules/vitefu' ]
+351 silly reify mark retired [ '/home/jaren/my-site/node_modules/vscode-languageserver-types' ]
+352 silly reify mark retired [ '/home/jaren/my-site/node_modules/vscode-uri' ]
+353 silly reify mark retired [
+353 silly reify   '/home/jaren/my-site/node_modules/vscode-languageserver-textdocument'
+353 silly reify ]
+354 silly reify mark retired [ '/home/jaren/my-site/node_modules/web-namespaces' ]
+355 silly reify mark retired [ '/home/jaren/my-site/node_modules/widest-line' ]
+356 silly reify mark retired [ '/home/jaren/my-site/node_modules/which-pm-runs' ]
+357 silly reify mark retired [
+357 silly reify   '/home/jaren/my-site/node_modules/wrangler',
+357 silly reify   '/home/jaren/my-site/node_modules/.bin/wrangler',
+357 silly reify   '/home/jaren/my-site/node_modules/.bin/wrangler2'
+357 silly reify ]
+358 silly reify mark retired [
+358 silly reify   '/home/jaren/my-site/node_modules/workerd',
+358 silly reify   '/home/jaren/my-site/node_modules/.bin/workerd'
+358 silly reify ]
+359 silly reify mark retired [ '/home/jaren/my-site/node_modules/wrap-ansi' ]
+360 silly reify mark retired [ '/home/jaren/my-site/node_modules/ws' ]
+361 silly reify mark retired [
+361 silly reify   '/home/jaren/my-site/node_modules/yaml',
+361 silly reify   '/home/jaren/my-site/node_modules/.bin/yaml'
+361 silly reify ]
+362 silly reify mark retired [ '/home/jaren/my-site/node_modules/xxhash-wasm' ]
+363 silly reify mark retired [ '/home/jaren/my-site/node_modules/yargs-parser' ]
+364 silly reify mark retired [ '/home/jaren/my-site/node_modules/yocto-queue' ]
+365 silly reify mark retired [ '/home/jaren/my-site/node_modules/yocto-spinner' ]
+366 silly reify mark retired [ '/home/jaren/my-site/node_modules/yoctocolors' ]
+367 silly reify mark retired [ '/home/jaren/my-site/node_modules/youch' ]
+368 silly reify mark retired [ '/home/jaren/my-site/node_modules/youch-core' ]
+369 silly reify mark retired [ '/home/jaren/my-site/node_modules/zod' ]
+370 silly reify mark retired [ '/home/jaren/my-site/node_modules/zwitch' ]
+371 silly reify mark retired [ '/home/jaren/my-site/node_modules/zod-to-ts' ]
+372 silly reify mark retired [ '/home/jaren/my-site/node_modules/zod-to-json-schema' ]
+373 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/compiler' ]
+374 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/cloudflare' ]
+375 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/markdown-remark' ]
+376 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/internal-helpers' ]
+377 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/prism' ]
+378 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/ts-plugin' ]
+379 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/telemetry' ]
+380 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/underscore-redirects' ]
+381 silly reify mark retired [ '/home/jaren/my-site/node_modules/@astrojs/yaml2ts' ]
+382 silly reify mark retired [ '/home/jaren/my-site/node_modules/@babel/helper-string-parser' ]
+383 silly reify mark retired [
+383 silly reify   '/home/jaren/my-site/node_modules/@babel/parser',
+383 silly reify   '/home/jaren/my-site/node_modules/.bin/parser'
+383 silly reify ]
+384 silly reify mark retired [ '/home/jaren/my-site/node_modules/@babel/types' ]
+385 silly reify mark retired [
+385 silly reify   '/home/jaren/my-site/node_modules/@babel/helper-validator-identifier'
+385 silly reify ]
+386 silly reify mark retired [ '/home/jaren/my-site/node_modules/@braintree/sanitize-url' ]
+387 silly reify mark retired [ '/home/jaren/my-site/node_modules/@capsizecss/unpack' ]
+388 silly reify mark retired [ '/home/jaren/my-site/node_modules/@chevrotain/cst-dts-gen' ]
+389 silly reify mark retired [ '/home/jaren/my-site/node_modules/@chevrotain/gast' ]
+390 silly reify mark retired [ '/home/jaren/my-site/node_modules/@chevrotain/regexp-to-ast' ]
+391 silly reify mark retired [ '/home/jaren/my-site/node_modules/@chevrotain/types' ]
+392 silly reify mark retired [ '/home/jaren/my-site/node_modules/@chevrotain/utils' ]
+393 silly reify mark retired [ '/home/jaren/my-site/node_modules/@cloudflare/kv-asset-handler' ]
+394 silly reify mark retired [ '/home/jaren/my-site/node_modules/@cloudflare/workerd-linux-64' ]
+395 silly reify mark retired [ '/home/jaren/my-site/node_modules/@cloudflare/unenv-preset' ]
+396 silly reify mark retired [ '/home/jaren/my-site/node_modules/@cloudflare/workers-types' ]
+397 silly reify mark retired [ '/home/jaren/my-site/node_modules/@cspotcode/source-map-support' ]
+398 silly reify mark retired [ '/home/jaren/my-site/node_modules/@esbuild/linux-x64' ]
+399 silly reify mark retired [ '/home/jaren/my-site/node_modules/@fortawesome/fontawesome-free' ]
+400 silly reify mark retired [ '/home/jaren/my-site/node_modules/@emnapi/runtime' ]
+401 silly reify mark retired [ '/home/jaren/my-site/node_modules/@iconify/types' ]
+402 silly reify mark retired [ '/home/jaren/my-site/node_modules/@iconify/utils' ]
+403 silly reify mark retired [ '/home/jaren/my-site/node_modules/@img/sharp-libvips-linux-x64' ]
+404 silly reify mark retired [ '/home/jaren/my-site/node_modules/@img/sharp-libvips-linuxmusl-x64' ]
+405 silly reify mark retired [ '/home/jaren/my-site/node_modules/@img/colour' ]
+406 silly reify mark retired [ '/home/jaren/my-site/node_modules/@img/sharp-linux-x64' ]
+407 silly reify mark retired [ '/home/jaren/my-site/node_modules/@img/sharp-linuxmusl-x64' ]
+408 silly reify mark retired [ '/home/jaren/my-site/node_modules/@jridgewell/gen-mapping' ]
+409 silly reify mark retired [ '/home/jaren/my-site/node_modules/@jridgewell/resolve-uri' ]
+410 silly reify mark retired [ '/home/jaren/my-site/node_modules/@jridgewell/remapping' ]
+411 silly reify mark retired [ '/home/jaren/my-site/node_modules/@jridgewell/sourcemap-codec' ]
+412 silly reify mark retired [ '/home/jaren/my-site/node_modules/@jridgewell/trace-mapping' ]
+413 silly reify mark retired [ '/home/jaren/my-site/node_modules/@mermaid-js/parser' ]
+414 silly reify mark retired [ '/home/jaren/my-site/node_modules/@oslojs/encoding' ]
+415 silly reify mark retired [ '/home/jaren/my-site/node_modules/@poppinss/dumper' ]
+416 silly reify mark retired [ '/home/jaren/my-site/node_modules/@poppinss/colors' ]
+417 silly reify mark retired [ '/home/jaren/my-site/node_modules/@poppinss/exception' ]
+418 silly reify mark retired [ '/home/jaren/my-site/node_modules/@rollup/pluginutils' ]
+419 silly reify mark retired [ '/home/jaren/my-site/node_modules/@rollup/rollup-linux-x64-gnu' ]
+420 silly reify mark retired [ '/home/jaren/my-site/node_modules/@rollup/rollup-linux-x64-musl' ]
+421 silly reify mark retired [ '/home/jaren/my-site/node_modules/@shikijs/engine-javascript' ]
+422 silly reify mark retired [ '/home/jaren/my-site/node_modules/@shikijs/core' ]
+423 silly reify mark retired [ '/home/jaren/my-site/node_modules/@shikijs/engine-oniguruma' ]
+424 silly reify mark retired [ '/home/jaren/my-site/node_modules/@shikijs/langs' ]
+425 silly reify mark retired [ '/home/jaren/my-site/node_modules/@shikijs/types' ]
+426 silly reify mark retired [ '/home/jaren/my-site/node_modules/@shikijs/themes' ]
+427 silly reify mark retired [ '/home/jaren/my-site/node_modules/@shikijs/vscode-textmate' ]
+428 silly reify mark retired [ '/home/jaren/my-site/node_modules/@sindresorhus/is' ]
+429 silly reify mark retired [ '/home/jaren/my-site/node_modules/@speed-highlight/core' ]
+430 silly reify mark retired [ '/home/jaren/my-site/node_modules/@tailwindcss/node' ]
+431 silly reify mark retired [ '/home/jaren/my-site/node_modules/@swc/helpers' ]
+432 silly reify mark retired [ '/home/jaren/my-site/node_modules/@tailwindcss/oxide-linux-x64-gnu' ]
+433 silly reify mark retired [
+433 silly reify   '/home/jaren/my-site/node_modules/@tailwindcss/oxide-linux-x64-musl'
+433 silly reify ]
+434 silly reify mark retired [ '/home/jaren/my-site/node_modules/@tailwindcss/typography' ]
+435 silly reify mark retired [ '/home/jaren/my-site/node_modules/@tailwindcss/vite' ]
+436 silly reify mark retired [ '/home/jaren/my-site/node_modules/@tailwindcss/oxide' ]
+437 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3' ]
+438 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-array' ]
+439 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-axis' ]
+440 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-chord' ]
+441 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-brush' ]
+442 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-color' ]
+443 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-contour' ]
+444 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-delaunay' ]
+445 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-dispatch' ]
+446 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-drag' ]
+447 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-dsv' ]
+448 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-ease' ]
+449 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-fetch' ]
+450 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-force' ]
+451 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-format' ]
+452 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-geo' ]
+453 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-hierarchy' ]
+454 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-interpolate' ]
+455 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-path' ]
+456 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-polygon' ]
+457 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-quadtree' ]
+458 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-random' ]
+459 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-scale-chromatic' ]
+460 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-scale' ]
+461 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-selection' ]
+462 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-shape' ]
+463 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-time' ]
+464 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-timer' ]
+465 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-time-format' ]
+466 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-transition' ]
+467 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/d3-zoom' ]
+468 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/debug' ]
+469 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/estree' ]
+470 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/fontkit' ]
+471 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/geojson' ]
+472 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/hast' ]
+473 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/mdast' ]
+474 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/ms' ]
+475 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/nlcst' ]
+476 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/node' ]
+477 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/trusted-types' ]
+478 silly reify mark retired [ '/home/jaren/my-site/node_modules/@types/unist' ]
+479 silly reify mark retired [ '/home/jaren/my-site/node_modules/@ungap/structured-clone' ]
+480 silly reify mark retired [ '/home/jaren/my-site/node_modules/@volar/language-core' ]
+481 silly reify mark retired [ '/home/jaren/my-site/node_modules/@volar/source-map' ]
+482 silly reify mark retired [ '/home/jaren/my-site/node_modules/@volar/typescript' ]
+483 silly reify mark retired [ '/home/jaren/my-site/node_modules/@antfu/install-pkg' ]
+484 silly reify moves {
+484 silly reify   '/home/jaren/my-site/node_modules/acorn': '/home/jaren/my-site/node_modules/.acorn-5DO1VbNv',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/acorn': '/home/jaren/my-site/node_modules/.bin/.acorn-N2lbwFww',
+484 silly reify   '/home/jaren/my-site/node_modules/acorn-walk': '/home/jaren/my-site/node_modules/.acorn-walk-US4zvTnR',
+484 silly reify   '/home/jaren/my-site/node_modules/ansi-align': '/home/jaren/my-site/node_modules/.ansi-align-8gN9cEBk',
+484 silly reify   '/home/jaren/my-site/node_modules/ansi-regex': '/home/jaren/my-site/node_modules/.ansi-regex-nDEIUNlW',
+484 silly reify   '/home/jaren/my-site/node_modules/ansi-styles': '/home/jaren/my-site/node_modules/.ansi-styles-46DJOnGj',
+484 silly reify   '/home/jaren/my-site/node_modules/anymatch': '/home/jaren/my-site/node_modules/.anymatch-fjSBLeTM',
+484 silly reify   '/home/jaren/my-site/node_modules/argparse': '/home/jaren/my-site/node_modules/.argparse-tPHBEzev',
+484 silly reify   '/home/jaren/my-site/node_modules/aria-query': '/home/jaren/my-site/node_modules/.aria-query-2bdXyziB',
+484 silly reify   '/home/jaren/my-site/node_modules/array-iterate': '/home/jaren/my-site/node_modules/.array-iterate-Lw6Q6H4e',
+484 silly reify   '/home/jaren/my-site/node_modules/astro': '/home/jaren/my-site/node_modules/.astro-WsLxSy3n',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/astro': '/home/jaren/my-site/node_modules/.bin/.astro-Jak9V5QC',
+484 silly reify   '/home/jaren/my-site/node_modules/axobject-query': '/home/jaren/my-site/node_modules/.axobject-query-t3yfSELb',
+484 silly reify   '/home/jaren/my-site/node_modules/bail': '/home/jaren/my-site/node_modules/.bail-rCnYFpvc',
+484 silly reify   '/home/jaren/my-site/node_modules/base-64': '/home/jaren/my-site/node_modules/.base-64-rN1Ek3WT',
+484 silly reify   '/home/jaren/my-site/node_modules/base64-js': '/home/jaren/my-site/node_modules/.base64-js-jX7sWPlS',
+484 silly reify   '/home/jaren/my-site/node_modules/blake3-wasm': '/home/jaren/my-site/node_modules/.blake3-wasm-zNsycQbn',
+484 silly reify   '/home/jaren/my-site/node_modules/boolbase': '/home/jaren/my-site/node_modules/.boolbase-CYAtEDd4',
+484 silly reify   '/home/jaren/my-site/node_modules/boxen': '/home/jaren/my-site/node_modules/.boxen-Ys5XlLWU',
+484 silly reify   '/home/jaren/my-site/node_modules/brotli': '/home/jaren/my-site/node_modules/.brotli-g17m0fPm',
+484 silly reify   '/home/jaren/my-site/node_modules/camelcase': '/home/jaren/my-site/node_modules/.camelcase-DJpEbIXM',
+484 silly reify   '/home/jaren/my-site/node_modules/ccount': '/home/jaren/my-site/node_modules/.ccount-2aHmPr9Q',
+484 silly reify   '/home/jaren/my-site/node_modules/chalk': '/home/jaren/my-site/node_modules/.chalk-AmWwpKot',
+484 silly reify   '/home/jaren/my-site/node_modules/character-entities': '/home/jaren/my-site/node_modules/.character-entities-aqvXOxZH',
+484 silly reify   '/home/jaren/my-site/node_modules/character-entities-html4': '/home/jaren/my-site/node_modules/.character-entities-html4-awDjIgBt',
+484 silly reify   '/home/jaren/my-site/node_modules/character-entities-legacy': '/home/jaren/my-site/node_modules/.character-entities-legacy-Tmbt07nM',
+484 silly reify   '/home/jaren/my-site/node_modules/chevrotain': '/home/jaren/my-site/node_modules/.chevrotain-akOO3Bcw',
+484 silly reify   '/home/jaren/my-site/node_modules/chevrotain-allstar': '/home/jaren/my-site/node_modules/.chevrotain-allstar-7X4p9H6O',
+484 silly reify   '/home/jaren/my-site/node_modules/chokidar': '/home/jaren/my-site/node_modules/.chokidar-HfLxTROQ',
+484 silly reify   '/home/jaren/my-site/node_modules/ci-info': '/home/jaren/my-site/node_modules/.ci-info-hDMtHf5B',
+484 silly reify   '/home/jaren/my-site/node_modules/cli-boxes': '/home/jaren/my-site/node_modules/.cli-boxes-3acfLJNq',
+484 silly reify   '/home/jaren/my-site/node_modules/clone': '/home/jaren/my-site/node_modules/.clone-ERmVnZhm',
+484 silly reify   '/home/jaren/my-site/node_modules/clsx': '/home/jaren/my-site/node_modules/.clsx-uhfRoFB5',
+484 silly reify   '/home/jaren/my-site/node_modules/color': '/home/jaren/my-site/node_modules/.color-cIgGwDoV',
+484 silly reify   '/home/jaren/my-site/node_modules/color-convert': '/home/jaren/my-site/node_modules/.color-convert-9nHnHRmi',
+484 silly reify   '/home/jaren/my-site/node_modules/color-name': '/home/jaren/my-site/node_modules/.color-name-7m73B7wz',
+484 silly reify   '/home/jaren/my-site/node_modules/color-string': '/home/jaren/my-site/node_modules/.color-string-KxcRIcp1',
+484 silly reify   '/home/jaren/my-site/node_modules/comma-separated-tokens': '/home/jaren/my-site/node_modules/.comma-separated-tokens-R0nHXVSt',
+484 silly reify   '/home/jaren/my-site/node_modules/commander': '/home/jaren/my-site/node_modules/.commander-YvZitTYa',
+484 silly reify   '/home/jaren/my-site/node_modules/common-ancestor-path': '/home/jaren/my-site/node_modules/.common-ancestor-path-cDsr4Se5',
+484 silly reify   '/home/jaren/my-site/node_modules/confbox': '/home/jaren/my-site/node_modules/.confbox-alaTEJ14',
+484 silly reify   '/home/jaren/my-site/node_modules/cookie': '/home/jaren/my-site/node_modules/.cookie-rfYCpX6N',
+484 silly reify   '/home/jaren/my-site/node_modules/cookie-es': '/home/jaren/my-site/node_modules/.cookie-es-WIDqB04D',
+484 silly reify   '/home/jaren/my-site/node_modules/cose-base': '/home/jaren/my-site/node_modules/.cose-base-BejQjuY6',
+484 silly reify   '/home/jaren/my-site/node_modules/crossws': '/home/jaren/my-site/node_modules/.crossws-4AZgZeyW',
+484 silly reify   '/home/jaren/my-site/node_modules/css-select': '/home/jaren/my-site/node_modules/.css-select-wTxd6SI9',
+484 silly reify   '/home/jaren/my-site/node_modules/css-tree': '/home/jaren/my-site/node_modules/.css-tree-WrMyjlrI',
+484 silly reify   '/home/jaren/my-site/node_modules/css-what': '/home/jaren/my-site/node_modules/.css-what-LiYdJeZj',
+484 silly reify   '/home/jaren/my-site/node_modules/cssesc': '/home/jaren/my-site/node_modules/.cssesc-myfklBqv',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/cssesc': '/home/jaren/my-site/node_modules/.bin/.cssesc-P85IXQC1',
+484 silly reify   '/home/jaren/my-site/node_modules/csso': '/home/jaren/my-site/node_modules/.csso-0CE2ha3k',
+484 silly reify   '/home/jaren/my-site/node_modules/cytoscape': '/home/jaren/my-site/node_modules/.cytoscape-OBfx063Z',
+484 silly reify   '/home/jaren/my-site/node_modules/cytoscape-cose-bilkent': '/home/jaren/my-site/node_modules/.cytoscape-cose-bilkent-MAHhofwf',
+484 silly reify   '/home/jaren/my-site/node_modules/cytoscape-fcose': '/home/jaren/my-site/node_modules/.cytoscape-fcose-MqSFS04m',
+484 silly reify   '/home/jaren/my-site/node_modules/d3': '/home/jaren/my-site/node_modules/.d3-zzEb3OOa',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-array': '/home/jaren/my-site/node_modules/.d3-array-5r2Xm7H3',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-axis': '/home/jaren/my-site/node_modules/.d3-axis-J66sia2h',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-brush': '/home/jaren/my-site/node_modules/.d3-brush-4gOFaRxX',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-chord': '/home/jaren/my-site/node_modules/.d3-chord-KxnTMGqw',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-color': '/home/jaren/my-site/node_modules/.d3-color-DgpMqziQ',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-contour': '/home/jaren/my-site/node_modules/.d3-contour-NEi8pX6c',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-delaunay': '/home/jaren/my-site/node_modules/.d3-delaunay-LwVasCcn',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-dispatch': '/home/jaren/my-site/node_modules/.d3-dispatch-0TDRKw0o',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-drag': '/home/jaren/my-site/node_modules/.d3-drag-mY9gqZ7J',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-dsv': '/home/jaren/my-site/node_modules/.d3-dsv-JX04y0qA',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/csv2json': '/home/jaren/my-site/node_modules/.bin/.csv2json-RNwps7vp',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/csv2tsv': '/home/jaren/my-site/node_modules/.bin/.csv2tsv-hWZERYnz',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/dsv2dsv': '/home/jaren/my-site/node_modules/.bin/.dsv2dsv-bbcVITgA',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/dsv2json': '/home/jaren/my-site/node_modules/.bin/.dsv2json-s9j05aqK',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/json2csv': '/home/jaren/my-site/node_modules/.bin/.json2csv-9q6wHJyK',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/json2dsv': '/home/jaren/my-site/node_modules/.bin/.json2dsv-XSM9qJHT',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/json2tsv': '/home/jaren/my-site/node_modules/.bin/.json2tsv-r7ms53K7',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/tsv2csv': '/home/jaren/my-site/node_modules/.bin/.tsv2csv-f7SVysV1',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/tsv2json': '/home/jaren/my-site/node_modules/.bin/.tsv2json-Kj9nk4Qe',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-ease': '/home/jaren/my-site/node_modules/.d3-ease-X0WWFdwB',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-fetch': '/home/jaren/my-site/node_modules/.d3-fetch-6BM9yOtb',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-force': '/home/jaren/my-site/node_modules/.d3-force-FZEDRIvg',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-format': '/home/jaren/my-site/node_modules/.d3-format-usKlSVUH',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-geo': '/home/jaren/my-site/node_modules/.d3-geo-36IRZ3JH',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-hierarchy': '/home/jaren/my-site/node_modules/.d3-hierarchy-1vwtu4nD',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-interpolate': '/home/jaren/my-site/node_modules/.d3-interpolate-UilNInms',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-path': '/home/jaren/my-site/node_modules/.d3-path-6UCcwMII',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-polygon': '/home/jaren/my-site/node_modules/.d3-polygon-aJTnWPnI',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-quadtree': '/home/jaren/my-site/node_modules/.d3-quadtree-cdxspCXP',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-random': '/home/jaren/my-site/node_modules/.d3-random-bO6XID8Z',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-sankey': '/home/jaren/my-site/node_modules/.d3-sankey-1kQDal5H',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-scale': '/home/jaren/my-site/node_modules/.d3-scale-2LumS9kj',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-scale-chromatic': '/home/jaren/my-site/node_modules/.d3-scale-chromatic-dF4EjbDY',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-selection': '/home/jaren/my-site/node_modules/.d3-selection-HL63RzB2',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-shape': '/home/jaren/my-site/node_modules/.d3-shape-7oPZE76R',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-time': '/home/jaren/my-site/node_modules/.d3-time-epMasvlz',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-time-format': '/home/jaren/my-site/node_modules/.d3-time-format-uVmFrU2V',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-timer': '/home/jaren/my-site/node_modules/.d3-timer-9nwTfz0z',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-transition': '/home/jaren/my-site/node_modules/.d3-transition-hViIqicg',
+484 silly reify   '/home/jaren/my-site/node_modules/d3-zoom': '/home/jaren/my-site/node_modules/.d3-zoom-Ja5Tl0Ol',
+484 silly reify   '/home/jaren/my-site/node_modules/dagre-d3-es': '/home/jaren/my-site/node_modules/.dagre-d3-es-zonkIwAC',
+484 silly reify   '/home/jaren/my-site/node_modules/dayjs': '/home/jaren/my-site/node_modules/.dayjs-cPBBBrPx',
+484 silly reify   '/home/jaren/my-site/node_modules/debug': '/home/jaren/my-site/node_modules/.debug-O8TxQa7b',
+484 silly reify   '/home/jaren/my-site/node_modules/decode-named-character-reference': '/home/jaren/my-site/node_modules/.decode-named-character-reference-9RxZj5ZV',
+484 silly reify   '/home/jaren/my-site/node_modules/defu': '/home/jaren/my-site/node_modules/.defu-aj0k8Zdu',
+484 silly reify   '/home/jaren/my-site/node_modules/delaunator': '/home/jaren/my-site/node_modules/.delaunator-HlG5lLF9',
+484 silly reify   '/home/jaren/my-site/node_modules/dequal': '/home/jaren/my-site/node_modules/.dequal-U45K5gXV',
+484 silly reify   '/home/jaren/my-site/node_modules/destr': '/home/jaren/my-site/node_modules/.destr-TGOl6laM',
+484 silly reify   '/home/jaren/my-site/node_modules/detect-libc': '/home/jaren/my-site/node_modules/.detect-libc-eyBAx1Zt',
+484 silly reify   '/home/jaren/my-site/node_modules/deterministic-object-hash': '/home/jaren/my-site/node_modules/.deterministic-object-hash-crj47FDc',
+484 silly reify   '/home/jaren/my-site/node_modules/devalue': '/home/jaren/my-site/node_modules/.devalue-j4SAROtk',
+484 silly reify   '/home/jaren/my-site/node_modules/devlop': '/home/jaren/my-site/node_modules/.devlop-3nBWCWKr',
+484 silly reify   '/home/jaren/my-site/node_modules/dfa': '/home/jaren/my-site/node_modules/.dfa-1vFboefp',
+484 silly reify   '/home/jaren/my-site/node_modules/diff': '/home/jaren/my-site/node_modules/.diff-wn1Bl4f1',
+484 silly reify   '/home/jaren/my-site/node_modules/dlv': '/home/jaren/my-site/node_modules/.dlv-efAHgt3B',
+484 silly reify   '/home/jaren/my-site/node_modules/dom-serializer': '/home/jaren/my-site/node_modules/.dom-serializer-77ITyV98',
+484 silly reify   '/home/jaren/my-site/node_modules/domelementtype': '/home/jaren/my-site/node_modules/.domelementtype-AGE98kYu',
+484 silly reify   '/home/jaren/my-site/node_modules/domhandler': '/home/jaren/my-site/node_modules/.domhandler-8YB3ejxC',
+484 silly reify   '/home/jaren/my-site/node_modules/dompurify': '/home/jaren/my-site/node_modules/.dompurify-osAjd2VT',
+484 silly reify   '/home/jaren/my-site/node_modules/domutils': '/home/jaren/my-site/node_modules/.domutils-ZGoKQCGy',
+484 silly reify   '/home/jaren/my-site/node_modules/dset': '/home/jaren/my-site/node_modules/.dset-Wy8Z2OSg',
+484 silly reify   '/home/jaren/my-site/node_modules/emoji-regex': '/home/jaren/my-site/node_modules/.emoji-regex-vI3SeqyP',
+484 silly reify   '/home/jaren/my-site/node_modules/enhanced-resolve': '/home/jaren/my-site/node_modules/.enhanced-resolve-eB7EgdtF',
+484 silly reify   '/home/jaren/my-site/node_modules/entities': '/home/jaren/my-site/node_modules/.entities-TfOKEDvQ',
+484 silly reify   '/home/jaren/my-site/node_modules/error-stack-parser-es': '/home/jaren/my-site/node_modules/.error-stack-parser-es-wzQGrJem',
+484 silly reify   '/home/jaren/my-site/node_modules/es-module-lexer': '/home/jaren/my-site/node_modules/.es-module-lexer-EjhZc3US',
+484 silly reify   '/home/jaren/my-site/node_modules/esbuild': '/home/jaren/my-site/node_modules/.esbuild-eXcy7qru',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/esbuild': '/home/jaren/my-site/node_modules/.bin/.esbuild-GPvLEHp1',
+484 silly reify   '/home/jaren/my-site/node_modules/escape-string-regexp': '/home/jaren/my-site/node_modules/.escape-string-regexp-aYq1IGX6',
+484 silly reify   '/home/jaren/my-site/node_modules/estree-walker': '/home/jaren/my-site/node_modules/.estree-walker-PtOxb51t',
+484 silly reify   '/home/jaren/my-site/node_modules/eventemitter3': '/home/jaren/my-site/node_modules/.eventemitter3-9rFL6rOh',
+484 silly reify   '/home/jaren/my-site/node_modules/exit-hook': '/home/jaren/my-site/node_modules/.exit-hook-lTfNW1WD',
+484 silly reify   '/home/jaren/my-site/node_modules/extend': '/home/jaren/my-site/node_modules/.extend-EtSWbSeI',
+484 silly reify   '/home/jaren/my-site/node_modules/fast-deep-equal': '/home/jaren/my-site/node_modules/.fast-deep-equal-bGdUs1kK',
+484 silly reify   '/home/jaren/my-site/node_modules/fdir': '/home/jaren/my-site/node_modules/.fdir-s8lwqKQT',
+484 silly reify   '/home/jaren/my-site/node_modules/flattie': '/home/jaren/my-site/node_modules/.flattie-hpvGAnXi',
+484 silly reify   '/home/jaren/my-site/node_modules/fontace': '/home/jaren/my-site/node_modules/.fontace-WDuDdZJO',
+484 silly reify   '/home/jaren/my-site/node_modules/fontkit': '/home/jaren/my-site/node_modules/.fontkit-umKkdqWp',
+484 silly reify   '/home/jaren/my-site/node_modules/get-east-asian-width': '/home/jaren/my-site/node_modules/.get-east-asian-width-ghWZKe3j',
+484 silly reify   '/home/jaren/my-site/node_modules/github-slugger': '/home/jaren/my-site/node_modules/.github-slugger-pScYp2Vb',
+484 silly reify   '/home/jaren/my-site/node_modules/glob-to-regexp': '/home/jaren/my-site/node_modules/.glob-to-regexp-F4TMXX0y',
+484 silly reify   '/home/jaren/my-site/node_modules/graceful-fs': '/home/jaren/my-site/node_modules/.graceful-fs-nFeL7yUd',
+484 silly reify   '/home/jaren/my-site/node_modules/h3': '/home/jaren/my-site/node_modules/.h3-D6UZ5jSP',
+484 silly reify   '/home/jaren/my-site/node_modules/hachure-fill': '/home/jaren/my-site/node_modules/.hachure-fill-BRS4YiLZ',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-from-dom': '/home/jaren/my-site/node_modules/.hast-util-from-dom-hQXvuvM0',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-from-html': '/home/jaren/my-site/node_modules/.hast-util-from-html-P1mRWnI3',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-from-html-isomorphic': '/home/jaren/my-site/node_modules/.hast-util-from-html-isomorphic-aaxUhhGe',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-from-parse5': '/home/jaren/my-site/node_modules/.hast-util-from-parse5-ljvTvwUf',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-is-element': '/home/jaren/my-site/node_modules/.hast-util-is-element-kv0zLKBI',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-parse-selector': '/home/jaren/my-site/node_modules/.hast-util-parse-selector-lGbbuyRH',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-raw': '/home/jaren/my-site/node_modules/.hast-util-raw-I9xHNGgW',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-to-html': '/home/jaren/my-site/node_modules/.hast-util-to-html-8DUNPaqd',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-to-parse5': '/home/jaren/my-site/node_modules/.hast-util-to-parse5-Mj0KNG5W',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-to-text': '/home/jaren/my-site/node_modules/.hast-util-to-text-h0MJnoKE',
+484 silly reify   '/home/jaren/my-site/node_modules/hast-util-whitespace': '/home/jaren/my-site/node_modules/.hast-util-whitespace-SZwGCmsZ',
+484 silly reify   '/home/jaren/my-site/node_modules/hastscript': '/home/jaren/my-site/node_modules/.hastscript-i5RhA5ag',
+484 silly reify   '/home/jaren/my-site/node_modules/html-escaper': '/home/jaren/my-site/node_modules/.html-escaper-ONfojkQK',
+484 silly reify   '/home/jaren/my-site/node_modules/html-void-elements': '/home/jaren/my-site/node_modules/.html-void-elements-CUyySEUi',
+484 silly reify   '/home/jaren/my-site/node_modules/http-cache-semantics': '/home/jaren/my-site/node_modules/.http-cache-semantics-yfB00pSS',
+484 silly reify   '/home/jaren/my-site/node_modules/iconv-lite': '/home/jaren/my-site/node_modules/.iconv-lite-En2yjZU4',
+484 silly reify   '/home/jaren/my-site/node_modules/import-meta-resolve': '/home/jaren/my-site/node_modules/.import-meta-resolve-PEQ8lKgE',
+484 silly reify   '/home/jaren/my-site/node_modules/internmap': '/home/jaren/my-site/node_modules/.internmap-0qY1jM5h',
+484 silly reify   '/home/jaren/my-site/node_modules/iron-webcrypto': '/home/jaren/my-site/node_modules/.iron-webcrypto-PkgXzm5H',
+484 silly reify   '/home/jaren/my-site/node_modules/is-arrayish': '/home/jaren/my-site/node_modules/.is-arrayish-ffwhUmcZ',
+484 silly reify   '/home/jaren/my-site/node_modules/is-docker': '/home/jaren/my-site/node_modules/.is-docker-Jh90ECOL',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/is-docker': '/home/jaren/my-site/node_modules/.bin/.is-docker-yYzAlV8i',
+484 silly reify   '/home/jaren/my-site/node_modules/is-fullwidth-code-point': '/home/jaren/my-site/node_modules/.is-fullwidth-code-point-81oZQILT',
+484 silly reify   '/home/jaren/my-site/node_modules/is-inside-container': '/home/jaren/my-site/node_modules/.is-inside-container-wp0lgWmP',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/is-inside-container': '/home/jaren/my-site/node_modules/.bin/.is-inside-container-0rbhH90I',
+484 silly reify   '/home/jaren/my-site/node_modules/is-plain-obj': '/home/jaren/my-site/node_modules/.is-plain-obj-M99m0gar',
+484 silly reify   '/home/jaren/my-site/node_modules/is-wsl': '/home/jaren/my-site/node_modules/.is-wsl-d21FGzJU',
+484 silly reify   '/home/jaren/my-site/node_modules/jiti': '/home/jaren/my-site/node_modules/.jiti-49BWkNZk',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/jiti': '/home/jaren/my-site/node_modules/.bin/.jiti-zn0XsvTf',
+484 silly reify   '/home/jaren/my-site/node_modules/js-yaml': '/home/jaren/my-site/node_modules/.js-yaml-DWt7DfuH',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/js-yaml': '/home/jaren/my-site/node_modules/.bin/.js-yaml-JU438e9s',
+484 silly reify   '/home/jaren/my-site/node_modules/katex': '/home/jaren/my-site/node_modules/.katex-GBqGmhFK',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/katex': '/home/jaren/my-site/node_modules/.bin/.katex-YCrqrdwV',
+484 silly reify   '/home/jaren/my-site/node_modules/khroma': '/home/jaren/my-site/node_modules/.khroma-ecpYOALS',
+484 silly reify   '/home/jaren/my-site/node_modules/kleur': '/home/jaren/my-site/node_modules/.kleur-6zPy2meY',
+484 silly reify   '/home/jaren/my-site/node_modules/langium': '/home/jaren/my-site/node_modules/.langium-yni3EROI',
+484 silly reify   '/home/jaren/my-site/node_modules/layout-base': '/home/jaren/my-site/node_modules/.layout-base-QXWjfnY4',
+484 silly reify   '/home/jaren/my-site/node_modules/lightningcss': '/home/jaren/my-site/node_modules/.lightningcss-tvMg7yWT',
+484 silly reify   '/home/jaren/my-site/node_modules/lightningcss-linux-x64-gnu': '/home/jaren/my-site/node_modules/.lightningcss-linux-x64-gnu-epO85Pfx',
+484 silly reify   '/home/jaren/my-site/node_modules/lightningcss-linux-x64-musl': '/home/jaren/my-site/node_modules/.lightningcss-linux-x64-musl-FAETJzoV',
+484 silly reify   '/home/jaren/my-site/node_modules/lodash-es': '/home/jaren/my-site/node_modules/.lodash-es-NdIodphi',
+484 silly reify   '/home/jaren/my-site/node_modules/longest-streak': '/home/jaren/my-site/node_modules/.longest-streak-GjFMt4Lg',
+484 silly reify   '/home/jaren/my-site/node_modules/lru-cache': '/home/jaren/my-site/node_modules/.lru-cache-UYKTSyon',
+484 silly reify   '/home/jaren/my-site/node_modules/magic-string': '/home/jaren/my-site/node_modules/.magic-string-gjmLtM2F',
+484 silly reify   '/home/jaren/my-site/node_modules/magicast': '/home/jaren/my-site/node_modules/.magicast-A94OScnO',
+484 silly reify   '/home/jaren/my-site/node_modules/markdown-table': '/home/jaren/my-site/node_modules/.markdown-table-gB0gVg16',
+484 silly reify   '/home/jaren/my-site/node_modules/marked': '/home/jaren/my-site/node_modules/.marked-FvdRa99s',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/marked': '/home/jaren/my-site/node_modules/.bin/.marked-hiKSTYD4',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-definitions': '/home/jaren/my-site/node_modules/.mdast-util-definitions-3Z6PgR8z',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-find-and-replace': '/home/jaren/my-site/node_modules/.mdast-util-find-and-replace-fEK3LYXq',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-from-markdown': '/home/jaren/my-site/node_modules/.mdast-util-from-markdown-bKONHRZ4',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-gfm': '/home/jaren/my-site/node_modules/.mdast-util-gfm-8Gro6Ss2',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-gfm-autolink-literal': '/home/jaren/my-site/node_modules/.mdast-util-gfm-autolink-literal-p0Xf1SXp',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-gfm-footnote': '/home/jaren/my-site/node_modules/.mdast-util-gfm-footnote-In5cFQuh',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-gfm-strikethrough': '/home/jaren/my-site/node_modules/.mdast-util-gfm-strikethrough-bQ4tehfk',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-gfm-table': '/home/jaren/my-site/node_modules/.mdast-util-gfm-table-BjSHupWs',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-gfm-task-list-item': '/home/jaren/my-site/node_modules/.mdast-util-gfm-task-list-item-W2eWR9un',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-phrasing': '/home/jaren/my-site/node_modules/.mdast-util-phrasing-OFXBq2MF',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-to-hast': '/home/jaren/my-site/node_modules/.mdast-util-to-hast-JNQ72Rue',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-to-markdown': '/home/jaren/my-site/node_modules/.mdast-util-to-markdown-WheAynh1',
+484 silly reify   '/home/jaren/my-site/node_modules/mdast-util-to-string': '/home/jaren/my-site/node_modules/.mdast-util-to-string-ZvuON47p',
+484 silly reify   '/home/jaren/my-site/node_modules/mdn-data': '/home/jaren/my-site/node_modules/.mdn-data-xymHDDCP',
+484 silly reify   '/home/jaren/my-site/node_modules/mermaid': '/home/jaren/my-site/node_modules/.mermaid-Ry4pOcsd',
+484 silly reify   '/home/jaren/my-site/node_modules/mermaid-isomorphic': '/home/jaren/my-site/node_modules/.mermaid-isomorphic-L0iL6Evy',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark': '/home/jaren/my-site/node_modules/.micromark-V4xY2uCC',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-core-commonmark': '/home/jaren/my-site/node_modules/.micromark-core-commonmark-9pyHMmDR',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm': '/home/jaren/my-site/node_modules/.micromark-extension-gfm-TpYcdCBy',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-autolink-literal': '/home/jaren/my-site/node_modules/.micromark-extension-gfm-autolink-literal-IH9uL2sp',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-footnote': '/home/jaren/my-site/node_modules/.micromark-extension-gfm-footnote-nuPMTqG0',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-strikethrough': '/home/jaren/my-site/node_modules/.micromark-extension-gfm-strikethrough-sLAx7dJf',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-table': '/home/jaren/my-site/node_modules/.micromark-extension-gfm-table-j4qStkhF',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-tagfilter': '/home/jaren/my-site/node_modules/.micromark-extension-gfm-tagfilter-REKD0RBc',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-extension-gfm-task-list-item': '/home/jaren/my-site/node_modules/.micromark-extension-gfm-task-list-item-T6ZWJhX0',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-factory-destination': '/home/jaren/my-site/node_modules/.micromark-factory-destination-4NXj1IBJ',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-factory-label': '/home/jaren/my-site/node_modules/.micromark-factory-label-afzkRy12',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-factory-space': '/home/jaren/my-site/node_modules/.micromark-factory-space-MQ63Jg59',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-factory-title': '/home/jaren/my-site/node_modules/.micromark-factory-title-Fqq46J4k',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-factory-whitespace': '/home/jaren/my-site/node_modules/.micromark-factory-whitespace-ngXedzGm',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-character': '/home/jaren/my-site/node_modules/.micromark-util-character-MJjNZf1X',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-chunked': '/home/jaren/my-site/node_modules/.micromark-util-chunked-bhVV2eNO',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-classify-character': '/home/jaren/my-site/node_modules/.micromark-util-classify-character-b20oLVcc',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-combine-extensions': '/home/jaren/my-site/node_modules/.micromark-util-combine-extensions-XuoKMC4q',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-decode-numeric-character-reference': '/home/jaren/my-site/node_modules/.micromark-util-decode-numeric-character-reference-vW528FWy',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-decode-string': '/home/jaren/my-site/node_modules/.micromark-util-decode-string-tERUzYlC',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-encode': '/home/jaren/my-site/node_modules/.micromark-util-encode-rxjnZZr7',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-normalize-identifier': '/home/jaren/my-site/node_modules/.micromark-util-normalize-identifier-TknXOCVW',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-resolve-all': '/home/jaren/my-site/node_modules/.micromark-util-resolve-all-qtci1000',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-html-tag-name': '/home/jaren/my-site/node_modules/.micromark-util-html-tag-name-zeRPQr2v',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-sanitize-uri': '/home/jaren/my-site/node_modules/.micromark-util-sanitize-uri-Nlij45Xr',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-symbol': '/home/jaren/my-site/node_modules/.micromark-util-symbol-yLhAm74R',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-subtokenize': '/home/jaren/my-site/node_modules/.micromark-util-subtokenize-Og5ZU7E7',
+484 silly reify   '/home/jaren/my-site/node_modules/micromark-util-types': '/home/jaren/my-site/node_modules/.micromark-util-types-g7mwsJQF',
+484 silly reify   '/home/jaren/my-site/node_modules/mime': '/home/jaren/my-site/node_modules/.mime-yd8Or1nu',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/mime': '/home/jaren/my-site/node_modules/.bin/.mime-EKymM2oI',
+484 silly reify   '/home/jaren/my-site/node_modules/miniflare': '/home/jaren/my-site/node_modules/.miniflare-OuWyXqeH',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/miniflare': '/home/jaren/my-site/node_modules/.bin/.miniflare-MKlZ8j3p',
+484 silly reify   '/home/jaren/my-site/node_modules/mini-svg-data-uri': '/home/jaren/my-site/node_modules/.mini-svg-data-uri-Zb1gtc9Y',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/mini-svg-data-uri': '/home/jaren/my-site/node_modules/.bin/.mini-svg-data-uri-NKBKU6Ns',
+484 silly reify   '/home/jaren/my-site/node_modules/mlly': '/home/jaren/my-site/node_modules/.mlly-eHmj9FVP',
+484 silly reify   '/home/jaren/my-site/node_modules/mrmime': '/home/jaren/my-site/node_modules/.mrmime-UAB5iKZE',
+484 silly reify   '/home/jaren/my-site/node_modules/ms': '/home/jaren/my-site/node_modules/.ms-6U78d1a9',
+484 silly reify   '/home/jaren/my-site/node_modules/nanoid': '/home/jaren/my-site/node_modules/.nanoid-Zc10UbBZ',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/nanoid': '/home/jaren/my-site/node_modules/.bin/.nanoid-ojDFwEjM',
+484 silly reify   '/home/jaren/my-site/node_modules/neotraverse': '/home/jaren/my-site/node_modules/.neotraverse-aRo1sKfE',
+484 silly reify   '/home/jaren/my-site/node_modules/node-fetch-native': '/home/jaren/my-site/node_modules/.node-fetch-native-IkhFWZOo',
+484 silly reify   '/home/jaren/my-site/node_modules/nlcst-to-string': '/home/jaren/my-site/node_modules/.nlcst-to-string-wOSqaisC',
+484 silly reify   '/home/jaren/my-site/node_modules/node-mock-http': '/home/jaren/my-site/node_modules/.node-mock-http-VTVJBt73',
+484 silly reify   '/home/jaren/my-site/node_modules/normalize-path': '/home/jaren/my-site/node_modules/.normalize-path-PypXMBci',
+484 silly reify   '/home/jaren/my-site/node_modules/nth-check': '/home/jaren/my-site/node_modules/.nth-check-Jn1dwDRd',
+484 silly reify   '/home/jaren/my-site/node_modules/ofetch': '/home/jaren/my-site/node_modules/.ofetch-UDvAmZiU',
+484 silly reify   '/home/jaren/my-site/node_modules/ohash': '/home/jaren/my-site/node_modules/.ohash-nAeitPjX',
+484 silly reify   '/home/jaren/my-site/node_modules/oniguruma-parser': '/home/jaren/my-site/node_modules/.oniguruma-parser-CA025xpN',
+484 silly reify   '/home/jaren/my-site/node_modules/oniguruma-to-es': '/home/jaren/my-site/node_modules/.oniguruma-to-es-83BNj9Nx',
+484 silly reify   '/home/jaren/my-site/node_modules/p-limit': '/home/jaren/my-site/node_modules/.p-limit-v6se56C2',
+484 silly reify   '/home/jaren/my-site/node_modules/p-queue': '/home/jaren/my-site/node_modules/.p-queue-UdQXylzr',
+484 silly reify   '/home/jaren/my-site/node_modules/parse-latin': '/home/jaren/my-site/node_modules/.parse-latin-dhU9erqm',
+484 silly reify   '/home/jaren/my-site/node_modules/parse5': '/home/jaren/my-site/node_modules/.parse5-V3mEK2no',
+484 silly reify   '/home/jaren/my-site/node_modules/path-browserify': '/home/jaren/my-site/node_modules/.path-browserify-xu6ZwjCr',
+484 silly reify   '/home/jaren/my-site/node_modules/path-data-parser': '/home/jaren/my-site/node_modules/.path-data-parser-DwCwC3fK',
+484 silly reify   '/home/jaren/my-site/node_modules/path-to-regexp': '/home/jaren/my-site/node_modules/.path-to-regexp-AxFa7aPi',
+484 silly reify   '/home/jaren/my-site/node_modules/pathe': '/home/jaren/my-site/node_modules/.pathe-bbuYvz1M',
+484 silly reify   '/home/jaren/my-site/node_modules/piccolore': '/home/jaren/my-site/node_modules/.piccolore-lbyqln26',
+484 silly reify   '/home/jaren/my-site/node_modules/picocolors': '/home/jaren/my-site/node_modules/.picocolors-miSuI7Su',
+484 silly reify   '/home/jaren/my-site/node_modules/package-manager-detector': '/home/jaren/my-site/node_modules/.package-manager-detector-D40i48V2',
+484 silly reify   '/home/jaren/my-site/node_modules/p-timeout': '/home/jaren/my-site/node_modules/.p-timeout-n57xFpCq',
+484 silly reify   '/home/jaren/my-site/node_modules/picomatch': '/home/jaren/my-site/node_modules/.picomatch-S8hAdCCm',
+484 silly reify   '/home/jaren/my-site/node_modules/pkg-types': '/home/jaren/my-site/node_modules/.pkg-types-01CRMRoO',
+484 silly reify   '/home/jaren/my-site/node_modules/playwright-core': '/home/jaren/my-site/node_modules/.playwright-core-mu9dWTBe',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/playwright-core': '/home/jaren/my-site/node_modules/.bin/.playwright-core-f9SVdavK',
+484 silly reify   '/home/jaren/my-site/node_modules/points-on-curve': '/home/jaren/my-site/node_modules/.points-on-curve-LAGWi7AE',
+484 silly reify   '/home/jaren/my-site/node_modules/playwright': '/home/jaren/my-site/node_modules/.playwright-syCiN4Pc',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/playwright': '/home/jaren/my-site/node_modules/.bin/.playwright-gN7OZULw',
+484 silly reify   '/home/jaren/my-site/node_modules/points-on-path': '/home/jaren/my-site/node_modules/.points-on-path-WywKAtyR',
+484 silly reify   '/home/jaren/my-site/node_modules/postcss': '/home/jaren/my-site/node_modules/.postcss-lQP4QHeE',
+484 silly reify   '/home/jaren/my-site/node_modules/postcss-selector-parser': '/home/jaren/my-site/node_modules/.postcss-selector-parser-kGjDRB4K',
+484 silly reify   '/home/jaren/my-site/node_modules/prismjs': '/home/jaren/my-site/node_modules/.prismjs-FigGxjn1',
+484 silly reify   '/home/jaren/my-site/node_modules/pako': '/home/jaren/my-site/node_modules/.pako-v2LwF6E0',
+484 silly reify   '/home/jaren/my-site/node_modules/prompts': '/home/jaren/my-site/node_modules/.prompts-JYRfIdg2',
+484 silly reify   '/home/jaren/my-site/node_modules/property-information': '/home/jaren/my-site/node_modules/.property-information-PE3yUNAD',
+484 silly reify   '/home/jaren/my-site/node_modules/radix3': '/home/jaren/my-site/node_modules/.radix3-aJW2zdoU',
+484 silly reify   '/home/jaren/my-site/node_modules/regex': '/home/jaren/my-site/node_modules/.regex-TexF4g1G',
+484 silly reify   '/home/jaren/my-site/node_modules/readdirp': '/home/jaren/my-site/node_modules/.readdirp-WLRuNXGU',
+484 silly reify   '/home/jaren/my-site/node_modules/regex-recursion': '/home/jaren/my-site/node_modules/.regex-recursion-8U0ckUly',
+484 silly reify   '/home/jaren/my-site/node_modules/regex-utilities': '/home/jaren/my-site/node_modules/.regex-utilities-8og6oHNZ',
+484 silly reify   '/home/jaren/my-site/node_modules/rehype': '/home/jaren/my-site/node_modules/.rehype-rQxRPuIl',
+484 silly reify   '/home/jaren/my-site/node_modules/rehype-mermaid': '/home/jaren/my-site/node_modules/.rehype-mermaid-eMEVhhTD',
+484 silly reify   '/home/jaren/my-site/node_modules/rehype-parse': '/home/jaren/my-site/node_modules/.rehype-parse-9wgTrY5U',
+484 silly reify   '/home/jaren/my-site/node_modules/rehype-raw': '/home/jaren/my-site/node_modules/.rehype-raw-8Tw5m9w9',
+484 silly reify   '/home/jaren/my-site/node_modules/rehype-stringify': '/home/jaren/my-site/node_modules/.rehype-stringify-lHoqmj1j',
+484 silly reify   '/home/jaren/my-site/node_modules/remark-gfm': '/home/jaren/my-site/node_modules/.remark-gfm-bmmDU4nZ',
+484 silly reify   '/home/jaren/my-site/node_modules/remark-parse': '/home/jaren/my-site/node_modules/.remark-parse-uVU1fHNL',
+484 silly reify   '/home/jaren/my-site/node_modules/remark-rehype': '/home/jaren/my-site/node_modules/.remark-rehype-pWCZL6OP',
+484 silly reify   '/home/jaren/my-site/node_modules/remark-smartypants': '/home/jaren/my-site/node_modules/.remark-smartypants-E5seczwG',
+484 silly reify   '/home/jaren/my-site/node_modules/remark-stringify': '/home/jaren/my-site/node_modules/.remark-stringify-EaUoAO6q',
+484 silly reify   '/home/jaren/my-site/node_modules/restructure': '/home/jaren/my-site/node_modules/.restructure-VAXqhaLJ',
+484 silly reify   '/home/jaren/my-site/node_modules/retext': '/home/jaren/my-site/node_modules/.retext-IMipANwu',
+484 silly reify   '/home/jaren/my-site/node_modules/retext-latin': '/home/jaren/my-site/node_modules/.retext-latin-lSuI65Dp',
+484 silly reify   '/home/jaren/my-site/node_modules/retext-stringify': '/home/jaren/my-site/node_modules/.retext-stringify-CtRHYd87',
+484 silly reify   '/home/jaren/my-site/node_modules/robust-predicates': '/home/jaren/my-site/node_modules/.robust-predicates-Xsw10QeT',
+484 silly reify   '/home/jaren/my-site/node_modules/retext-smartypants': '/home/jaren/my-site/node_modules/.retext-smartypants-EV5izWgx',
+484 silly reify   '/home/jaren/my-site/node_modules/rw': '/home/jaren/my-site/node_modules/.rw-HKpmTXFv',
+484 silly reify   '/home/jaren/my-site/node_modules/rollup': '/home/jaren/my-site/node_modules/.rollup-jt01e6i9',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/rollup': '/home/jaren/my-site/node_modules/.bin/.rollup-jfpZUnYW',
+484 silly reify   '/home/jaren/my-site/node_modules/roughjs': '/home/jaren/my-site/node_modules/.roughjs-aYnTJErG',
+484 silly reify   '/home/jaren/my-site/node_modules/safer-buffer': '/home/jaren/my-site/node_modules/.safer-buffer-W2R9lBvw',
+484 silly reify   '/home/jaren/my-site/node_modules/sax': '/home/jaren/my-site/node_modules/.sax-QNBWzSrc',
+484 silly reify   '/home/jaren/my-site/node_modules/semver': '/home/jaren/my-site/node_modules/.semver-v6pRy2GQ',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/semver': '/home/jaren/my-site/node_modules/.bin/.semver-t2om5X00',
+484 silly reify   '/home/jaren/my-site/node_modules/sharp': '/home/jaren/my-site/node_modules/.sharp-zUfSMhOB',
+484 silly reify   '/home/jaren/my-site/node_modules/shiki': '/home/jaren/my-site/node_modules/.shiki-Q2TSKQRe',
+484 silly reify   '/home/jaren/my-site/node_modules/simple-swizzle': '/home/jaren/my-site/node_modules/.simple-swizzle-7H7PnJKi',
+484 silly reify   '/home/jaren/my-site/node_modules/sisteransi': '/home/jaren/my-site/node_modules/.sisteransi-HWu9H085',
+484 silly reify   '/home/jaren/my-site/node_modules/smol-toml': '/home/jaren/my-site/node_modules/.smol-toml-tr1RsrdP',
+484 silly reify   '/home/jaren/my-site/node_modules/source-map-js': '/home/jaren/my-site/node_modules/.source-map-js-NIWFJj5T',
+484 silly reify   '/home/jaren/my-site/node_modules/space-separated-tokens': '/home/jaren/my-site/node_modules/.space-separated-tokens-dbY6vTMz',
+484 silly reify   '/home/jaren/my-site/node_modules/stoppable': '/home/jaren/my-site/node_modules/.stoppable-mLs1T4nF',
+484 silly reify   '/home/jaren/my-site/node_modules/string-width': '/home/jaren/my-site/node_modules/.string-width-14QRksgI',
+484 silly reify   '/home/jaren/my-site/node_modules/stringify-entities': '/home/jaren/my-site/node_modules/.stringify-entities-7NGI81mF',
+484 silly reify   '/home/jaren/my-site/node_modules/strip-ansi': '/home/jaren/my-site/node_modules/.strip-ansi-ERuYDcjZ',
+484 silly reify   '/home/jaren/my-site/node_modules/stylis': '/home/jaren/my-site/node_modules/.stylis-aOSKKqy8',
+484 silly reify   '/home/jaren/my-site/node_modules/supports-color': '/home/jaren/my-site/node_modules/.supports-color-T8cFiio8',
+484 silly reify   '/home/jaren/my-site/node_modules/svgo': '/home/jaren/my-site/node_modules/.svgo-Gr4XwE5K',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/svgo': '/home/jaren/my-site/node_modules/.bin/.svgo-TQYJPv9A',
+484 silly reify   '/home/jaren/my-site/node_modules/tailwindcss': '/home/jaren/my-site/node_modules/.tailwindcss-XUkJOTTF',
+484 silly reify   '/home/jaren/my-site/node_modules/tapable': '/home/jaren/my-site/node_modules/.tapable-ZTCHnYyj',
+484 silly reify   '/home/jaren/my-site/node_modules/tiny-inflate': '/home/jaren/my-site/node_modules/.tiny-inflate-zxVrbT0Q',
+484 silly reify   '/home/jaren/my-site/node_modules/tinyglobby': '/home/jaren/my-site/node_modules/.tinyglobby-PEe8Qt4J',
+484 silly reify   '/home/jaren/my-site/node_modules/tinyexec': '/home/jaren/my-site/node_modules/.tinyexec-EosrThaG',
+484 silly reify   '/home/jaren/my-site/node_modules/trim-lines': '/home/jaren/my-site/node_modules/.trim-lines-wHjiQr2F',
+484 silly reify   '/home/jaren/my-site/node_modules/trough': '/home/jaren/my-site/node_modules/.trough-P3Ui6lnN',
+484 silly reify   '/home/jaren/my-site/node_modules/ts-dedent': '/home/jaren/my-site/node_modules/.ts-dedent-YaZaktHX',
+484 silly reify   '/home/jaren/my-site/node_modules/tsconfck': '/home/jaren/my-site/node_modules/.tsconfck-SXvdsIJs',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/tsconfck': '/home/jaren/my-site/node_modules/.bin/.tsconfck-c3HTfUzk',
+484 silly reify   '/home/jaren/my-site/node_modules/tslib': '/home/jaren/my-site/node_modules/.tslib-t7Hxm5Cg',
+484 silly reify   '/home/jaren/my-site/node_modules/type-fest': '/home/jaren/my-site/node_modules/.type-fest-0nq5ZiLZ',
+484 silly reify   '/home/jaren/my-site/node_modules/typescript': '/home/jaren/my-site/node_modules/.typescript-0lgix8I7',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/tsc': '/home/jaren/my-site/node_modules/.bin/.tsc-V6kJ0bck',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/tsserver': '/home/jaren/my-site/node_modules/.bin/.tsserver-kgD13XYP',
+484 silly reify   '/home/jaren/my-site/node_modules/ufo': '/home/jaren/my-site/node_modules/.ufo-4tni6pNY',
+484 silly reify   '/home/jaren/my-site/node_modules/ultrahtml': '/home/jaren/my-site/node_modules/.ultrahtml-AYSLH4yL',
+484 silly reify   '/home/jaren/my-site/node_modules/uncrypto': '/home/jaren/my-site/node_modules/.uncrypto-rYigaa3p',
+484 silly reify   '/home/jaren/my-site/node_modules/undici': '/home/jaren/my-site/node_modules/.undici-uZk16nF4',
+484 silly reify   '/home/jaren/my-site/node_modules/undici-types': '/home/jaren/my-site/node_modules/.undici-types-KnSIiXo3',
+484 silly reify   '/home/jaren/my-site/node_modules/unenv': '/home/jaren/my-site/node_modules/.unenv-MDYSnAXV',
+484 silly reify   '/home/jaren/my-site/node_modules/unicode-properties': '/home/jaren/my-site/node_modules/.unicode-properties-hj2LKR0B',
+484 silly reify   '/home/jaren/my-site/node_modules/unified': '/home/jaren/my-site/node_modules/.unified-ONVyru2D',
+484 silly reify   '/home/jaren/my-site/node_modules/unicode-trie': '/home/jaren/my-site/node_modules/.unicode-trie-wq5xUe4O',
+484 silly reify   '/home/jaren/my-site/node_modules/unifont': '/home/jaren/my-site/node_modules/.unifont-sFVT0vyz',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-find-after': '/home/jaren/my-site/node_modules/.unist-util-find-after-nYUkTeb6',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-is': '/home/jaren/my-site/node_modules/.unist-util-is-ctuszoOe',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-modify-children': '/home/jaren/my-site/node_modules/.unist-util-modify-children-EOMxYvpt',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-position': '/home/jaren/my-site/node_modules/.unist-util-position-yyh8MSrT',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-remove-position': '/home/jaren/my-site/node_modules/.unist-util-remove-position-MeSEJePF',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-stringify-position': '/home/jaren/my-site/node_modules/.unist-util-stringify-position-2VSL4IC5',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-visit': '/home/jaren/my-site/node_modules/.unist-util-visit-5zbGTuge',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-visit-children': '/home/jaren/my-site/node_modules/.unist-util-visit-children-2w3IygOI',
+484 silly reify   '/home/jaren/my-site/node_modules/unist-util-visit-parents': '/home/jaren/my-site/node_modules/.unist-util-visit-parents-Zi4UPOmb',
+484 silly reify   '/home/jaren/my-site/node_modules/unstorage': '/home/jaren/my-site/node_modules/.unstorage-pSrUBcdZ',
+484 silly reify   '/home/jaren/my-site/node_modules/util-deprecate': '/home/jaren/my-site/node_modules/.util-deprecate-Vk9JTGdO',
+484 silly reify   '/home/jaren/my-site/node_modules/uuid': '/home/jaren/my-site/node_modules/.uuid-XJlZ9roc',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/uuid': '/home/jaren/my-site/node_modules/.bin/.uuid-r0LWBYGX',
+484 silly reify   '/home/jaren/my-site/node_modules/vfile-location': '/home/jaren/my-site/node_modules/.vfile-location-1VFISJHN',
+484 silly reify   '/home/jaren/my-site/node_modules/vfile': '/home/jaren/my-site/node_modules/.vfile-24PHk3Ad',
+484 silly reify   '/home/jaren/my-site/node_modules/vfile-message': '/home/jaren/my-site/node_modules/.vfile-message-lsF5BrDk',
+484 silly reify   '/home/jaren/my-site/node_modules/vite': '/home/jaren/my-site/node_modules/.vite-SB9f0ynB',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/vite': '/home/jaren/my-site/node_modules/.bin/.vite-wgb3aTLJ',
+484 silly reify   '/home/jaren/my-site/node_modules/vscode-jsonrpc': '/home/jaren/my-site/node_modules/.vscode-jsonrpc-1HEUh3i8',
+484 silly reify   '/home/jaren/my-site/node_modules/vscode-languageserver-protocol': '/home/jaren/my-site/node_modules/.vscode-languageserver-protocol-3DFFGyWR',
+484 silly reify   '/home/jaren/my-site/node_modules/vscode-languageserver': '/home/jaren/my-site/node_modules/.vscode-languageserver-SSCHcsVW',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/installServerIntoExtension': '/home/jaren/my-site/node_modules/.bin/.installServerIntoExtension-M1sNemSQ',
+484 silly reify   '/home/jaren/my-site/node_modules/vitefu': '/home/jaren/my-site/node_modules/.vitefu-HWYUbhjb',
+484 silly reify   '/home/jaren/my-site/node_modules/vscode-languageserver-types': '/home/jaren/my-site/node_modules/.vscode-languageserver-types-56vD8hLt',
+484 silly reify   '/home/jaren/my-site/node_modules/vscode-uri': '/home/jaren/my-site/node_modules/.vscode-uri-qbTijuJH',
+484 silly reify   '/home/jaren/my-site/node_modules/vscode-languageserver-textdocument': '/home/jaren/my-site/node_modules/.vscode-languageserver-textdocument-JbXJ4Frg',
+484 silly reify   '/home/jaren/my-site/node_modules/web-namespaces': '/home/jaren/my-site/node_modules/.web-namespaces-7d8d7ci8',
+484 silly reify   '/home/jaren/my-site/node_modules/widest-line': '/home/jaren/my-site/node_modules/.widest-line-XOThJoPD',
+484 silly reify   '/home/jaren/my-site/node_modules/which-pm-runs': '/home/jaren/my-site/node_modules/.which-pm-runs-EaHYtSZp',
+484 silly reify   '/home/jaren/my-site/node_modules/wrangler': '/home/jaren/my-site/node_modules/.wrangler-kLxfXrPT',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/wrangler': '/home/jaren/my-site/node_modules/.bin/.wrangler-9KxXttBT',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/wrangler2': '/home/jaren/my-site/node_modules/.bin/.wrangler2-SR1u9Nxn',
+484 silly reify   '/home/jaren/my-site/node_modules/workerd': '/home/jaren/my-site/node_modules/.workerd-lK6ktEg0',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/workerd': '/home/jaren/my-site/node_modules/.bin/.workerd-WzqpLIC1',
+484 silly reify   '/home/jaren/my-site/node_modules/wrap-ansi': '/home/jaren/my-site/node_modules/.wrap-ansi-tRREuwzk',
+484 silly reify   '/home/jaren/my-site/node_modules/ws': '/home/jaren/my-site/node_modules/.ws-awtkt30Y',
+484 silly reify   '/home/jaren/my-site/node_modules/yaml': '/home/jaren/my-site/node_modules/.yaml-bb586Gyz',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/yaml': '/home/jaren/my-site/node_modules/.bin/.yaml-WmZybZo7',
+484 silly reify   '/home/jaren/my-site/node_modules/xxhash-wasm': '/home/jaren/my-site/node_modules/.xxhash-wasm-oDNltgDm',
+484 silly reify   '/home/jaren/my-site/node_modules/yargs-parser': '/home/jaren/my-site/node_modules/.yargs-parser-CqSHxSsT',
+484 silly reify   '/home/jaren/my-site/node_modules/yocto-queue': '/home/jaren/my-site/node_modules/.yocto-queue-K9ViL2bg',
+484 silly reify   '/home/jaren/my-site/node_modules/yocto-spinner': '/home/jaren/my-site/node_modules/.yocto-spinner-qPFiQ6pU',
+484 silly reify   '/home/jaren/my-site/node_modules/yoctocolors': '/home/jaren/my-site/node_modules/.yoctocolors-QolP4z6f',
+484 silly reify   '/home/jaren/my-site/node_modules/youch': '/home/jaren/my-site/node_modules/.youch-7v0Uo8aI',
+484 silly reify   '/home/jaren/my-site/node_modules/youch-core': '/home/jaren/my-site/node_modules/.youch-core-wysguoUx',
+484 silly reify   '/home/jaren/my-site/node_modules/zod': '/home/jaren/my-site/node_modules/.zod-AQ6jRcHG',
+484 silly reify   '/home/jaren/my-site/node_modules/zwitch': '/home/jaren/my-site/node_modules/.zwitch-8C50ksIs',
+484 silly reify   '/home/jaren/my-site/node_modules/zod-to-ts': '/home/jaren/my-site/node_modules/.zod-to-ts-Wi9laAV2',
+484 silly reify   '/home/jaren/my-site/node_modules/zod-to-json-schema': '/home/jaren/my-site/node_modules/.zod-to-json-schema-PJxLIOQL',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/compiler': '/home/jaren/my-site/node_modules/@astrojs/.compiler-uMtJVGdF',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/cloudflare': '/home/jaren/my-site/node_modules/@astrojs/.cloudflare-sfYxyEvx',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/markdown-remark': '/home/jaren/my-site/node_modules/@astrojs/.markdown-remark-OHLsOoB7',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/internal-helpers': '/home/jaren/my-site/node_modules/@astrojs/.internal-helpers-DJOd7UDX',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/prism': '/home/jaren/my-site/node_modules/@astrojs/.prism-3RouCvn9',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/ts-plugin': '/home/jaren/my-site/node_modules/@astrojs/.ts-plugin-0ztvpwSH',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/telemetry': '/home/jaren/my-site/node_modules/@astrojs/.telemetry-6bLMEf2X',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/underscore-redirects': '/home/jaren/my-site/node_modules/@astrojs/.underscore-redirects-eJNWghjw',
+484 silly reify   '/home/jaren/my-site/node_modules/@astrojs/yaml2ts': '/home/jaren/my-site/node_modules/@astrojs/.yaml2ts-8dBR4hoA',
+484 silly reify   '/home/jaren/my-site/node_modules/@babel/helper-string-parser': '/home/jaren/my-site/node_modules/@babel/.helper-string-parser-OycQm52F',
+484 silly reify   '/home/jaren/my-site/node_modules/@babel/parser': '/home/jaren/my-site/node_modules/@babel/.parser-GdK7tJbw',
+484 silly reify   '/home/jaren/my-site/node_modules/.bin/parser': '/home/jaren/my-site/node_modules/.bin/.parser-npTwoomD',
+484 silly reify   '/home/jaren/my-site/node_modules/@babel/types': '/home/jaren/my-site/node_modules/@babel/.types-ryObI1SZ',
+484 silly reify   '/home/jaren/my-site/node_modules/@babel/helper-validator-identifier': '/home/jaren/my-site/node_modules/@babel/.helper-validator-identifier-RAv5kx07',
+484 silly reify   '/home/jaren/my-site/node_modules/@braintree/sanitize-url': '/home/jaren/my-site/node_modules/@braintree/.sanitize-url-FQrQWsSX',
+484 silly reify   '/home/jaren/my-site/node_modules/@capsizecss/unpack': '/home/jaren/my-site/node_modules/@capsizecss/.unpack-hBS0Bm2x',
+484 silly reify   '/home/jaren/my-site/node_modules/@chevrotain/cst-dts-gen': '/home/jaren/my-site/node_modules/@chevrotain/.cst-dts-gen-ZxEeGvCG',
+484 silly reify   '/home/jaren/my-site/node_modules/@chevrotain/gast': '/home/jaren/my-site/node_modules/@chevrotain/.gast-iwgPOXn7',
+484 silly reify   '/home/jaren/my-site/node_modules/@chevrotain/regexp-to-ast': '/home/jaren/my-site/node_modules/@chevrotain/.regexp-to-ast-6sh0G1hV',
+484 silly reify   '/home/jaren/my-site/node_modules/@chevrotain/types': '/home/jaren/my-site/node_modules/@chevrotain/.types-GZlNVU2B',
+484 silly reify   '/home/jaren/my-site/node_modules/@chevrotain/utils': '/home/jaren/my-site/node_modules/@chevrotain/.utils-X9mNgysZ',
+484 silly reify   '/home/jaren/my-site/node_modules/@cloudflare/kv-asset-handler': '/home/jaren/my-site/node_modules/@cloudflare/.kv-asset-handler-ITFNRePV',
+484 silly reify   '/home/jaren/my-site/node_modules/@cloudflare/workerd-linux-64': '/home/jaren/my-site/node_modules/@cloudflare/.workerd-linux-64-Qci6i7j0',
+484 silly reify   '/home/jaren/my-site/node_modules/@cloudflare/unenv-preset': '/home/jaren/my-site/node_modules/@cloudflare/.unenv-preset-yuFmtLY1',
+484 silly reify   '/home/jaren/my-site/node_modules/@cloudflare/workers-types': '/home/jaren/my-site/node_modules/@cloudflare/.workers-types-I44N5NNP',
+484 silly reify   '/home/jaren/my-site/node_modules/@cspotcode/source-map-support': '/home/jaren/my-site/node_modules/@cspotcode/.source-map-support-LDBBglYo',
+484 silly reify   '/home/jaren/my-site/node_modules/@esbuild/linux-x64': '/home/jaren/my-site/node_modules/@esbuild/.linux-x64-kv6ZmpQN',
+484 silly reify   '/home/jaren/my-site/node_modules/@fortawesome/fontawesome-free': '/home/jaren/my-site/node_modules/@fortawesome/.fontawesome-free-BGW5MLXx',
+484 silly reify   '/home/jaren/my-site/node_modules/@emnapi/runtime': '/home/jaren/my-site/node_modules/@emnapi/.runtime-fIJYFPnl',
+484 silly reify   '/home/jaren/my-site/node_modules/@iconify/types': '/home/jaren/my-site/node_modules/@iconify/.types-P5PJMInQ',
+484 silly reify   '/home/jaren/my-site/node_modules/@iconify/utils': '/home/jaren/my-site/node_modules/@iconify/.utils-K0iEumq2',
+484 silly reify   '/home/jaren/my-site/node_modules/@img/sharp-libvips-linux-x64': '/home/jaren/my-site/node_modules/@img/.sharp-libvips-linux-x64-Fj27QovW',
+484 silly reify   '/home/jaren/my-site/node_modules/@img/sharp-libvips-linuxmusl-x64': '/home/jaren/my-site/node_modules/@img/.sharp-libvips-linuxmusl-x64-9GgJUq9x',
+484 silly reify   '/home/jaren/my-site/node_modules/@img/colour': '/home/jaren/my-site/node_modules/@img/.colour-GpA92Xfe',
+484 silly reify   '/home/jaren/my-site/node_modules/@img/sharp-linux-x64': '/home/jaren/my-site/node_modules/@img/.sharp-linux-x64-N2IL0kQj',
+484 silly reify   '/home/jaren/my-site/node_modules/@img/sharp-linuxmusl-x64': '/home/jaren/my-site/node_modules/@img/.sharp-linuxmusl-x64-Zcr0MJep',
+484 silly reify   '/home/jaren/my-site/node_modules/@jridgewell/gen-mapping': '/home/jaren/my-site/node_modules/@jridgewell/.gen-mapping-3fkAlHsm',
+484 silly reify   '/home/jaren/my-site/node_modules/@jridgewell/resolve-uri': '/home/jaren/my-site/node_modules/@jridgewell/.resolve-uri-usGi9oxO',
+484 silly reify   '/home/jaren/my-site/node_modules/@jridgewell/remapping': '/home/jaren/my-site/node_modules/@jridgewell/.remapping-wWMe9iRH',
+484 silly reify   '/home/jaren/my-site/node_modules/@jridgewell/sourcemap-codec': '/home/jaren/my-site/node_modules/@jridgewell/.sourcemap-codec-Fm7G6Jzu',
+484 silly reify   '/home/jaren/my-site/node_modules/@jridgewell/trace-mapping': '/home/jaren/my-site/node_modules/@jridgewell/.trace-mapping-Qyv8njf5',
+484 silly reify   '/home/jaren/my-site/node_modules/@mermaid-js/parser': '/home/jaren/my-site/node_modules/@mermaid-js/.parser-YdeKnYYm',
+484 silly reify   '/home/jaren/my-site/node_modules/@oslojs/encoding': '/home/jaren/my-site/node_modules/@oslojs/.encoding-lbVThFKd',
+484 silly reify   '/home/jaren/my-site/node_modules/@poppinss/dumper': '/home/jaren/my-site/node_modules/@poppinss/.dumper-qBbZyNCK',
+484 silly reify   '/home/jaren/my-site/node_modules/@poppinss/colors': '/home/jaren/my-site/node_modules/@poppinss/.colors-EcJ1poKQ',
+484 silly reify   '/home/jaren/my-site/node_modules/@poppinss/exception': '/home/jaren/my-site/node_modules/@poppinss/.exception-rHlJ1MWf',
+484 silly reify   '/home/jaren/my-site/node_modules/@rollup/pluginutils': '/home/jaren/my-site/node_modules/@rollup/.pluginutils-fc5Be11n',
+484 silly reify   '/home/jaren/my-site/node_modules/@rollup/rollup-linux-x64-gnu': '/home/jaren/my-site/node_modules/@rollup/.rollup-linux-x64-gnu-QQIAQ0xw',
+484 silly reify   '/home/jaren/my-site/node_modules/@rollup/rollup-linux-x64-musl': '/home/jaren/my-site/node_modules/@rollup/.rollup-linux-x64-musl-w62F6YTz',
+484 silly reify   '/home/jaren/my-site/node_modules/@shikijs/engine-javascript': '/home/jaren/my-site/node_modules/@shikijs/.engine-javascript-4XCs9JlK',
+484 silly reify   '/home/jaren/my-site/node_modules/@shikijs/core': '/home/jaren/my-site/node_modules/@shikijs/.core-qFmMVnmm',
+484 silly reify   '/home/jaren/my-site/node_modules/@shikijs/engine-oniguruma': '/home/jaren/my-site/node_modules/@shikijs/.engine-oniguruma-txXAm83k',
+484 silly reify   '/home/jaren/my-site/node_modules/@shikijs/langs': '/home/jaren/my-site/node_modules/@shikijs/.langs-j9UWjFPc',
+484 silly reify   '/home/jaren/my-site/node_modules/@shikijs/types': '/home/jaren/my-site/node_modules/@shikijs/.types-VgwmhLu8',
+484 silly reify   '/home/jaren/my-site/node_modules/@shikijs/themes': '/home/jaren/my-site/node_modules/@shikijs/.themes-9DhUzd44',
+484 silly reify   '/home/jaren/my-site/node_modules/@shikijs/vscode-textmate': '/home/jaren/my-site/node_modules/@shikijs/.vscode-textmate-lGVtHedN',
+484 silly reify   '/home/jaren/my-site/node_modules/@sindresorhus/is': '/home/jaren/my-site/node_modules/@sindresorhus/.is-EjKCIu5n',
+484 silly reify   '/home/jaren/my-site/node_modules/@speed-highlight/core': '/home/jaren/my-site/node_modules/@speed-highlight/.core-oPdPNUYs',
+484 silly reify   '/home/jaren/my-site/node_modules/@tailwindcss/node': '/home/jaren/my-site/node_modules/@tailwindcss/.node-XLxFV2aB',
+484 silly reify   '/home/jaren/my-site/node_modules/@swc/helpers': '/home/jaren/my-site/node_modules/@swc/.helpers-Oa5kp8DN',
+484 silly reify   '/home/jaren/my-site/node_modules/@tailwindcss/oxide-linux-x64-gnu': '/home/jaren/my-site/node_modules/@tailwindcss/.oxide-linux-x64-gnu-daWRTxRB',
+484 silly reify   '/home/jaren/my-site/node_modules/@tailwindcss/oxide-linux-x64-musl': '/home/jaren/my-site/node_modules/@tailwindcss/.oxide-linux-x64-musl-kyQjZSUa',
+484 silly reify   '/home/jaren/my-site/node_modules/@tailwindcss/typography': '/home/jaren/my-site/node_modules/@tailwindcss/.typography-1m2xZBJm',
+484 silly reify   '/home/jaren/my-site/node_modules/@tailwindcss/vite': '/home/jaren/my-site/node_modules/@tailwindcss/.vite-shoaNvFm',
+484 silly reify   '/home/jaren/my-site/node_modules/@tailwindcss/oxide': '/home/jaren/my-site/node_modules/@tailwindcss/.oxide-4nJ7vvDc',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3': '/home/jaren/my-site/node_modules/@types/.d3-k40bEgz5',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-array': '/home/jaren/my-site/node_modules/@types/.d3-array-Swrc9zYL',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-axis': '/home/jaren/my-site/node_modules/@types/.d3-axis-lLSqe3JV',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-chord': '/home/jaren/my-site/node_modules/@types/.d3-chord-ilT0O5cc',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-brush': '/home/jaren/my-site/node_modules/@types/.d3-brush-wLM4RAYQ',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-color': '/home/jaren/my-site/node_modules/@types/.d3-color-r13KViSL',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-contour': '/home/jaren/my-site/node_modules/@types/.d3-contour-TzPglaaO',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-delaunay': '/home/jaren/my-site/node_modules/@types/.d3-delaunay-h0Ehq5Wd',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-dispatch': '/home/jaren/my-site/node_modules/@types/.d3-dispatch-VLovPdBQ',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-drag': '/home/jaren/my-site/node_modules/@types/.d3-drag-oSesNhAf',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-dsv': '/home/jaren/my-site/node_modules/@types/.d3-dsv-cfpfHeBb',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-ease': '/home/jaren/my-site/node_modules/@types/.d3-ease-CGpcSYiD',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-fetch': '/home/jaren/my-site/node_modules/@types/.d3-fetch-DwV1yAqV',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-force': '/home/jaren/my-site/node_modules/@types/.d3-force-iF7MQLeO',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-format': '/home/jaren/my-site/node_modules/@types/.d3-format-3bFdTIro',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-geo': '/home/jaren/my-site/node_modules/@types/.d3-geo-GoGRfgCZ',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-hierarchy': '/home/jaren/my-site/node_modules/@types/.d3-hierarchy-HOOkHR2o',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-interpolate': '/home/jaren/my-site/node_modules/@types/.d3-interpolate-95412Q5u',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-path': '/home/jaren/my-site/node_modules/@types/.d3-path-hoQuCJF5',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-polygon': '/home/jaren/my-site/node_modules/@types/.d3-polygon-EelKolFf',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-quadtree': '/home/jaren/my-site/node_modules/@types/.d3-quadtree-4Sv1691r',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-random': '/home/jaren/my-site/node_modules/@types/.d3-random-9v9gtUGu',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-scale-chromatic': '/home/jaren/my-site/node_modules/@types/.d3-scale-chromatic-jznVWKWo',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-scale': '/home/jaren/my-site/node_modules/@types/.d3-scale-BSTDxzGT',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-selection': '/home/jaren/my-site/node_modules/@types/.d3-selection-lbjzxdQk',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-shape': '/home/jaren/my-site/node_modules/@types/.d3-shape-JESP6IJE',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-time': '/home/jaren/my-site/node_modules/@types/.d3-time-x0wyqyHZ',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-timer': '/home/jaren/my-site/node_modules/@types/.d3-timer-CcuQZi9K',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-time-format': '/home/jaren/my-site/node_modules/@types/.d3-time-format-lA7zhEF2',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-transition': '/home/jaren/my-site/node_modules/@types/.d3-transition-0c0l2TkK',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/d3-zoom': '/home/jaren/my-site/node_modules/@types/.d3-zoom-jbsdYPym',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/debug': '/home/jaren/my-site/node_modules/@types/.debug-1dfVH5og',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/estree': '/home/jaren/my-site/node_modules/@types/.estree-eT7JPbpq',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/fontkit': '/home/jaren/my-site/node_modules/@types/.fontkit-DITCTXqj',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/geojson': '/home/jaren/my-site/node_modules/@types/.geojson-gupBcF1q',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/hast': '/home/jaren/my-site/node_modules/@types/.hast-BtASM7Ta',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/mdast': '/home/jaren/my-site/node_modules/@types/.mdast-SWKDoiae',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/ms': '/home/jaren/my-site/node_modules/@types/.ms-frNdBlYf',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/nlcst': '/home/jaren/my-site/node_modules/@types/.nlcst-szWxNOjE',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/node': '/home/jaren/my-site/node_modules/@types/.node-LBoJkxh1',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/trusted-types': '/home/jaren/my-site/node_modules/@types/.trusted-types-6cqx3TvT',
+484 silly reify   '/home/jaren/my-site/node_modules/@types/unist': '/home/jaren/my-site/node_modules/@types/.unist-rbMfgNZO',
+484 silly reify   '/home/jaren/my-site/node_modules/@ungap/structured-clone': '/home/jaren/my-site/node_modules/@ungap/.structured-clone-xLdvQ0hX',
+484 silly reify   '/home/jaren/my-site/node_modules/@volar/language-core': '/home/jaren/my-site/node_modules/@volar/.language-core-ghA7cN3r',
+484 silly reify   '/home/jaren/my-site/node_modules/@volar/source-map': '/home/jaren/my-site/node_modules/@volar/.source-map-WGptDKRv',
+484 silly reify   '/home/jaren/my-site/node_modules/@volar/typescript': '/home/jaren/my-site/node_modules/@volar/.typescript-DkvItPJp',
+484 silly reify   '/home/jaren/my-site/node_modules/@antfu/install-pkg': '/home/jaren/my-site/node_modules/@antfu/.install-pkg-zLYLgLnL'
+484 silly reify }
+485 verbose stack Error: EROFS: read-only file system, rename '/home/jaren/my-site/node_modules/.bin/acorn' -> '/home/jaren/my-site/node_modules/.bin/.acorn-N2lbwFww'
+485 verbose stack     at async Object.rename (node:internal/fs/promises:784:10)
+485 verbose stack     at async moveFile (/nix/store/9ajfmqyg0y8y60jhxzd5x1zwqd3l39yn-nodejs-slim-22.22.2-npm/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+485 verbose stack     at async Promise.allSettled (index 1)
+485 verbose stack     at async [reifyPackages] (/nix/store/9ajfmqyg0y8y60jhxzd5x1zwqd3l39yn-nodejs-slim-22.22.2-npm/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:334:11)
+485 verbose stack     at async Arborist.reify (/nix/store/9ajfmqyg0y8y60jhxzd5x1zwqd3l39yn-nodejs-slim-22.22.2-npm/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:149:5)
+485 verbose stack     at async Uninstall.exec (/nix/store/9ajfmqyg0y8y60jhxzd5x1zwqd3l39yn-nodejs-slim-22.22.2-npm/lib/node_modules/npm/lib/commands/uninstall.js:51:5)
+485 verbose stack     at async Npm.exec (/nix/store/9ajfmqyg0y8y60jhxzd5x1zwqd3l39yn-nodejs-slim-22.22.2-npm/lib/node_modules/npm/lib/npm.js:207:9)
+485 verbose stack     at async module.exports (/nix/store/9ajfmqyg0y8y60jhxzd5x1zwqd3l39yn-nodejs-slim-22.22.2-npm/lib/node_modules/npm/lib/cli/entry.js:74:5)
+486 error code EROFS
+487 error syscall rename
+488 error path /home/jaren/my-site/node_modules/.bin/acorn
+489 error dest /home/jaren/my-site/node_modules/.bin/.acorn-N2lbwFww
+490 error errno -30
+491 error rofs EROFS: read-only file system, rename '/home/jaren/my-site/node_modules/.bin/acorn' -> '/home/jaren/my-site/node_modules/.bin/.acorn-N2lbwFww'
+492 error rofs Often virtualized file systems, or other file systems
+492 error rofs that don't support symlinks, give this error.
+493 silly unfinished npm timer reify 1787646240792
+494 silly unfinished npm timer reify:retireShallow 1787646241179
+495 verbose cwd /home/jaren/my-site
+496 verbose os Linux 6.18.45
+497 verbose node v22.22.2
+498 verbose npm  v10.9.7
+499 verbose exit -30
+500 verbose code -30
+501 error A complete log of this run can be found in: /home/jaren/my-site/.npm-cache/_logs/2026-08-25T08_24_00_572Z-debug-0.log

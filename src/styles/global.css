@@ -50,31 +50,6 @@ h3 {
   @apply text-sm text-neutral-400 font-mono;
 }
 
-.triad-links {
-  color: #fff;
-}
-
-.triad-links a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.triad-links a:hover {
-  color: #e5e7eb;
-}
-
-/* Mermaid subgraph labels */
-.mermaid .cluster-label {
-  fill: #737373 !important;
-  color: #737373 !important;
-}
-
-.mermaid .cluster-label span {
-  color: #737373 !important;
-  font-size: 0.8em !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
 
 /* Nav link hover effect - underline slides in from left */
 .nav-link {

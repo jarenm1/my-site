@@ -9,12 +9,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  markdown: {
-    shikiConfig: {
-      // Don't syntax highlight mermaid - let client handle it
-      langAlias: { mermaid: 'text' }
-    }
-  },
 
   adapter: cloudflare()
 });
