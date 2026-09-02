@@ -73,6 +73,14 @@ function getYouTubeEmbedUrl(urlOrId?: string): string | null {
 
             {item.type === 'canvas' && (
               <div class="aspect-video w-full flex items-center justify-center overflow-hidden">
+                {item.canvasType === 'triage-data-generation' && (
+                  <iframe
+                    class="w-full h-full border-0"
+                    src="/wasm/triage-data-generation/index.html"
+                    title="Triage data generation demo"
+                    loading="lazy"
+                  />
+                )}
                 {item.canvasType === 'triage' && <TriageCanvas />}
                 {item.canvasType === 'predator-prey' && <PredatorPrey />}
                 {item.canvasType === 'flow-field' && <FlowFieldArt />}

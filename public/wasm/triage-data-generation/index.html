@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triage canvas</title>
+  <link rel="icon" href="data:,">
+  
+  
+  <style>
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #141c24; }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; outline: none; }
+  </style>
+  <script type="module" src="./app.js"></script>
+<link rel="modulepreload" href="./web-demo.js" crossorigin="anonymous" integrity="sha384-B5sOOOm17xr/+E3uUyraDNuFMOFjWazPvpOG21IyQcNSC6eF42sOoqK8C1GxrjJC"><link rel="preload" href="./web-demo_bg.wasm" crossorigin="anonymous" integrity="sha384-rO0X/BS3v7ZBlDHRtn6rpltWI2mX2L34ckYiVKAePbFSUr/8tWUK17IPIdSs5azh" as="fetch" type="application/wasm"></head>
+<body>
+  <canvas id="triage-canvas" tabindex="0" aria-label="Loading Triage renderer" title="1 RGB · 2 Depth · 3 Instances · 4 Compare · S scene · Drag / arrows to orbit · Scroll / pinch to zoom · Space auto-orbit · Double-click to reset"></canvas>
+</body>
+</html>
