@@ -1,0 +1,115 @@
+---
+import { feedItems } from '../data/feed';
+import PredatorPrey from './PredatorPrey.astro';
+import FlowFieldArt from './FlowFieldArt.astro';
+import TriageCanvas from './TriageCanvas.astro';
+function getYouTubeEmbedUrl(urlOrId?: string): string | null {
+  if (!urlOrId) return null;
+
+  let id: string | null = null;
+  let startSeconds: number | null = null;
+
+  // Extract ID
+  if (/^[a-zA-Z0-9_-]{11}$/.test(urlOrId)) {
+    id = urlOrId;
+  } else {
+    const idMatch = urlOrId.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
+    if (idMatch) {
+      id = idMatch[1];
+    }
+  }
+
+  if (!id) return null;
+
+  // Extract timestamp if present (e.g. t=2974, t=49m34s, start=2974)
+  const timeMatch = urlOrId.match(/[?&](?:t|start)=([0-9hms]+)/);
+  if (timeMatch) {
+    const rawTime = timeMatch[1];
+    if (/^\d+s?$/.test(rawTime)) {
+      startSeconds = parseInt(rawTime, 10);
+    } else {
+      let total = 0;
+      const hours = rawTime.match(/(\d+)h/);
+      const minutes = rawTime.match(/(\d+)m/);
+      const seconds = rawTime.match(/(\d+)s/);
+      if (hours) total += parseInt(hours[1], 10) * 3600;
+      if (minutes) total += parseInt(minutes[1], 10) * 60;
+      if (seconds) total += parseInt(seconds[1], 10);
+      if (total > 0) startSeconds = total;
+    }
+  }
+
+  const query = startSeconds ? `?start=${startSeconds}` : '';
+  return `https://www.youtube-nocookie.com/embed/${id}${query}`;
+}
+---
+
+<div class="space-y-10 md:space-y-14">
+  {feedItems.length === 0 ? (
+    <div class="py-12 text-center text-neutral-500 font-mono text-xs">
+      <p>Feed updates coming soon.</p>
+    </div>
+  ) : (
+    feedItems.map((item) => {
+      const embedUrl = item.type === 'youtube' ? getYouTubeEmbedUrl(item.youtubeUrl) : null;
+      const isVertical = item.aspect === 'vertical' || item.youtubeUrl?.includes('/shorts/');
+
+      return (
+        <article class="group relative flex flex-col space-y-4">
+          {/* Media Container */}
+          <div class={`relative w-full rounded-lg border border-neutral-800 bg-neutral-900/60 overflow-hidden shadow-sm ${isVertical ? 'max-w-[360px] mx-auto' : ''}`}>
+            {item.type === 'youtube' && embedUrl && (
+              <div class={isVertical ? 'aspect-[9/16] w-full' : 'aspect-video w-full'}>
+                <iframe
+                  class="w-full h-full border-0"
+                  src={embedUrl}
+                  title={item.title || 'YouTube video'}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  loading="lazy"
+                  allowfullscreen
+                />
+              </div>
+            )}
+
+            {item.type === 'canvas' && (
+              <div class="aspect-video w-full flex items-center justify-center overflow-hidden">
+                {item.canvasType === 'triage' && <TriageCanvas />}
+                {item.canvasType === 'predator-prey' && <PredatorPrey />}
+                {item.canvasType === 'flow-field' && <FlowFieldArt />}
+              </div>
+            )}
+          </div>
+
+          {/* Info: Title + Single Subtitle + Optional Link (if any provided) */}
+          {(item.title || item.subtitle || item.link) && (
+            <div class={`flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 ${isVertical ? 'max-w-[360px] mx-auto w-full' : ''}`}>
+              <div>
+                {item.title && (
+                  <h2 class="text-lg md:text-xl font-medium text-neutral-100">
+                    {item.title}
+                  </h2>
+                )}
+                {item.subtitle && (
+                  <p class="text-sm text-neutral-400 mt-1">
+                    {item.subtitle}
+                  </p>
+                )}
+              </div>
+
+              {item.link && (
+                <a
+                  href={item.link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-xs font-mono text-neutral-500 hover:text-neutral-300 transition-colors shrink-0 underline decoration-neutral-700 underline-offset-4"
+                >
+                  {item.link.label} &rarr;
+                </a>
+              )}
+            </div>
+          )}
+        </article>
+      );
+    })
+  )}
+</div>
