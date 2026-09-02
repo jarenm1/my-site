@@ -18,6 +18,17 @@ export interface FeedItem {
 
 export const feedItems: FeedItem[] = [
   {
+    id: 'triage-data-generation',
+    title: 'Triage: data gen',
+    subtitle: 'RGB, relative depth, and instance IDs rendered with WebGPU.',
+    type: 'canvas',
+    canvasType: 'triage-data-generation',
+    link: {
+      label: 'GitHub',
+      url: 'https://github.com/jarenm1/triage'
+    }
+  },
+  {
     id: 'triage-demo',
     title: 'Triage',
     subtitle: 'winit & wgpu rendered in canvas.',
