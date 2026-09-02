@@ -1,0 +1,37 @@
+export interface FeedItem {
+  id: string;
+  title?: string;
+  subtitle?: string;
+  type: 'canvas' | 'youtube';
+  date?: string;
+  // YouTube video ID or full URL with optional timestamp (e.g. "https://youtu.be/NYFGCESmikA?t=2974")
+  youtubeUrl?: string;
+  // Aspect ratio ("video" = 16:9 standard, "vertical" = 9:16 for Shorts)
+  aspect?: 'video' | 'vertical';
+  // For interactive canvas demos
+  canvasType?: string;
+  link?: {
+    label: string;
+    url: string;
+  };
+}
+
+export const feedItems: FeedItem[] = [
+  {
+    id: 'triage-demo',
+    title: 'Triage',
+    subtitle: 'winit & wgpu rendered in canvas.',
+    type: 'canvas',
+    canvasType: 'triage',
+    link: {
+      label: 'GitHub',
+      url: 'https://github.com/jarenm1/triage'
+    }
+  },
+  {
+    id: 'talk-demo',
+    type: 'youtube',
+    youtubeUrl: 'https://youtu.be/NYFGCESmikA?t=2974',
+    subtitle: 'the most beautiful programming language btw'
+  }
+];

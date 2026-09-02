@@ -1,19 +1,14 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import AboutSection from '../components/AboutSection.astro';
-import PredatorPrey from '../components/PredatorPrey.astro';
+import FeedSection from '../components/FeedSection.astro';
 ---
 
 <MainLayout title="Jaren McHugh">
-  <div class="landing">
-    <section class="landing-copy">
-      <AboutSection />
-    </section>
-
-    <div class="rl-showcase">
-      <PredatorPrey />
-    </div>
-
-    <section class="posts-space" aria-label="Posts"></section>
+  <div class="max-w-2xl mx-auto px-4 py-12 md:py-20">
+    <AboutSection />
+    <main>
+      <FeedSection />
+    </main>
   </div>
 </MainLayout>

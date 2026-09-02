@@ -1,0 +1,63 @@
+---
+---
+
+<div id="triage-container" class="relative w-full h-full aspect-video flex items-center justify-center bg-neutral-950/80 overflow-hidden">
+  <canvas id="sim-canvas" class="w-full h-full block focus:outline-none"></canvas>
+  <div id="triage-fallback" class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-xs font-mono text-neutral-400 bg-neutral-950/90">
+    <p>Unable to initialize WebGPU / WebGL renderer.</p>
+  </div>
+</div>
+
+<script is:inline>
+  let isInitialized = false;
+  let isVisible = false;
+
+  async function loadAndRunTriage() {
+    if (isInitialized) return;
+    isInitialized = true;
+
+    const canvas = document.getElementById('sim-canvas');
+    const fallback = document.getElementById('triage-fallback');
+    if (!canvas) return;
+
+    try {
+      const { default: init, run_wasm } = await import('/wasm/triage/window-demo.js');
+      await init('/wasm/triage/window-demo_bg.wasm');
+      if (typeof run_wasm === 'function') {
+        run_wasm();
+      }
+    } catch (err) {
+      console.error('Failed to load triage graphics demo:', err);
+      if (fallback) {
+        fallback.textContent = 'Error initializing renderer: ' + (err instanceof Error ? err.message : String(err));
+        fallback.classList.remove('hidden');
+      }
+    }
+  }
+
+  function setupObserver() {
+    const container = document.getElementById('triage-container');
+    if (!container) return;
+
+    // IntersectionObserver to pause loop offscreen and lazy-load on approach
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      isVisible = entry.isIntersecting;
+
+      if (isVisible && !isInitialized) {
+        loadAndRunTriage();
+      }
+    }, {
+      rootMargin: '100px',
+      threshold: 0.01
+    });
+
+    observer.observe(container);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupObserver);
+  } else {
+    setupObserver();
+  }
+</script>
