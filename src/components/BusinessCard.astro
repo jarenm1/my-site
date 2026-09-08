@@ -1,7 +1,4 @@
----
-// Prototype: three business-card compositions on /, selected with ?variant=A|B|C.
----
-<header class="card-prototype" data-variant="C">
+<header class="business-card">
   <div class="card-intro">
     <h1>Jaren McHugh</h1>
     <p class="intro-description">Austin, TX, Systems and ML</p>
@@ -14,25 +11,14 @@
     </nav>
   </div>
 </header>
-{import.meta.env.DEV && <aside class="prototype-switcher" aria-label="Prototype variants">
-  <span class="draft-label">DRAFT</span>
-  <button type="button" data-direction="-1" aria-label="Previous variant">←</button>
-  <output aria-live="polite">C · Typeset</output>
-  <button type="button" data-direction="1" aria-label="Next variant">→</button>
-</aside>}
 
 <script>
   import * as THREE from 'three';
   import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
   import QRCode from 'qrcode';
 
-  const root = document.querySelector<HTMLElement>('.card-prototype')!;
+  const root = document.querySelector<HTMLElement>('.business-card')!;
   const stage = root.querySelector<HTMLElement>('.card-stage')!;
-  const variants = ['A', 'B', 'C'];
-  const names = ['On paper', 'The introduction', 'Typeset'];
-  const requested = new URL(location.href).searchParams.get('variant');
-  let variant = variants.includes(requested ?? '') ? requested! : 'C';
-  root.dataset.variant = variant;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
@@ -135,21 +121,11 @@
       ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.025})`;
       ctx.fillRect(Math.random() * 1400, Math.random() * 800, 1.5, 1.5);
     }
-    if (variant === 'C') {
-      text('Jaren', 85, 270, 206, 'Noto Serif', '#f5f5f5');
-      text('McHugh', 75, 483, 206, 'Noto Serif', '#f5f5f5');
-      ctx.fillStyle = '#555555';
-      ctx.fillRect(88, 557, 1224, 2);
-      text('Austin, TX, Systems and ML', 88, 622, 36, 'Inter');
-    } else if (variant === 'B') {
-      ctx.fillStyle = '#555555';
-      ctx.fillRect(100, 100, 2, 600);
-      text('Jaren McHugh', 165, 310, 104, 'Noto Serif', '#f5f5f5');
-      text('Austin, TX, Systems and ML', 170, 390, 40, 'Inter');
-    } else {
-      text('Jaren McHugh', 94, 335, 104, 'Noto Serif', '#f5f5f5');
-      text('Austin, TX, Systems and ML', 100, 414, 40, 'Inter');
-    }
+    text('Jaren', 85, 270, 206, 'Noto Serif', '#f5f5f5');
+    text('McHugh', 75, 483, 206, 'Noto Serif', '#f5f5f5');
+    ctx.fillStyle = '#555555';
+    ctx.fillRect(88, 557, 1224, 2);
+    text('Austin, TX, Systems and ML', 88, 622, 36, 'Inter');
     texture.needsUpdate = true;
   }
 
@@ -231,81 +207,35 @@
     targetX = targetY = 0;
     requestRender();
   });
-  function applyVariant() {
-    root.dataset.variant = variant;
-    const label = document.querySelector('output');
-    if (label) label.textContent = `${variant} · ${names[variants.indexOf(variant)]}`;
-    drawArtwork();
-    resize();
-  }
-  function cycle(direction: number) {
-    variant = variants[(variants.indexOf(variant) + direction + variants.length) % variants.length];
-    const url = new URL(location.href);
-    url.searchParams.set('variant', variant);
-    history.replaceState(null, '', url);
-    applyVariant();
-  }
-  document.querySelectorAll<HTMLButtonElement>('[data-direction]').forEach(button => {
-    button.addEventListener('click', () => cycle(Number(button.dataset.direction)));
-  });
-  if (import.meta.env.DEV) document.addEventListener('keydown', (event) => {
-    if (event.target instanceof HTMLElement && event.target.closest('input, textarea, select, [contenteditable], [role="slider"]')) return;
-    if (event.altKey || event.ctrlKey || event.metaKey) return;
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-      event.preventDefault();
-      cycle(event.key === 'ArrowLeft' ? -1 : 1);
-    }
-  });
-  window.addEventListener('popstate', () => {
-    const value = new URL(location.href).searchParams.get('variant');
-    variant = variants.includes(value ?? '') ? value! : 'C';
-    applyVariant();
-  });
   await Promise.all([document.fonts.load('400 104px "Noto Serif"'), document.fonts.load('400 31px "IBM Plex Mono"'), document.fonts.load('400 40px "Inter"')]);
   backContext.fillStyle = '#b5b5b5';
   backContext.font = '400 32px "IBM Plex Mono"';
   backContext.textAlign = 'center';
   backContext.fillText('jarenmchugh.com', 700, 718);
   backTexture.needsUpdate = true;
-  applyVariant();
+  drawArtwork();
+  resize();
   root.classList.add('is-rendered');
 </script>
 
 <style>
-  .card-prototype { margin: -1.5rem -1rem 4rem; }
-  .card-stage { height: 340px; width: 100%; min-width: 0; touch-action: pan-y; cursor: grab; }
+  .business-card { margin: -1.5rem -1rem 4rem; }
+  .card-stage { height: 385px; width: 100%; min-width: 0; touch-action: pan-y; cursor: grab; }
   .card-stage.is-dragging { cursor: grabbing; }
   .card-stage:focus { outline: none; }
   .card-stage :global(canvas) { display: block; }
   .card-intro { text-align: center; padding: 2rem 1rem 0; }
   .card-intro h1 { font-family: var(--font-noto-serif); font-size: 2rem; letter-spacing: -0.04em; }
   .intro-description { color: #a3a3a3; font-size: 0.8rem; }
-  .is-rendered:not([data-variant="B"]) .card-intro { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .is-rendered .card-intro { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .card-caption { display: flex; justify-content: center; align-items: center; margin: 0 1rem; padding-top: 0.25rem; font-family: var(--font-mono); font-size: 0.75rem; }
   nav { display: flex; gap: 1.5rem; }
   nav a { color: #a3a3a3; text-decoration: underline; text-decoration-color: #404040; text-underline-offset: 4px; padding-block: 0.5rem; }
   nav a:hover { color: #f5f5f5; }
-  [data-variant="B"] { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; margin-top: 1rem; }
-  [data-variant="B"] .card-intro { text-align: left; padding: 0 0 0 1rem; }
-  [data-variant="B"] .card-intro h1 { font-size: 2.3rem; line-height: 1.15; margin-bottom: 1rem; }
-  [data-variant="B"] .card-stage { height: 280px; }
-  [data-variant="B"] .card-caption { grid-column: 1 / -1; margin: 1rem 1rem 0; }
-  [data-variant="C"] .card-stage { height: 385px; }
-  [data-variant="C"] .card-caption { justify-content: center; }
-  .prototype-switcher { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); z-index: 100; display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.7rem; background: #eae5da; color: #292923; border: 1px solid #fff8; border-radius: 999px; box-shadow: 0 4px 24px #0006; font: 11px var(--font-mono); white-space: nowrap; }
-  .draft-label { font-size: 9px; color: #7c776b; margin-inline: 0.3rem; }
-  .prototype-switcher button { width: 30px; height: 30px; cursor: pointer; border-radius: 50%; }
-  .prototype-switcher button:hover { background: #d7d0c3; }
-  .prototype-switcher output { min-width: 155px; text-align: center; }
   @media (max-width: 520px) {
-    .card-prototype { margin-top: -1rem; margin-bottom: 3rem; }
-    .card-stage { height: 265px; }
+    .business-card { margin-top: -1rem; margin-bottom: 3rem; }
+    .card-stage { height: 290px; }
     .card-caption { margin-inline: 1.4rem; font-size: 0.6rem; }
     .card-caption { justify-content: center; }
-    [data-variant="B"] { display: flex; flex-direction: column; }
-    [data-variant="B"] .card-intro { text-align: center; padding: 1rem 1rem 0; }
-    [data-variant="B"] .card-stage { height: 255px; }
-    [data-variant="B"] .card-caption { margin-top: 0; }
-    [data-variant="C"] .card-stage { height: 290px; }
   }
 </style>
