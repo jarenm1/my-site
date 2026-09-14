@@ -20,10 +20,11 @@ export interface FeedItem {
 export const feedItems: FeedItem[] = [
   {
     id: 'apple-tesseract',
-    title: 'Apple tesseract',
-    subtitle: 'A four-dimensional orchard, projected into the browser.',
+    title: 'apple tesseract tesseract',
+    subtitle: 'Oh what level of apple do you envision in your head?',
     type: 'canvas',
-    canvasType: 'apple-tesseract'
+    canvasType: 'apple-tesseract',
+    tags: ['shitpost'],
   },
   {
     id: 'triage-data-generation',
