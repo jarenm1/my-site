@@ -2,7 +2,7 @@
   id="apple-tesseract-canvas"
   class="block h-full w-full"
   role="img"
-  aria-label="A rotating four-dimensional tesseract built entirely from three-dimensional apples"
+  aria-label="A rotating tesseract made from smaller tesseracts, each built entirely from three-dimensional apples"
 ></canvas>
 
 <script>
@@ -59,13 +59,17 @@
       }
     }
 
-    const applesPerEdge = 5;
-    const appleCount = vertices.length + edges.length * applesPerEdge;
+    const outerTesseractsPerEdge = 3;
+    const applesInDetailedTesseract = vertices.length + edges.length;
+    const outerConnectorTesseracts = edges.length * outerTesseractsPerEdge;
+    const appleCount =
+      vertices.length * applesInDetailedTesseract +
+      outerConnectorTesseracts * vertices.length;
 
     // Sculpt a high-resolution sphere into an asymmetric apple with shoulders,
     // four subtle lobes, and depressions at both the stem and blossom ends.
     const bodyRadius = 0.19;
-    const bodyGeometry = new THREE.SphereGeometry(bodyRadius, 36, 28);
+    const bodyGeometry = new THREE.SphereGeometry(bodyRadius, 24, 18);
     const bodyPositions = bodyGeometry.attributes.position;
     for (let index = 0; index < bodyPositions.count; index++) {
       const x = bodyPositions.getX(index);
@@ -254,33 +258,86 @@
       calyxes.setMatrixAt(index, transform.matrix);
     }
 
+    function renderAppleTesseract(
+      startIndex: number,
+      center: THREE.Vector3,
+      clusterScale: number,
+      appleSize: number,
+      phase: number,
+      detailed: boolean,
+      highlighted: boolean,
+    ): number {
+      let index = startIndex;
+
+      for (let vertexIndex = 0; vertexIndex < vertices.length; vertexIndex++) {
+        const position = project(vertices[vertexIndex], phase)
+          .multiplyScalar(clusterScale)
+          .add(center);
+        setApple(
+          index++,
+          position,
+          appleSize,
+          phase * 0.55 + vertexIndex * 0.37,
+          highlighted,
+        );
+      }
+
+      // The inner tesseracts have no strokes either: one tiny apple marks the
+      // midpoint of every internal edge.
+      if (detailed) {
+        for (let edgeIndex = 0; edgeIndex < edges.length; edgeIndex++) {
+          const [fromIndex, toIndex] = edges[edgeIndex];
+          const midpoint = interpolate4d(vertices[fromIndex], vertices[toIndex], 0.5);
+          const position = project(midpoint, phase)
+            .multiplyScalar(clusterScale)
+            .add(center);
+          setApple(
+            index++,
+            position,
+            appleSize * 0.46,
+            -phase * 0.7 + edgeIndex * 0.29,
+            false,
+          );
+        }
+      }
+
+      return index;
+    }
+
     let visible = true;
     let animationFrame = 0;
 
     function render(milliseconds: number) {
       const time = milliseconds / 1000;
       let appleIndex = 0;
+      let clusterIndex = 0;
 
+      // Every vertex of the outer tesseract is a complete apple tesseract.
       for (let index = 0; index < vertices.length; index++) {
-        setApple(
-          appleIndex++,
+        appleIndex = renderAppleTesseract(
+          appleIndex,
           project(vertices[index], time),
-          1.42,
-          time * 0.6 + index * 0.31,
+          0.255,
+          0.43,
+          time * 1.31 + clusterIndex++ * 0.11,
+          true,
           true,
         );
       }
 
+      // The outer edges are chains of still more apple tesseracts.
       for (let edgeIndex = 0; edgeIndex < edges.length; edgeIndex++) {
         const [fromIndex, toIndex] = edges[edgeIndex];
-        for (let step = 1; step <= applesPerEdge; step++) {
-          const amount = step / (applesPerEdge + 1);
+        for (let step = 1; step <= outerTesseractsPerEdge; step++) {
+          const amount = step / (outerTesseractsPerEdge + 1);
           const point = interpolate4d(vertices[fromIndex], vertices[toIndex], amount);
-          setApple(
-            appleIndex++,
+          appleIndex = renderAppleTesseract(
+            appleIndex,
             project(point, time),
-            0.47,
-            -time * 0.9 + edgeIndex * 0.22 + step,
+            0.088,
+            0.17,
+            -time * 1.18 + clusterIndex++ * 0.09,
+            false,
             false,
           );
         }
