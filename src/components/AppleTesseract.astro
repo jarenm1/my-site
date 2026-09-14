@@ -11,7 +11,6 @@
 
   if (canvas && context) {
     const ctx = context;
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const vertices = Array.from({ length: 16 }, (_, index) => [
       index & 1 ? 1 : -1,
       index & 2 ? 1 : -1,
@@ -104,7 +103,7 @@
     }
 
     function render(milliseconds: number) {
-      const time = reduceMotion ? 1.4 : milliseconds / 1000;
+      const time = milliseconds / 1000;
       ctx.clearRect(0, 0, width, height);
 
       const background = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width * 0.62);
@@ -140,7 +139,7 @@
           drawApple(point.x, point.y, point.size, alpha);
         });
 
-      if (!reduceMotion && visible) animationFrame = requestAnimationFrame(render);
+      if (visible) animationFrame = requestAnimationFrame(render);
     }
 
     function resize() {
@@ -151,16 +150,19 @@
       canvas.width = Math.round(width * pixelRatio);
       canvas.height = Math.round(height * pixelRatio);
       ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-      if (reduceMotion) render(0);
     }
 
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(canvas);
 
+    resize();
+    animationFrame = requestAnimationFrame(render);
+
     const visibilityObserver = new IntersectionObserver(([entry]) => {
+      const wasVisible = visible;
       visible = entry.isIntersecting;
-      cancelAnimationFrame(animationFrame);
-      if (visible) animationFrame = requestAnimationFrame(render);
+      if (!visible) cancelAnimationFrame(animationFrame);
+      if (visible && !wasVisible) animationFrame = requestAnimationFrame(render);
     });
     visibilityObserver.observe(canvas);
   }
