@@ -2,15 +2,48 @@
   id="apple-tesseract-canvas"
   class="block h-full w-full"
   role="img"
-  aria-label="A rotating four-dimensional tesseract with apples at its vertices"
+  aria-label="A rotating four-dimensional tesseract built entirely from three-dimensional apples"
 ></canvas>
 
 <script>
-  const canvas = document.getElementById('apple-tesseract-canvas') as HTMLCanvasElement;
-  const context = canvas?.getContext('2d');
+  import * as THREE from 'three';
 
-  if (canvas && context) {
-    const ctx = context;
+  const canvas = document.getElementById('apple-tesseract-canvas') as HTMLCanvasElement;
+
+  if (canvas) {
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      alpha: true,
+      antialias: true,
+      powerPreference: 'high-performance',
+    });
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.15;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(34, 16 / 9, 0.1, 100);
+    camera.position.set(0, 0.15, 6.4);
+
+    const world = new THREE.Group();
+    world.rotation.x = -0.16;
+    scene.add(world);
+
+    scene.add(new THREE.HemisphereLight(0xfff2df, 0x2b1010, 2.4));
+
+    const keyLight = new THREE.DirectionalLight(0xfff0d5, 5.5);
+    keyLight.position.set(-3, 4, 5);
+    scene.add(keyLight);
+
+    const rimLight = new THREE.PointLight(0xff2438, 25, 12);
+    rimLight.position.set(3.5, 0.5, 3);
+    scene.add(rimLight);
+
+    const greenLight = new THREE.PointLight(0x84cc16, 10, 10);
+    greenLight.position.set(-3, -2, 1);
+    scene.add(greenLight);
+
     const vertices = Array.from({ length: 16 }, (_, index) => [
       index & 1 ? 1 : -1,
       index & 2 ? 1 : -1,
@@ -26,10 +59,56 @@
       }
     }
 
-    let width = 0;
-    let height = 0;
-    let visible = true;
-    let animationFrame = 0;
+    const applesPerEdge = 5;
+    const appleCount = vertices.length + edges.length * applesPerEdge;
+
+    // Start with a sphere, then sculpt its vertices into a squat, four-lobed apple.
+    const bodyGeometry = new THREE.SphereGeometry(0.19, 24, 18);
+    const bodyPositions = bodyGeometry.attributes.position;
+    for (let index = 0; index < bodyPositions.count; index++) {
+      const x = bodyPositions.getX(index);
+      const y = bodyPositions.getY(index);
+      const z = bodyPositions.getZ(index);
+      const angle = Math.atan2(z, x);
+      const normalizedY = y / 0.19;
+      const lobes = 1 + Math.cos(angle * 4) * 0.055;
+      const taper = 1 - Math.max(0, normalizedY) * 0.12;
+      bodyPositions.setXYZ(index, x * lobes * taper, y * 0.93, z * lobes * taper);
+    }
+    bodyGeometry.computeVertexNormals();
+
+    const stemGeometry = new THREE.CylinderGeometry(0.014, 0.019, 0.095, 8);
+    const leafGeometry = new THREE.SphereGeometry(0.055, 12, 8);
+    leafGeometry.scale(1.45, 0.28, 0.72);
+
+    const bodyMaterial = new THREE.MeshStandardMaterial({
+      color: 0xdc2638,
+      roughness: 0.28,
+      metalness: 0.08,
+    });
+    const stemMaterial = new THREE.MeshStandardMaterial({
+      color: 0x6f3b17,
+      roughness: 0.74,
+    });
+    const leafMaterial = new THREE.MeshStandardMaterial({
+      color: 0x65a30d,
+      roughness: 0.52,
+    });
+
+    const bodies = new THREE.InstancedMesh(bodyGeometry, bodyMaterial, appleCount);
+    const stems = new THREE.InstancedMesh(stemGeometry, stemMaterial, appleCount);
+    const leaves = new THREE.InstancedMesh(leafGeometry, leafMaterial, appleCount);
+    bodies.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    stems.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    leaves.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    world.add(bodies, stems, leaves);
+
+    const transform = new THREE.Object3D();
+    const appleRotation = new THREE.Quaternion();
+    const localOffset = new THREE.Vector3();
+    const applePosition = new THREE.Vector3();
+    const appleScale = new THREE.Vector3();
+    const red = new THREE.Color();
 
     function rotate(a: number, b: number, angle: number): [number, number] {
       const cosine = Math.cos(angle);
@@ -37,124 +116,110 @@
       return [a * cosine - b * sine, a * sine + b * cosine];
     }
 
-    function project(point: number[], time: number) {
+    function project(point: number[], time: number): THREE.Vector3 {
       let [x, y, z, w] = point;
-      [x, w] = rotate(x, w, time * 0.43);
-      [y, z] = rotate(y, z, time * 0.31);
-      [z, w] = rotate(z, w, time * 0.23);
-      [x, y] = rotate(x, y, time * 0.12);
+      [x, w] = rotate(x, w, time * 0.48);
+      [y, z] = rotate(y, z, time * 0.34);
+      [z, w] = rotate(z, w, time * 0.27);
+      [x, y] = rotate(x, y, time * 0.13);
 
-      const perspective4d = 2.8 / (3.4 - w);
-      x *= perspective4d;
-      y *= perspective4d;
-      z *= perspective4d;
-
-      const perspective3d = 3.2 / (4.2 - z);
-      const scale = Math.min(width, height) * 0.29;
-      return {
-        x: width / 2 + x * perspective3d * scale,
-        y: height / 2 + y * perspective3d * scale,
-        depth: z + w * 0.35,
-        size: Math.max(7, Math.min(15, 9.5 * perspective3d * perspective4d)),
-      };
+      const perspective = 2.7 / (3.35 - w);
+      return new THREE.Vector3(x, y, z).multiplyScalar(perspective * 1.23);
     }
 
-    function drawApple(x: number, y: number, radius: number, alpha: number) {
-      ctx.save();
-      ctx.globalAlpha = alpha;
-      ctx.shadowColor = 'rgba(239, 68, 68, 0.65)';
-      ctx.shadowBlur = radius * 1.2;
-
-      const gradient = ctx.createRadialGradient(
-        x - radius * 0.35,
-        y - radius * 0.4,
-        radius * 0.1,
-        x,
-        y,
-        radius * 1.15,
-      );
-      gradient.addColorStop(0, '#fca5a5');
-      gradient.addColorStop(0.38, '#ef4444');
-      gradient.addColorStop(1, '#7f1d1d');
-
-      ctx.beginPath();
-      ctx.moveTo(x, y - radius * 0.55);
-      ctx.bezierCurveTo(x - radius * 0.25, y - radius, x - radius, y - radius * 0.7, x - radius, y);
-      ctx.bezierCurveTo(x - radius, y + radius * 0.72, x - radius * 0.42, y + radius, x, y + radius * 0.72);
-      ctx.bezierCurveTo(x + radius * 0.42, y + radius, x + radius, y + radius * 0.72, x + radius, y);
-      ctx.bezierCurveTo(x + radius, y - radius * 0.7, x + radius * 0.25, y - radius, x, y - radius * 0.55);
-      ctx.fillStyle = gradient;
-      ctx.fill();
-
-      ctx.shadowBlur = 0;
-      ctx.lineCap = 'round';
-      ctx.lineWidth = Math.max(1.2, radius * 0.16);
-      ctx.strokeStyle = '#a16207';
-      ctx.beginPath();
-      ctx.moveTo(x, y - radius * 0.62);
-      ctx.quadraticCurveTo(x + radius * 0.08, y - radius * 1.15, x + radius * 0.34, y - radius * 1.28);
-      ctx.stroke();
-
-      ctx.fillStyle = '#65a30d';
-      ctx.beginPath();
-      ctx.ellipse(x + radius * 0.43, y - radius * 1.04, radius * 0.34, radius * 0.16, -0.45, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
+    function interpolate4d(from: number[], to: number[], amount: number): number[] {
+      return from.map((value, index) => THREE.MathUtils.lerp(value, to[index], amount));
     }
+
+    function setApple(
+      index: number,
+      position: THREE.Vector3,
+      scale: number,
+      spin: number,
+      isVertex: boolean,
+    ) {
+      appleRotation.setFromEuler(new THREE.Euler(0.04 * Math.sin(spin), spin, 0.06 * Math.cos(spin)));
+      appleScale.setScalar(scale);
+
+      transform.position.copy(position);
+      transform.quaternion.copy(appleRotation);
+      transform.scale.copy(appleScale);
+      transform.updateMatrix();
+      bodies.setMatrixAt(index, transform.matrix);
+
+      red.setHSL(isVertex ? 0.985 : 0.975, isVertex ? 0.78 : 0.68, isVertex ? 0.52 : 0.39);
+      bodies.setColorAt(index, red);
+
+      localOffset.set(0, 0.205 * scale, 0).applyQuaternion(appleRotation);
+      transform.position.copy(position).add(localOffset);
+      transform.quaternion.setFromEuler(new THREE.Euler(0, spin, -0.16));
+      transform.scale.setScalar(scale);
+      transform.updateMatrix();
+      stems.setMatrixAt(index, transform.matrix);
+
+      localOffset.set(0.057 * scale, 0.252 * scale, 0).applyQuaternion(appleRotation);
+      transform.position.copy(position).add(localOffset);
+      transform.quaternion.setFromEuler(new THREE.Euler(0.12, spin, -0.48));
+      transform.scale.setScalar(scale);
+      transform.updateMatrix();
+      leaves.setMatrixAt(index, transform.matrix);
+    }
+
+    let visible = true;
+    let animationFrame = 0;
 
     function render(milliseconds: number) {
       const time = milliseconds / 1000;
-      ctx.clearRect(0, 0, width, height);
+      let appleIndex = 0;
 
-      const background = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width * 0.62);
-      background.addColorStop(0, 'rgba(127, 29, 29, 0.18)');
-      background.addColorStop(0.48, 'rgba(23, 23, 23, 0.28)');
-      background.addColorStop(1, 'rgba(10, 10, 10, 0)');
-      ctx.fillStyle = background;
-      ctx.fillRect(0, 0, width, height);
-
-      const projected = vertices.map((vertex) => project(vertex, time));
-
-      for (const [fromIndex, toIndex] of edges) {
-        const from = projected[fromIndex];
-        const to = projected[toIndex];
-        const depth = (from.depth + to.depth) / 2;
-        const alpha = Math.max(0.16, Math.min(0.72, 0.42 + depth * 0.1));
-        const gradient = ctx.createLinearGradient(from.x, from.y, to.x, to.y);
-        gradient.addColorStop(0, `rgba(248, 113, 113, ${alpha})`);
-        gradient.addColorStop(1, `rgba(250, 204, 21, ${alpha * 0.72})`);
-        ctx.strokeStyle = gradient;
-        ctx.lineWidth = Math.max(1, Math.min(width, height) / 320);
-        ctx.beginPath();
-        ctx.moveTo(from.x, from.y);
-        ctx.lineTo(to.x, to.y);
-        ctx.stroke();
+      for (let index = 0; index < vertices.length; index++) {
+        setApple(
+          appleIndex++,
+          project(vertices[index], time),
+          1.42,
+          time * 0.6 + index * 0.31,
+          true,
+        );
       }
 
-      projected
-        .map((point, index) => ({ ...point, index }))
-        .sort((a, b) => a.depth - b.depth)
-        .forEach((point) => {
-          const alpha = Math.max(0.55, Math.min(1, 0.78 + point.depth * 0.07));
-          drawApple(point.x, point.y, point.size, alpha);
-        });
+      for (let edgeIndex = 0; edgeIndex < edges.length; edgeIndex++) {
+        const [fromIndex, toIndex] = edges[edgeIndex];
+        for (let step = 1; step <= applesPerEdge; step++) {
+          const amount = step / (applesPerEdge + 1);
+          const point = interpolate4d(vertices[fromIndex], vertices[toIndex], amount);
+          setApple(
+            appleIndex++,
+            project(point, time),
+            0.47,
+            -time * 0.9 + edgeIndex * 0.22 + step,
+            false,
+          );
+        }
+      }
+
+      bodies.instanceMatrix.needsUpdate = true;
+      stems.instanceMatrix.needsUpdate = true;
+      leaves.instanceMatrix.needsUpdate = true;
+      if (bodies.instanceColor) bodies.instanceColor.needsUpdate = true;
+
+      world.rotation.y = time * 0.08;
+      world.rotation.z = Math.sin(time * 0.18) * 0.07;
+      renderer.render(scene, camera);
 
       if (visible) animationFrame = requestAnimationFrame(render);
     }
 
     function resize() {
       const bounds = canvas.getBoundingClientRect();
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-      width = Math.max(1, bounds.width);
-      height = Math.max(1, bounds.height);
-      canvas.width = Math.round(width * pixelRatio);
-      canvas.height = Math.round(height * pixelRatio);
-      ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+      const width = Math.max(1, bounds.width);
+      const height = Math.max(1, bounds.height);
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
     }
 
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(canvas);
-
     resize();
     animationFrame = requestAnimationFrame(render);
 
