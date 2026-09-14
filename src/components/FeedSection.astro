@@ -3,6 +3,7 @@ import { feedItems } from '../data/feed';
 import PredatorPrey from './PredatorPrey.astro';
 import FlowFieldArt from './FlowFieldArt.astro';
 import TriageCanvas from './TriageCanvas.astro';
+import AppleTesseract from './AppleTesseract.astro';
 function getYouTubeEmbedUrl(urlOrId?: string): string | null {
   if (!urlOrId) return null;
 
@@ -84,6 +85,7 @@ function getYouTubeEmbedUrl(urlOrId?: string): string | null {
                 {item.canvasType === 'triage' && <TriageCanvas />}
                 {item.canvasType === 'predator-prey' && <PredatorPrey />}
                 {item.canvasType === 'flow-field' && <FlowFieldArt />}
+                {item.canvasType === 'apple-tesseract' && <AppleTesseract />}
               </div>
             )}
           </div>
