@@ -1,0 +1,167 @@
+<canvas
+  id="apple-tesseract-canvas"
+  class="block h-full w-full"
+  role="img"
+  aria-label="A rotating four-dimensional tesseract with apples at its vertices"
+></canvas>
+
+<script>
+  const canvas = document.getElementById('apple-tesseract-canvas') as HTMLCanvasElement;
+  const context = canvas?.getContext('2d');
+
+  if (canvas && context) {
+    const ctx = context;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const vertices = Array.from({ length: 16 }, (_, index) => [
+      index & 1 ? 1 : -1,
+      index & 2 ? 1 : -1,
+      index & 4 ? 1 : -1,
+      index & 8 ? 1 : -1,
+    ]);
+    const edges: [number, number][] = [];
+
+    for (let vertex = 0; vertex < 16; vertex++) {
+      for (let axis = 0; axis < 4; axis++) {
+        const neighbor = vertex ^ (1 << axis);
+        if (vertex < neighbor) edges.push([vertex, neighbor]);
+      }
+    }
+
+    let width = 0;
+    let height = 0;
+    let visible = true;
+    let animationFrame = 0;
+
+    function rotate(a: number, b: number, angle: number): [number, number] {
+      const cosine = Math.cos(angle);
+      const sine = Math.sin(angle);
+      return [a * cosine - b * sine, a * sine + b * cosine];
+    }
+
+    function project(point: number[], time: number) {
+      let [x, y, z, w] = point;
+      [x, w] = rotate(x, w, time * 0.43);
+      [y, z] = rotate(y, z, time * 0.31);
+      [z, w] = rotate(z, w, time * 0.23);
+      [x, y] = rotate(x, y, time * 0.12);
+
+      const perspective4d = 2.8 / (3.4 - w);
+      x *= perspective4d;
+      y *= perspective4d;
+      z *= perspective4d;
+
+      const perspective3d = 3.2 / (4.2 - z);
+      const scale = Math.min(width, height) * 0.29;
+      return {
+        x: width / 2 + x * perspective3d * scale,
+        y: height / 2 + y * perspective3d * scale,
+        depth: z + w * 0.35,
+        size: Math.max(7, Math.min(15, 9.5 * perspective3d * perspective4d)),
+      };
+    }
+
+    function drawApple(x: number, y: number, radius: number, alpha: number) {
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.shadowColor = 'rgba(239, 68, 68, 0.65)';
+      ctx.shadowBlur = radius * 1.2;
+
+      const gradient = ctx.createRadialGradient(
+        x - radius * 0.35,
+        y - radius * 0.4,
+        radius * 0.1,
+        x,
+        y,
+        radius * 1.15,
+      );
+      gradient.addColorStop(0, '#fca5a5');
+      gradient.addColorStop(0.38, '#ef4444');
+      gradient.addColorStop(1, '#7f1d1d');
+
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius * 0.55);
+      ctx.bezierCurveTo(x - radius * 0.25, y - radius, x - radius, y - radius * 0.7, x - radius, y);
+      ctx.bezierCurveTo(x - radius, y + radius * 0.72, x - radius * 0.42, y + radius, x, y + radius * 0.72);
+      ctx.bezierCurveTo(x + radius * 0.42, y + radius, x + radius, y + radius * 0.72, x + radius, y);
+      ctx.bezierCurveTo(x + radius, y - radius * 0.7, x + radius * 0.25, y - radius, x, y - radius * 0.55);
+      ctx.fillStyle = gradient;
+      ctx.fill();
+
+      ctx.shadowBlur = 0;
+      ctx.lineCap = 'round';
+      ctx.lineWidth = Math.max(1.2, radius * 0.16);
+      ctx.strokeStyle = '#a16207';
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius * 0.62);
+      ctx.quadraticCurveTo(x + radius * 0.08, y - radius * 1.15, x + radius * 0.34, y - radius * 1.28);
+      ctx.stroke();
+
+      ctx.fillStyle = '#65a30d';
+      ctx.beginPath();
+      ctx.ellipse(x + radius * 0.43, y - radius * 1.04, radius * 0.34, radius * 0.16, -0.45, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function render(milliseconds: number) {
+      const time = reduceMotion ? 1.4 : milliseconds / 1000;
+      ctx.clearRect(0, 0, width, height);
+
+      const background = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width * 0.62);
+      background.addColorStop(0, 'rgba(127, 29, 29, 0.18)');
+      background.addColorStop(0.48, 'rgba(23, 23, 23, 0.28)');
+      background.addColorStop(1, 'rgba(10, 10, 10, 0)');
+      ctx.fillStyle = background;
+      ctx.fillRect(0, 0, width, height);
+
+      const projected = vertices.map((vertex) => project(vertex, time));
+
+      for (const [fromIndex, toIndex] of edges) {
+        const from = projected[fromIndex];
+        const to = projected[toIndex];
+        const depth = (from.depth + to.depth) / 2;
+        const alpha = Math.max(0.16, Math.min(0.72, 0.42 + depth * 0.1));
+        const gradient = ctx.createLinearGradient(from.x, from.y, to.x, to.y);
+        gradient.addColorStop(0, `rgba(248, 113, 113, ${alpha})`);
+        gradient.addColorStop(1, `rgba(250, 204, 21, ${alpha * 0.72})`);
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = Math.max(1, Math.min(width, height) / 320);
+        ctx.beginPath();
+        ctx.moveTo(from.x, from.y);
+        ctx.lineTo(to.x, to.y);
+        ctx.stroke();
+      }
+
+      projected
+        .map((point, index) => ({ ...point, index }))
+        .sort((a, b) => a.depth - b.depth)
+        .forEach((point) => {
+          const alpha = Math.max(0.55, Math.min(1, 0.78 + point.depth * 0.07));
+          drawApple(point.x, point.y, point.size, alpha);
+        });
+
+      if (!reduceMotion && visible) animationFrame = requestAnimationFrame(render);
+    }
+
+    function resize() {
+      const bounds = canvas.getBoundingClientRect();
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+      width = Math.max(1, bounds.width);
+      height = Math.max(1, bounds.height);
+      canvas.width = Math.round(width * pixelRatio);
+      canvas.height = Math.round(height * pixelRatio);
+      ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+      if (reduceMotion) render(0);
+    }
+
+    const resizeObserver = new ResizeObserver(resize);
+    resizeObserver.observe(canvas);
+
+    const visibilityObserver = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      cancelAnimationFrame(animationFrame);
+      if (visible) animationFrame = requestAnimationFrame(render);
+    });
+    visibilityObserver.observe(canvas);
+  }
+</script>
