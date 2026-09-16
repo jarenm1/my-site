@@ -19,6 +19,14 @@ export interface FeedItem {
 
 export const feedItems: FeedItem[] = [
   {
+    id: 'apple-tesseract',
+    title: 'apple tesseract tesseract',
+    subtitle: 'Oh what level of apple do you envision in your head?',
+    type: 'canvas',
+    canvasType: 'apple-tesseract',
+    tags: ['shitpost'],
+  },
+  {
     id: 'triage-data-generation',
     title: 'Triage: data gen',
     subtitle: 'RGB, relative depth, and instance IDs rendered with WebGPU.',
