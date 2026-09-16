@@ -10,6 +10,7 @@ export interface FeedItem {
   aspect?: 'video' | 'vertical';
   // For interactive canvas demos
   canvasType?: string;
+  tags?: string[];
   link?: {
     label: string;
     url: string;
@@ -23,6 +24,7 @@ export const feedItems: FeedItem[] = [
     subtitle: 'RGB, relative depth, and instance IDs rendered with WebGPU.',
     type: 'canvas',
     canvasType: 'triage-data-generation',
+    tags: ['project', 'demo'],
     link: {
       label: 'GitHub',
       url: 'https://github.com/jarenm1/triage'
@@ -34,6 +36,7 @@ export const feedItems: FeedItem[] = [
     subtitle: 'winit & wgpu rendered in canvas.',
     type: 'canvas',
     canvasType: 'triage',
+    tags: ['project', 'demo'],
     link: {
       label: 'GitHub',
       url: 'https://github.com/jarenm1/triage'
@@ -43,6 +46,7 @@ export const feedItems: FeedItem[] = [
     id: 'talk-demo',
     type: 'youtube',
     youtubeUrl: 'https://youtu.be/NYFGCESmikA?t=2974',
+    tags: ['shitpost'],
     subtitle: 'the most beautiful programming language btw'
   }
 ];

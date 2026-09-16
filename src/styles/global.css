@@ -133,3 +133,8 @@
 .posts-space {
   min-height: clamp(4rem, 10vh, 6rem);
 }
+
+/* Recruiter mode: hide shitpost-tagged feed entries */
+.recruiter-mode [data-shitpost] {
+  display: none;
+}

@@ -55,7 +55,7 @@ function getYouTubeEmbedUrl(urlOrId?: string): string | null {
       const isVertical = item.aspect === 'vertical' || item.youtubeUrl?.includes('/shorts/');
 
       return (
-        <article class="group relative flex flex-col space-y-4">
+        <article class="group relative flex flex-col space-y-4" data-shitpost={item.tags?.includes('shitpost') || undefined}>
           {/* Media Container */}
           <div class={`relative w-full rounded-lg border border-neutral-800 bg-neutral-900/60 overflow-hidden shadow-sm ${isVertical ? 'max-w-[360px] mx-auto' : ''}`}>
             {item.type === 'youtube' && embedUrl && (
@@ -101,6 +101,15 @@ function getYouTubeEmbedUrl(urlOrId?: string): string | null {
                   <p class="text-sm text-neutral-400 mt-1">
                     {item.subtitle}
                   </p>
+                )}
+                {item.tags && item.tags.length > 0 && (
+                  <ul class="flex flex-wrap gap-1.5 mt-2">
+                    {item.tags.map((tag) => (
+                      <li class="text-[10px] font-mono text-neutral-500 border border-neutral-800 rounded px-1.5 py-0.5">
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
 
